@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Cutter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+  public GameObject Knife;
+  void OnTriggerEnter(Collider col)
+  {
+    if (col.gameObject.tag == "Slice" && Knife.GetComponent<Knife>().isCutting)
     {
-        
-    }
+      Knife.GetComponent<Knife>().SetCuttingState(true);
+       
+       col.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        //col.gameObject.GetComponent<Rigidbody>().AddTorque;
 
-    // Update is called once per frame
-    void Update()
-    {
+        
+
+        GameSystem.System.OnVegetableCut();
+
+        Destroy(col.gameObject, 4f);
         
     }
+  }
+
 }
