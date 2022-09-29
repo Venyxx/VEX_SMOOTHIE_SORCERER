@@ -185,10 +185,10 @@ Shader "Unlit/Normal_GooseGame"
             //This will be our light Color
             fixed3 colorRefl = _LightColor0.rgb;
             //This is the function for LambertShading
-            half3 diffuse = LambertShading( colorRefl , _LightInt, normal, lightDir);
+            half3 diffuse = LambertShading( colorRefl , _LightInt, normal_color, lightDir);
 
             col.rgb *= diffuse * shadow;
-            col.rgb *= dot(normal_color,lightDir);
+            //col.rgb *= dot(normal_color,lightDir);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
