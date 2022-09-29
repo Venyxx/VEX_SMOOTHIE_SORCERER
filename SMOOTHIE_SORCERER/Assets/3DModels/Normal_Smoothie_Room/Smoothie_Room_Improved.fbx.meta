@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Concrete
+    second: {fileID: 2100000, guid: e0fc5d0ba734e8b4b9d42f5ecdb13102, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert1
     second: {fileID: 2100000, guid: 3dbb9845ecf420b479d37016d37da352, type: 2}
   - first:
@@ -47,7 +52,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 32
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
