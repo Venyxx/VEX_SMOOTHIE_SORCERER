@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6e888f5785b98648bd5f725ff67269d
+guid: 40b654cff342e6d4698b6cbb8503976a
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,63 +7,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_00Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: BookCover
+    second: {fileID: 2100000, guid: 7dcacfd8d03f8e045986fa1c293f58be, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_01Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: BookCover2
+    second: {fileID: 2100000, guid: 1cd6f808467f9c548b494463e31335cb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_02Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: BookPaper
+    second: {fileID: 2100000, guid: 52d52277a44ea924a82bdb107fe4ca1f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_03Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: 61cc7f9ff85008c4190670aad66876ee, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_04Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: WoodBase
+    second: {fileID: 2100000, guid: 231def9c41ce5da429cabb5f2a13aa0f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_05Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: WoodDark
+    second: {fileID: 2100000, guid: b66acd3bee5127b4eb83ffb0f508c808, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_06Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: WoodLight
+    second: {fileID: 2100000, guid: a42cb731a3e67414e88e0990d0ca40a6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_07Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_08Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_09Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_10Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_11Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: 073d0e4fe70f49d48b757adc43705ad1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -95,7 +75,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 32
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -148,7 +128,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.32
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

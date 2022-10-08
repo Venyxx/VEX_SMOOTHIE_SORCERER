@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6e888f5785b98648bd5f725ff67269d
+guid: d864c0c4606cf2b468b0b767c3cb46f6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,63 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_00Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: BlenderBase
+    second: {fileID: 2100000, guid: dbcf909a6ca9f874a9dee5e4b16e234a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_01Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: BlenderButtons
+    second: {fileID: 2100000, guid: d304acb661b6080479db73cf494269fe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_02Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: Blender_Blades
+    second: {fileID: 2100000, guid: bf88c0d0350fa684383cee81787aa3bd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Slice_03Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_04Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_05Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_06Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_07Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_08Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_09Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_10Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_11Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+      name: Glass
+    second: {fileID: 2100000, guid: 61cc7f9ff85008c4190670aad66876ee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -95,7 +55,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 32
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -148,7 +108,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 32
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

@@ -1,69 +1,9 @@
 fileFormatVersion: 2
-guid: c6e888f5785b98648bd5f725ff67269d
+guid: 277c58604fbc2804fbed817151c50c2d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_00Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_01Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_02Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_03Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_04Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_05Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_06Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_07Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_08Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_09Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_10Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Slice_11Mat
-    second: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
