@@ -14,7 +14,6 @@ Release Notes for Version 1.0
 New Features
 	Click to chop, has android dead zone placements for mobile testing.
 Known Bugs /Issues
-	"Good chop" recognition flashes if mouse button is held. You are 	slightly required to hold the mouse button for it to register the full 	chop, but it works well in mobile testing.
+	"Good chop" recognition flashes if mouse button is held.
 Numbered List of All Completed Features
 	1. Click to chop
-	2. Timer recognition for an overblended smoothie.
