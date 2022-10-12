@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class Moveable : MonoBehaviour
 {
-    [SerializeField] private float speedMetersPerSecond = 25f;
+    [SerializeField] private float speedMetersPerSecond = 1.5f;
 
     private Vector3? destination;
     private Vector3 startPosition;
     private float totalLerpDuration;
     private float elapsedLerpDuration;
+    public RailWaypointNav RailWaypointNavREF; 
 
     
 
@@ -28,13 +29,17 @@ public class Moveable : MonoBehaviour
         
         if (destination.HasValue ==false)
         {
+            Debug.Log("returning");
             return;
         }
 
         if (elapsedLerpDuration>= totalLerpDuration && totalLerpDuration > 0)
         {
+            Debug.Log("returning");
             return;
         }
+
+        
 
         elapsedLerpDuration += Time.deltaTime;
         float percent = (elapsedLerpDuration / totalLerpDuration);

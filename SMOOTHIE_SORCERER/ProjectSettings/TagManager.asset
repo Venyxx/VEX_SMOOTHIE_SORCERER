@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Slice
   - Customer
+  - SeatingManager
   layers:
   - Default
   - TransparentFX
