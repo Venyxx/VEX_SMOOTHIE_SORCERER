@@ -7,12 +7,15 @@ public class RailWaypointNav : MonoBehaviour
 {
     [SerializeField] private Moveable target;
     [SerializeField] public bool waiting;
+    [SerializeField] public bool seated;
+    [SerializeField] public bool canOrder;
 
     public List<Transform> waypoints;
     public List<Transform> seats;
 
     public GameObject pathHolder;
     public GameObject seatHolder;
+    public GameObject player;
 
     private int nextWayPointIndex;
     private SeatChecker SeatChecker;
@@ -22,6 +25,7 @@ public class RailWaypointNav : MonoBehaviour
     {
         GameObject seatManager = GameObject.FindGameObjectWithTag("SeatingManager");
         SeatChecker = seatManager.GetComponent<SeatChecker>(); 
+        seated = false;
     }
     private void OnEnable ()
     {
@@ -30,15 +34,23 @@ public class RailWaypointNav : MonoBehaviour
             seats = seatHolder.GetComponentsInChildren<Transform>().ToList(); 
             waypoints.RemoveAt(index: 0);
             MoveToNextWaypoint();
+
+            
             
         
+    }
+
+    private void Update()
+    {
+        if (seated)
+            Invoke ("FaceCounter", 3f);
     }
 
     private void MoveToNextWaypoint ()
     {
         if (nextWayPointIndex == waypoints.Count) // reached the waiting, to be seated, area
         {
-            Debug.Log("reached waiting point");
+            //Debug.Log("reached waiting point");
             waiting = true;
 
             if (SeatChecker.seat1 == false)
@@ -46,15 +58,10 @@ public class RailWaypointNav : MonoBehaviour
                 var seatWayPoint = seats[0];
                 target.MoveTo(seatWayPoint.position, MoveToNextWaypoint);
                 target.transform.LookAt(seatWayPoint.position);
+                seated = true;
             }
 
-
-
-
-
-
-
-
+            //make the rules for all the other seats
 
 
         }
@@ -70,5 +77,11 @@ public class RailWaypointNav : MonoBehaviour
         }
         
         
+    }
+
+    private void FaceCounter()
+    {
+        target.transform.LookAt(player.transform.position);
+        canOrder = true;
     }
 }

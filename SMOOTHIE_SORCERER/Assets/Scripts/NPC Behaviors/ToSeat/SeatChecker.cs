@@ -16,6 +16,7 @@ public class SeatChecker : MonoBehaviour
     void Start()
     {
         seats = seatHolder.GetComponentsInChildren<Transform>().ToList(); 
+        
     }
 
     // Update is called once per frame
