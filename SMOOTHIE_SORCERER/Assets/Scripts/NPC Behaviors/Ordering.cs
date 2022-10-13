@@ -6,6 +6,7 @@ public class Ordering : MonoBehaviour
 {
     public RailWaypointNav navREF;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,10 @@ public class Ordering : MonoBehaviour
         {
             Debug.Log("we are ordering now");
         }
+    }
+
+    private void orderDisplay ()
+    {
+        
     }
 }
