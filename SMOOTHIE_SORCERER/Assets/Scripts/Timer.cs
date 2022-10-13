@@ -8,18 +8,23 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI blendStatus;
     public float currentTime;
+    public bool startBlending;
     public bool hasLimit;
     public float timerLimit;
     // Start is called before the first frame update
     void Start()
     {
+        startBlending = false;
         hasLimit = true;
         blendStatus.text = " ";
+        timerText.text = " ";
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+        if (startBlending == true)
+        {
         currentTime = currentTime += Time.deltaTime;
 
         if (hasLimit && currentTime >= timerLimit)
@@ -31,12 +36,12 @@ public class Timer : MonoBehaviour
         }
         SetTimerText();
 
- if(currentTime >= timerLimit)
+ if(currentTime >= 16f )
         {
             blendStatus.text = "Overblended";
             blendStatus.color = Color.red;
         }
-        else if (currentTime <= 10f)
+        else if (currentTime >=10f)
         {
             
             blendStatus.text = "Well Blended";
@@ -44,10 +49,28 @@ public class Timer : MonoBehaviour
         }
 
     }
+    }
 
 
     private void SetTimerText()
     {
         timerText.text = currentTime.ToString("0");
+    }
+
+    public void TimerReset()
+    {
+       currentTime = 0f;
+       blendStatus.text = " ";
+    }
+
+    public void TimerStart()
+    {
+        
+        startBlending = true;
+    }
+
+    public void TimerStop()
+    {
+        startBlending = false;
     }
 }
