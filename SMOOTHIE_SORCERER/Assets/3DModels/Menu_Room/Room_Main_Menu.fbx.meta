@@ -12,8 +12,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Sky
+    second: {fileID: 2100000, guid: 94a96db57623c6545b3545caf9316ee3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert1
     second: {fileID: 2100000, guid: e487ccb923d2a224692b6119a7b17f4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert8
+    second: {fileID: 2100000, guid: 94a96db57623c6545b3545caf9316ee3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
