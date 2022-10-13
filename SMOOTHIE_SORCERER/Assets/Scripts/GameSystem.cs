@@ -10,6 +10,11 @@ public class GameSystem : MonoBehaviour
     public GameObject GameScoreCanvas;
     public TMP_Text ScoreText;
 
+    void Start()
+    {
+        ScoreText.text = " ";
+    }
+
     public static GameSystem System
     {
         get
