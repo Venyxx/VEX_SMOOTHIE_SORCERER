@@ -1,0 +1,1420 @@
+fileFormatVersion: 2
+guid: 96374130c4fac644697c1839adb06a85
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Animated_Logo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7826
+        width: 586
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b93b5214adfc7849a74e862aa1db9a7
+      internalID: 886989224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_1
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 7830
+        width: 592
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8e7a86b636a584081175551e48bb2e
+      internalID: 1953214091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_2
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 7822
+        width: 588
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5e85958974e754e908e83d8d5cc3fb
+      internalID: -104247408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_3
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 7818
+        width: 588
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf108eb2c674b149ae1e67d3b6820a0
+      internalID: -893018628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_4
+      rect:
+        serializedVersion: 2
+        x: 2798
+        y: 7814
+        width: 592
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e844f66b71f564880ecf5dbf4914b2
+      internalID: -140708710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_5
+      rect:
+        serializedVersion: 2
+        x: 3518
+        y: 7818
+        width: 588
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81587b3b642b42b458a51f5ead5ea4c1
+      internalID: 403045597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_6
+      rect:
+        serializedVersion: 2
+        x: 4202
+        y: 7826
+        width: 592
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4680a6093837af4eb22ef9542c53920
+      internalID: -452658844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_7
+      rect:
+        serializedVersion: 2
+        x: 4906
+        y: 7834
+        width: 592
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c3e63254fbb25408509a48772d44ff
+      internalID: 1887457495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_8
+      rect:
+        serializedVersion: 2
+        x: 5626
+        y: 7835
+        width: 592
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5ef6e21046cbf4ca3ecf70e6b05a67
+      internalID: 1160934011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_9
+      rect:
+        serializedVersion: 2
+        x: 6330
+        y: 7834
+        width: 592
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4008c9dd7c75d5a49afb0c5f01af9850
+      internalID: 1254104950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_10
+      rect:
+        serializedVersion: 2
+        x: 7054
+        y: 7830
+        width: 600
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e497d61bf271e47844a681e7573ed2
+      internalID: 1773384098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_11
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 7338
+        width: 588
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595707c57d71d244eb34e5342ce8f298
+      internalID: 1160679218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_12
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 7334
+        width: 588
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02c641fd06236b4090ffdb55432d44c
+      internalID: -2087488526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_13
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 7326
+        width: 592
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45101c0b0b1d5b74bbf6c0a9cc8892dc
+      internalID: -138267617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_14
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 7318
+        width: 592
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c271edab0ee7740a035a0fa9fbf8b8
+      internalID: -1912303186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_15
+      rect:
+        serializedVersion: 2
+        x: 2838
+        y: 7326
+        width: 588
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6688787aecdfc3f4eba866593ba8df1f
+      internalID: 1975591669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_16
+      rect:
+        serializedVersion: 2
+        x: 3532
+        y: 7334
+        width: 590
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eed08e09ca24de45ab725bac45076ed
+      internalID: 1050824352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_17
+      rect:
+        serializedVersion: 2
+        x: 4234
+        y: 7338
+        width: 588
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4525481adb19c7449946dec5834d8b1
+      internalID: -160427369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_18
+      rect:
+        serializedVersion: 2
+        x: 4934
+        y: 7326
+        width: 592
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa86b9fb4b919740a6dc068fca6804b
+      internalID: -1499798522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_19
+      rect:
+        serializedVersion: 2
+        x: 5630
+        y: 7318
+        width: 592
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8983819eace3073409d6e83f8350d4ee
+      internalID: 623418026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_20
+      rect:
+        serializedVersion: 2
+        x: 6330
+        y: 7326
+        width: 592
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9716ddbb9d3b04e959e5b5dc581726
+      internalID: -1887985974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_21
+      rect:
+        serializedVersion: 2
+        x: 7034
+        y: 7330
+        width: 588
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3363f7dde225934459374fd26e1d4c27
+      internalID: -1078084138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_22
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 6846
+        width: 588
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e622b9b32ff7184e85799c48630e00b
+      internalID: -1129637657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_23
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 6846
+        width: 592
+        height: 388
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef88c5e3820456143acdfd3f4240ff84
+      internalID: -14242187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_24
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 6834
+        width: 588
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424a3e379b56f9f4bb553c740b7c1863
+      internalID: 1701458362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_25
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 6842
+        width: 592
+        height: 392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf319959a16b97b4cbf8306a90da6488
+      internalID: -1420589581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_26
+      rect:
+        serializedVersion: 2
+        x: 2794
+        y: 6847
+        width: 588
+        height: 387
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5623bd7306cffd34399e9094f3f7942f
+      internalID: -1303944327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_27
+      rect:
+        serializedVersion: 2
+        x: 3490
+        y: 6854
+        width: 588
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f3f0c9dc8ee4f428241a51dfafdb6b
+      internalID: -225154035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_28
+      rect:
+        serializedVersion: 2
+        x: 4207
+        y: 6854
+        width: 587
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa0917605e3f574694d31328c058da0
+      internalID: -2041683134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_29
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 6854
+        width: 592
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70afbbf41a06c8c46b2b17fa555c8358
+      internalID: -1635307807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_30
+      rect:
+        serializedVersion: 2
+        x: 5626
+        y: 6850
+        width: 588
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c741eb34b14c3e4480f4a40cb82e4de
+      internalID: -778445495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_31
+      rect:
+        serializedVersion: 2
+        x: 6310
+        y: 6854
+        width: 588
+        height: 367
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd88b6770a6c8d242817330a5f104447
+      internalID: 1228610312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_32
+      rect:
+        serializedVersion: 2
+        x: 7026
+        y: 6846
+        width: 588
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14054a5f47826d64d8ab7e9669bf624a
+      internalID: 1099344606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6358
+        width: 586
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf8e2dd21bd7a74dab1166f891803a1
+      internalID: -1009786878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_34
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 6350
+        width: 592
+        height: 392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304a73b7f5cb0ce48a37b17dd97997b1
+      internalID: 1837011693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_36
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 6362
+        width: 588
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b72979da213df4f942fa72f159f7e2
+      internalID: -670414375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_37
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 6374
+        width: 588
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9083ec9d9684fe842b43f8f1761964c2
+      internalID: 66311841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_38
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 6382
+        width: 588
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d96ec2ecf748f41bb4347aa2fc657c
+      internalID: 267353707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_39
+      rect:
+        serializedVersion: 2
+        x: 3462
+        y: 6378
+        width: 588
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b323581ea4dd045bbe6a175255fab0
+      internalID: -2059273770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_40
+      rect:
+        serializedVersion: 2
+        x: 4166
+        y: 6374
+        width: 592
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b027463599b67499b3e7735b638f32
+      internalID: 1441372245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_41
+      rect:
+        serializedVersion: 2
+        x: 4866
+        y: 6382
+        width: 596
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67c5cee0a9fed44e9ecb05b1a048b34
+      internalID: 1868411950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_42
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 6390
+        width: 604
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bea984753df3014e888560e1547928a
+      internalID: -2012461046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_43
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 6386
+        width: 608
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3311f14fb191a4ba656dafe5faf7e5
+      internalID: -565466267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_44
+      rect:
+        serializedVersion: 2
+        x: 7006
+        y: 6378
+        width: 616
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8978362ef598f1844b27f7ea79149f22
+      internalID: -126550700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_45
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5882
+        width: 620
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f825ad4abdb3a4ebfae4299e4446a1
+      internalID: 608796712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_46
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 5890
+        width: 616
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e55d4e19bee9f249b5e576851731f88
+      internalID: 2084217343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_47
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 5898
+        width: 611
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15db0b1a97b0c8448a8d3b1ed2790368
+      internalID: -1271537631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_48
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 5902
+        width: 604
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15db7cfad8a164c44b5fa222c9480737
+      internalID: 1789160584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_49
+      rect:
+        serializedVersion: 2
+        x: 2882
+        y: 5898
+        width: 596
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee1b8fa38ae115439dcca0e2b125690
+      internalID: -998818615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_50
+      rect:
+        serializedVersion: 2
+        x: 3582
+        y: 5898
+        width: 592
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b022e7dd5d172c4f9848b3e99b5dc7d
+      internalID: -1013780641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_51
+      rect:
+        serializedVersion: 2
+        x: 4302
+        y: 5898
+        width: 592
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b06b380243691c4fa4726dbd51e7768
+      internalID: 1849037756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_52
+      rect:
+        serializedVersion: 2
+        x: 4990
+        y: 5894
+        width: 588
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a985410b02daa4cbdebb078932ac36
+      internalID: -1455896992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_53
+      rect:
+        serializedVersion: 2
+        x: 5694
+        y: 5894
+        width: 588
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99851dea734fd3b4eb7d460c20fb1611
+      internalID: 1057094374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_54
+      rect:
+        serializedVersion: 2
+        x: 6398
+        y: 5894
+        width: 592
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357adc96f2b77494e83abea0b8d7ad9e
+      internalID: -457603531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5426
+        width: 586
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5fed416a8d8e04382ca5daade356ce
+      internalID: 1072703967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_56
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 5423
+        width: 592
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea743a02066f3d48999bd7e01aaf588
+      internalID: -622821867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_57
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 5422
+        width: 588
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e8ef23dd1ea8c45897f45e83fcb7ab
+      internalID: 351378342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_58
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 5422
+        width: 592
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83a48e4ae0dace4c854c2ba97feff94
+      internalID: -827433040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated_Logo_35
+      rect:
+        serializedVersion: 2
+        x: 7106
+        y: 5894
+        width: 588
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41de7a2effffffff0800000000000000
+      internalID: -492311276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Animated_Logo_35: -492311276
+      Animated_Logo_18: -1499798522
+      Animated_Logo_40: 1441372245
+      Animated_Logo_10: 1773384098
+      Animated_Logo_24: 1701458362
+      Animated_Logo_6: -452658844
+      Animated_Logo_0: 886989224
+      Animated_Logo_34: 1837011693
+      Animated_Logo_36: -670414375
+      Animated_Logo_37: 66311841
+      Animated_Logo_26: -1303944327
+      Animated_Logo_30: -778445495
+      Animated_Logo_11: 1160679218
+      Animated_Logo_25: -1420589581
+      Animated_Logo_28: -2041683134
+      Animated_Logo_9: 1254104950
+      Animated_Logo_49: -998818615
+      Animated_Logo_16: 1050824352
+      Animated_Logo_14: -1912303186
+      Animated_Logo_7: 1887457495
+      Animated_Logo_48: 1789160584
+      Animated_Logo_31: 1228610312
+      Animated_Logo_13: -138267617
+      Animated_Logo_1: 1953214091
+      Animated_Logo_21: -1078084138
+      Animated_Logo_8: 1160934011
+      Animated_Logo_17: -160427369
+      Animated_Logo_38: 267353707
+      Animated_Logo_19: 623418026
+      Animated_Logo_4: -140708710
+      Animated_Logo_33: -1009786878
+      Animated_Logo_44: -126550700
+      Animated_Logo_45: 608796712
+      Animated_Logo_39: -2059273770
+      Animated_Logo_3: -893018628
+      Animated_Logo_12: -2087488526
+      Animated_Logo_43: -565466267
+      Animated_Logo_47: -1271537631
+      Animated_Logo_46: 2084217343
+      Animated_Logo_50: -1013780641
+      Animated_Logo_52: -1455896992
+      Animated_Logo_56: -622821867
+      Animated_Logo_58: -827433040
+      Animated_Logo_32: 1099344606
+      Animated_Logo_15: 1975591669
+      Animated_Logo_22: -1129637657
+      Animated_Logo_29: -1635307807
+      Animated_Logo_5: 403045597
+      Animated_Logo_2: -104247408
+      Animated_Logo_20: -1887985974
+      Animated_Logo_42: -2012461046
+      Animated_Logo_27: -225154035
+      Animated_Logo_51: 1849037756
+      Animated_Logo_53: 1057094374
+      Animated_Logo_57: 351378342
+      Animated_Logo_41: 1868411950
+      Animated_Logo_55: 1072703967
+      Animated_Logo_54: -457603531
+      Animated_Logo_23: -14242187
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
