@@ -5,12 +5,12 @@ using UnityEngine;
 public class Ordering : MonoBehaviour
 {
     public RailWaypointNav navREF;
-
+    public GameObject sprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        sprite.SetActive(false);
     }
 
     // Update is called once per frame
@@ -18,7 +18,8 @@ public class Ordering : MonoBehaviour
     {
         if (navREF.canOrder == true)
         {
-            Debug.Log("we are ordering now");
+            sprite.SetActive(true);
+            //Debug.Log("we are ordering now");
         }
     }
 

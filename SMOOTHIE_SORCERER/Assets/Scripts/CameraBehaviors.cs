@@ -11,7 +11,7 @@ public class CameraBehaviors : MonoBehaviour
     void Start()
     {
         //frontCamera.gameObject.SetActive(true);
-        //backCamera.gameObject.SetActive(false);
+        backCamera.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
