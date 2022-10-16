@@ -7,7 +7,7 @@ public class Knife : MonoBehaviour
 {
     private Rect screenBounds;
     public bool isCutting;
-    public GameObject ChopStatus;
+    //public GameObject ChopStatus;
     public TMP_Text ChopState;
 
     public float TimeElapsed = 0f;
@@ -30,7 +30,7 @@ public class Knife : MonoBehaviour
         {
             TimeElapsed = 0f;
             SetCuttingState(true);
-            ChopState.text = "Chopping";
+            //ChopState.text = "Chopping";
         }
         else
         {
@@ -39,7 +39,7 @@ public class Knife : MonoBehaviour
             {
                 SetCuttingState(false);
                 TimeElapsed = 0f;
-                ChopState.text = "Not Chopping";
+                //ChopState.text = "Not Chopping";
             }
             
         }
