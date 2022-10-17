@@ -45,7 +45,7 @@ public class RailWaypointNav : MonoBehaviour
     private void Update()
     {
         if (seated)
-            Invoke ("FaceCounter", 3f);
+            Invoke ("FaceCounter", 1f);
     }
 
     private void MoveToNextWaypoint ()
