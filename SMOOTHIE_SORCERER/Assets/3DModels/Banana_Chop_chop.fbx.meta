@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: 2106029975725247774
     second: chop
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface1
+    second: {fileID: 2100000, guid: 2b2bb2f2b696ac746b70583a065f6818, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
