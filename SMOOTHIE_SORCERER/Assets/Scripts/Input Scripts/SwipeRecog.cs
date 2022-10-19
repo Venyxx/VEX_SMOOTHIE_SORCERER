@@ -24,7 +24,7 @@ public class SwipeRecog : MonoBehaviour
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
-            endTsouchPosition = Input.GetTouch(0).position;
+            endTouchPosition = Input.GetTouch(0).position;
 
             if (endTouchPosition.y < startTouchPosition.y)
             {
