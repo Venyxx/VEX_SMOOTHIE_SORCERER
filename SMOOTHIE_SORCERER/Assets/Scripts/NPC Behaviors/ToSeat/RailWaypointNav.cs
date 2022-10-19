@@ -9,6 +9,7 @@ public class RailWaypointNav : MonoBehaviour
     [SerializeField] public bool waiting;
     [SerializeField] public bool seated;
     [SerializeField] public bool canOrder;
+    [SerializeField] public bool isLeaving;
 
     public List<Transform> waypoints;
     public List<Transform> seats;
@@ -24,6 +25,7 @@ public class RailWaypointNav : MonoBehaviour
     private void Start ()
     {
         GameObject seatManager = GameObject.FindGameObjectWithTag("SeatingManager");
+        
         SeatChecker = seatManager.GetComponent<SeatChecker>(); 
         seated = false;
     }
@@ -43,7 +45,7 @@ public class RailWaypointNav : MonoBehaviour
     private void Update()
     {
         if (seated)
-            Invoke ("FaceCounter", 3f);
+            Invoke ("FaceCounter", 1f);
     }
 
     private void MoveToNextWaypoint ()
