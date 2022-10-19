@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1d19f06f9493947b83e043d5993ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CupType: 0
+  CupType: 2
   Coconut: {fileID: 21300000, guid: de4a2212f8d06b54cb520600056d3fa7, type: 3}
   Boot: {fileID: 21300000, guid: a6d940911eff59648bba241615f5800b, type: 3}
   Barber: {fileID: 21300000, guid: 36ac52809a3c6ff4aa0b7f0d88959759, type: 3}
@@ -981,7 +981,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2df83ae3d1d7174409f11662c6b55a14,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2df83ae3d1d7174409f11662c6b55a14,
         type: 3}
@@ -1346,7 +1346,7 @@ PrefabInstance:
     - target: {fileID: 4944830741727876265, guid: e6bef891a782a414ba1c022228ffd5e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4944830741727876265, guid: e6bef891a782a414ba1c022228ffd5e3,
         type: 3}
