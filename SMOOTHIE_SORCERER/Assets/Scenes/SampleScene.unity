@@ -2061,6 +2061,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23127540d95095c4195c4987821342de, type: 3}
+--- !u!1 &1141790960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4621d68e89eca4a4e9cb092ec03e305c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1011405677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1141790961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141790960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92268594028a7b42a4ae149ff52fbb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1141790962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141790960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.0045839194, z: 0.049632065}
+  m_Center: {x: -0.0000000023004367, y: 0.0022919597, z: 0}
+--- !u!65 &1141790966
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141790960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.060000002, y: 0.03437438, z: 0.049632065}
+  m_Center: {x: -0.0000000027939677, y: 0.01718719, z: -9.313226e-10}
 --- !u!1001 &1170971073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2319,6 +2363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Knife: {fileID: 1028990983}
+  CutFruit: {fileID: 1702486573}
+  speed: 5
 --- !u!1 &1365284476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2992,6 +3038,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 686969197}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1702486572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1702486573}
+  m_Layer: 0
+  m_Name: CutFruitSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1702486573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702486572}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.734, y: 1.416, z: -3.966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1732104565
 GameObject:
   m_ObjectHideFlags: 0
