@@ -7,7 +7,7 @@ public class Cutter : MonoBehaviour
   public GameObject Knife;
   public Transform CutFruit;
   public float speed;
-  void OnTriggerEnter(Collider col)
+  void OnTriggerStay(Collider col)
   {
     if (col.gameObject.tag == "Slice" && Knife.GetComponent<Knife>().isCutting)
     {

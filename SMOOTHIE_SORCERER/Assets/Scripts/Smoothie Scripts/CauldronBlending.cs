@@ -27,6 +27,7 @@ public class CauldronBlending : MonoBehaviour
          collidedObj.Add(col.gameObject);
 
          Debug.Log("Added");
+         Debug.Log(collidedObj);
 
     }
 }
