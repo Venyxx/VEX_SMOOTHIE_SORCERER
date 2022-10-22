@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 181711937}
   - component: {fileID: 181711936}
   - component: {fileID: 181711935}
+  - component: {fileID: 181711939}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -532,6 +533,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &181711939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181711934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c45a89ad720024693b9dc57f1d8655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1961147656}
+  blendStatus: {fileID: 65561520}
+  currentTime: 0
+  startBlending: 0
+  hasLimit: 0
+  timerLimit: 20
 --- !u!1 &287720910
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +717,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360034175}
   m_CullTransparentMesh: 1
+--- !u!1 &386025535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9144444703042883557, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8225527661357113817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &386025540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386025535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.034374375, z: 0.04963206}
+  m_Center: {x: -0.0000000027939675, y: 0.017187187, z: -9.313225e-10}
+--- !u!114 &386025541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386025535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92268594028a7b42a4ae149ff52fbb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidedObj: []
+  hasBanana: 0
+  hasBlueberry: 0
+  hasStrawberry: 0
 --- !u!1 &432211349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,6 +1337,57 @@ MonoBehaviour:
   startBlending: 0
   hasLimit: 0
   timerLimit: 20
+--- !u!1 &794066183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8225527660957404826, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8225527661357113817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &794066185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794066183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d715d23712f1e947a43c96e272247b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  definedButton: {fileID: 0}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 181711939}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: TimerStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  cam: {fileID: 963194227}
+--- !u!114 &794066188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794066183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a55fe043eb073498995d39a7c63e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBanana: 0
+  hasBlueberry: 0
+  hasStrawberry: 0
+  foodValue: 0
 --- !u!1 &827711454
 GameObject:
   m_ObjectHideFlags: 0
@@ -4121,6 +4226,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 8225527660957404826, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blender
       objectReference: {fileID: 0}
     - target: {fileID: 8225527660957404829, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
         type: 3}

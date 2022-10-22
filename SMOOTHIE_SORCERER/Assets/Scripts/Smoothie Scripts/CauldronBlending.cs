@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class CauldronBlending : MonoBehaviour
 {
-    List<GameObject> collidedObj;
-    
+    public List<GameObject> collidedObj;
+         public bool hasBanana;
+        public bool hasBlueberry;
+        public bool hasStrawberry;
     // Start is called before the first frame update
     public void Start()
     {
-        collidedObj = new List<GameObject>();
+        collidedObj = new List<GameObject>();  
     }
 
-    //public void Update()
-    //{
-    //    if(GameObject.Contains("Cube"))
-    //    {
-    //        Debug.Log("We Got Cubes");
-    //    }
-    //}
+    // public void Update()
+    // {
+    //     if(collidedObj.Contains("Cube"))
+    //     {
+    //         Debug.Log("We Got Cubes");
+    //     }
+    // }
 
     public void OnTriggerEnter (Collider col)
     {
