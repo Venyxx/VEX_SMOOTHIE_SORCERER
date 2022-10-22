@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bdabf4c2b42ea69449dea50b7dd9e171
+guid: 0b9b30110b8c1814ba1f92a9cb888ea1
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: RecipeBookTexture
-    second: {fileID: 2100000, guid: 7a604070dbd4f2e44bf9118852c1beae, type: 2}
+      name: ScrollTexture
+    second: {fileID: 2100000, guid: fc3e8bb27942a1f4db027696a03a7b53, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
