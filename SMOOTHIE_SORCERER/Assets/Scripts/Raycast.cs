@@ -6,6 +6,10 @@ public class Raycast : MonoBehaviour
 {
     public Camera cam;
     private RailWaypointNav customerNavREF;
+    private CustomerOrder customerOrderREF;
+    private Ticket ticketREF;
+
+    private GameObject ticket;
     // Start is called before the first frame update
 
 
@@ -22,11 +26,22 @@ public class Raycast : MonoBehaviour
         {
             if (hit.collider.tag == "Customer")
             {
-                Debug.Log("raycast found the customer");
                 GameObject customer = hit.collider.gameObject;
 
-                 customerNavREF = customer.GetComponent<RailWaypointNav>();
+                customerOrderREF = customer.GetComponent<CustomerOrder>();
+                customerNavREF = customer.GetComponent<RailWaypointNav>();
                 customerNavREF.clickedStartingOrder = true;
+                Debug.Log("raycast found the customer");
+
+                //set the ticket
+                ticket = GameObject.Find("CurrentOrderTicket");
+                ticketREF = ticket.GetComponent<Ticket>();
+
+                ticketREF.orderBanana = customerOrderREF.wantBanana;
+                ticketREF.orderStrawberry = customerOrderREF.wantStrawberry;
+                ticketREF.orderBlueberry = customerOrderREF.wantBlueberry;
+
+                
             }
         }
        }

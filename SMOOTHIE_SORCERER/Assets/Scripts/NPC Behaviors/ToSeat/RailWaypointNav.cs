@@ -56,11 +56,12 @@ public class RailWaypointNav : MonoBehaviour
     {
         if (nextWayPointIndex == waypoints.Count) // reached the waiting, to be seated, area
         {
-            //Debug.Log("reached waiting point");
+            
             waiting = true;
 
             if (SeatChecker.seat1 == false)
             {
+                //Debug.Log("reached seating point");
                 var seatWayPoint = seats[0];
                 target.MoveTo(seatWayPoint.position, MoveToNextWaypoint);
                 target.transform.LookAt(seatWayPoint.position);
@@ -73,7 +74,7 @@ public class RailWaypointNav : MonoBehaviour
         }
         else if (nextWayPointIndex < waypoints.Count) // keep moving along
         {
-            Debug.Log("keep moving");
+            //Debug.Log("keep moving");
             var targetWayPointTransform = waypoints[nextWayPointIndex];
         target.MoveTo(targetWayPointTransform.position, MoveToNextWaypoint);
 
