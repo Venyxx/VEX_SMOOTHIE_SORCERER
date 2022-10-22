@@ -70,7 +70,7 @@ public class Timer : MonoBehaviour
     }
 
     public void TimerStop()
-    {
-        startBlending = false;
+    {  
+        startBlending = false;     
     }
 }

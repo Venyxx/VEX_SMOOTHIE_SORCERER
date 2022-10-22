@@ -7,22 +7,20 @@ using System;
 public class CauldronBlending : MonoBehaviour
 {
     public List<GameObject> collidedObj;
-         public bool hasBanana;
+        public bool hasBanana;
         public bool hasBlueberry;
         public bool hasStrawberry;
+        
     // Start is called before the first frame update
     public void Start()
     {
         collidedObj = new List<GameObject>();  
     }
 
-    // public void Update()
-    // {
-    //     if(collidedObj.Contains("Cube"))
-    //     {
-    //         Debug.Log("We Got Cubes");
-    //     }
-    // }
+    public void Update()
+    {
+    
+    }
 
     public void OnTriggerEnter (Collider col)
     {
@@ -30,7 +28,17 @@ public class CauldronBlending : MonoBehaviour
          collidedObj.Add(col.gameObject);
 
          Debug.Log("Added");
-         Debug.Log(collidedObj);
+        //  Debug.Log(collidedObj);
+
+         if (col.gameObject.name == "Cube(Clone)")
+          {
+             hasBanana = true;
+          }
+
+          if (col.gameObject.name == "Strawberry_export(Clone)")
+          {
+            hasStrawberry = true;
+          }
 
     }
 }

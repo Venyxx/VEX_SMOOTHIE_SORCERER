@@ -1361,6 +1361,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 181711939}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: TimerStop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 181711939}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: TimerStart
         m_Mode: 1
         m_Arguments:
@@ -4326,6 +4338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144444703042883557, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blender
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fa2b5e8601a2e4083fb1f30c984d6a, type: 3}
