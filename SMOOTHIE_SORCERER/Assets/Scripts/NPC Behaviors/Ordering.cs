@@ -19,7 +19,7 @@ public class Ordering : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (navREF.canOrder == true)
+        if (navREF.clickedStartingOrder == true)
         {
             OrderingSprite.SetActive(true);
             IrritantContainer.SetActive(true);
