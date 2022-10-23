@@ -29,7 +29,7 @@ public class IrritantBar : MonoBehaviour
 
             float percent = currentIrritant/maxIrritant;
             imageRef.fillAmount = percent;
-            if (currentIrritant == maxIrritant)
+            if (currentIrritant >= maxIrritant)
                  {
                      customerREF.isLeaving = true;
                  }

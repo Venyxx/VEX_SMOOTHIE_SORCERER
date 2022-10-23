@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Raycast : MonoBehaviour
 {
     public Camera cam;
+    public TMP_Text currentorder;
     private RailWaypointNav customerNavREF;
     private CustomerOrder customerOrderREF;
     private Ticket ticketREF;
@@ -35,6 +38,7 @@ public class Raycast : MonoBehaviour
 
                 //set the ticket
                 ticket = GameObject.Find("CurrentOrderTicket");
+                currentorder.text = "This customer wants StrawberryBanana";
                 ticketREF = ticket.GetComponent<Ticket>();
 
                 ticketREF.orderBanana = customerOrderREF.wantBanana;

@@ -14,11 +14,13 @@ public class CameraBehaviors : MonoBehaviour
         frontCamera.gameObject.SetActive(true);
         isFacingFront = true;
         backCamera.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.C) && isFacingFront == true)
         {
             Debug.Log("noticed input to back");
@@ -40,12 +42,12 @@ public class CameraBehaviors : MonoBehaviour
         if (isFacingFront)
         {
             isFacingFront = false;
-            //Debug.Log("changed front to false");
+            Debug.Log("changed front to false");
         }
         else if (!isFacingFront)
         {
            isFacingFront = true; 
-            //Debug.Log("changed front to true");
+            Debug.Log("changed front to true");
         }
         
     }
