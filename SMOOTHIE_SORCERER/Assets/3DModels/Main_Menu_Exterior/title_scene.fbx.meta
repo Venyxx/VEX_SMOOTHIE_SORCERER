@@ -1,9 +1,44 @@
 fileFormatVersion: 2
-guid: e5f430844551c7b4f840416f544aac39
+guid: 6acf836067a02214b9e060982112509c
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: d256a45dbd388dc408a2c614b0fa4131, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 1e78323388f822a4ea0d6007ac6bce40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 93609bdabd7c4ac43b3d40e5eb65498c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 5ac1941580e1c534a9b295c1f19df08b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: f7e0e1df73fc4ab47b045e98f3d3b912, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neon Sign
+    second: {fileID: 2100000, guid: cd039f6081fb28847a10e17eb1020098, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neon_2
+    second: {fileID: 2100000, guid: a91057435682e7240b3d5504681c58aa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
