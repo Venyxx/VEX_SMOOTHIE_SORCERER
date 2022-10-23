@@ -6,15 +6,19 @@ using System;
 
 public class CauldronBlending : MonoBehaviour
 {
-    public List<GameObject> collidedObj;
+    
         public bool hasBanana;
         public bool hasBlueberry;
         public bool hasStrawberry;
         
+        public GameObject StrBanana;
+        public GameObject BananaSM;
+        public GameObject StrawbSM;
+
     // Start is called before the first frame update
     public void Start()
     {
-        collidedObj = new List<GameObject>();  
+       
     }
 
     public void Update()
@@ -24,11 +28,7 @@ public class CauldronBlending : MonoBehaviour
 
     public void OnTriggerEnter (Collider col)
     {
-         if (col.transform.tag == "Slice" && !collidedObj.Contains(col.gameObject))
-         collidedObj.Add(col.gameObject);
-
-         Debug.Log("Added");
-        //  Debug.Log(collidedObj);
+       
 
          if (col.gameObject.name == "Cube(Clone)")
           {
@@ -40,5 +40,20 @@ public class CauldronBlending : MonoBehaviour
             hasStrawberry = true;
           }
 
+    }
+
+    public void StrawBanana()
+    {
+        Instantiate(StrBanana);
+    }
+
+    public void Strawberry()
+    {
+        Instantiate(StrawbSM);
+    }
+
+    public void Banana()
+    {
+        Instantiate(BananaSM);
     }
 }
