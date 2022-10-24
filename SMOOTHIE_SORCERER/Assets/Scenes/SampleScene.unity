@@ -621,6 +621,7 @@ MonoBehaviour:
   startBlending: 0
   hasLimit: 0
   timerLimit: 20
+  GameSystem: {fileID: 773865152}
   gSys: {fileID: 773865152}
 --- !u!1 &287720910
 GameObject:
@@ -1410,6 +1411,7 @@ MonoBehaviour:
   startBlending: 0
   hasLimit: 0
   timerLimit: 20
+  GameSystem: {fileID: 0}
   gSys: {fileID: 0}
 --- !u!1 &794066183 stripped
 GameObject:
@@ -2538,7 +2540,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fruit:
   - {fileID: 3347013658010552561, guid: 00c7bb6dc258d124b9312278a355ac60, type: 3}
-  - {fileID: 939036084228413301, guid: 190e87d4db80518498bd7d2e81192ab8, type: 3}
   - {fileID: 939036084228413301, guid: 190e87d4db80518498bd7d2e81192ab8, type: 3}
   SpawnPoint: {fileID: 2049585420}
   IntervalBetweenSpawn: 3
