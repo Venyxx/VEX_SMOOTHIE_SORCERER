@@ -621,6 +621,7 @@ MonoBehaviour:
   startBlending: 0
   hasLimit: 0
   timerLimit: 20
+  gSys: {fileID: 773865152}
 --- !u!1 &287720910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1410,7 @@ MonoBehaviour:
   startBlending: 0
   hasLimit: 0
   timerLimit: 20
+  gSys: {fileID: 0}
 --- !u!1 &794066183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8225527660957404826, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,

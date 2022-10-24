@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     public bool hasLimit;
     public float timerLimit;
 
-    private GameSystem gSys;
+    public GameSystem gSys;
     // Start is called before the first frame update
     void Start()
     {
