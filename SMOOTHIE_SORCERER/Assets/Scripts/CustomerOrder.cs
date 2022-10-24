@@ -25,7 +25,7 @@ public class CustomerOrder : MonoBehaviour
         {
             //Debug.Log("customer wants strawberry banana");
             wantStrawberry = true;
-            wantBanana = true;
+            wantBanana = false;
             wantBlueberry = false;
         }
     }

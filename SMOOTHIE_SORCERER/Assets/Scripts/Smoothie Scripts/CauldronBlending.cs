@@ -28,11 +28,13 @@ public class CauldronBlending : MonoBehaviour
 
     public void OnTriggerEnter (Collider col)
     {
-       
+       Debug.Log("were hitting the trigger");
 
          if (col.gameObject.name == "Cube(Clone)")
           {
              hasBanana = true;
+             Debug.Log("were hitting the banana");
+
           }
 
           if (col.gameObject.name == "Strawberry_export(Clone)")

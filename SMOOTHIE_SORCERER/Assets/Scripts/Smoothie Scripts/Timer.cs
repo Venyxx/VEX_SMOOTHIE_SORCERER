@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
     public bool startBlending;
     public bool hasLimit;
     public float timerLimit;
+
+    private GameSystem gSys;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class Timer : MonoBehaviour
         hasLimit = true;
         blendStatus.text = " ";
         timerText.text = " ";
+        gSys = gameObject.GetComponent<GameSystem>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,7 @@ public class Timer : MonoBehaviour
  if(currentTime >= 16f )
         {
             blendStatus.text = "Overblended";
+            gSys.Score -= 1;
             blendStatus.color = Color.red;
         }
         else if (currentTime >=10f)

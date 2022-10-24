@@ -38,7 +38,7 @@ public class Raycast : MonoBehaviour
 
                 //set the ticket
                 ticket = GameObject.Find("CurrentOrderTicket");
-                currentorder.text = "This customer wants StrawberryBanana";
+                currentorder.text = "This customer wants Strawberry";
                 ticketREF = ticket.GetComponent<Ticket>();
 
                 ticketREF.orderBanana = customerOrderREF.wantBanana;

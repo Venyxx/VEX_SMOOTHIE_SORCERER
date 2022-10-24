@@ -43,7 +43,8 @@ public class GameSystem : MonoBehaviour
 
     public void OnVegetableCut()
   {
-    IncreaseScore();
+    //IncreaseScore();
     Debug.Log("Cut");
+    ScoreText.text = Score.ToString();
   }
 }
