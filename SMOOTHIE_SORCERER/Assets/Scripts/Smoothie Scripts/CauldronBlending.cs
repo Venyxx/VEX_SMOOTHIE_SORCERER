@@ -10,6 +10,8 @@ public class CauldronBlending : MonoBehaviour
         public bool hasBanana;
         public bool hasBlueberry;
         public bool hasStrawberry;
+        public bool wellBlended;
+        public bool overBlended;
         
         public GameObject StrBanana;
         public GameObject BananaSM;
@@ -18,7 +20,8 @@ public class CauldronBlending : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-       
+        wellBlended = false;
+        overBlended = false;
     }
 
     public void Update()

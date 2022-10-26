@@ -7,7 +7,7 @@ public class Knife : MonoBehaviour
 {
     private Rect screenBounds;
     public bool isCutting;
-    //public GameObject ChopStatus;
+    public CameraBehaviors Cam;
     public TMP_Text ChopState;
 
     public float TimeElapsed = 0f;

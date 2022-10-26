@@ -42,15 +42,11 @@ public class Timer : MonoBehaviour
 
  if(currentTime >= 16f )
         {
-            blendStatus.text = "Overblended";
-            gSys.Score -= 1;
-            blendStatus.color = Color.red;
+                Overblended();
         }
         else if (currentTime >=10f)
         {
-            
-            blendStatus.text = "Well Blended";
-            blendStatus.color = Color.green;
+                WellBlended();
         }
 
     }
@@ -62,20 +58,32 @@ public class Timer : MonoBehaviour
         timerText.text = currentTime.ToString("0");
     }
 
-    public void TimerReset()
-    {
-       currentTime = 0f;
-       blendStatus.text = " ";
-    }
-
     public void TimerStart()
     {
-        
-        startBlending = true;
+
+        if (startBlending == true)
+        {
+            startBlending = false;
+        }
+        else
+        {
+            currentTime = 0f;
+            startBlending = true;
+        }
     }
 
-    public void TimerStop()
-    {  
-        startBlending = false;     
+    public void WellBlended()
+    {
+        blendStatus.text = "Well Blended";
+        blendStatus.color = Color.green;
+    }
+
+   
+
+    public void Overblended()
+    {
+        blendStatus.text = "Overblended";
+        gSys.Score -= 1;
+        blendStatus.color = Color.red;
     }
 }
