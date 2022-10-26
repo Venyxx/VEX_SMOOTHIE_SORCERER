@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: a472dddd8c9aac54d80b1a8ac4741eb8
+guid: a5b8f6022b47b1d4c83395ce3e73706c
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RecipeBookTexture
-    second: {fileID: 2100000, guid: 3515ea74883a6404e8a053d08db06e20, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -42,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 32
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
