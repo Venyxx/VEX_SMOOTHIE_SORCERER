@@ -1460,8 +1460,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cam: {fileID: 963194227}
-  orderTixComparison: {fileID: 1713294891}
-  GameSystem: {fileID: 773865151}
+  Canvas: {fileID: 181711934}
 --- !u!1 &827711454
 GameObject:
   m_ObjectHideFlags: 0
