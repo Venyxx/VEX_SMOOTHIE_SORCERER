@@ -3,7 +3,12 @@ guid: bdabf4c2b42ea69449dea50b7dd9e171
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RecipeBookTexture
+    second: {fileID: 2100000, guid: 3b94dad2b5f724d49836016d5c1a936b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
