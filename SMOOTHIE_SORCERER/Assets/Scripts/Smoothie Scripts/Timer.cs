@@ -12,8 +12,7 @@ public class Timer : MonoBehaviour
     public bool hasLimit;
     public float timerLimit;
 
-    public GameSystem GameSystem;
-    public GameSystem gSys;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +20,7 @@ public class Timer : MonoBehaviour
         hasLimit = true;
         blendStatus.text = " ";
         timerText.text = " ";
-        gSys = GameSystem.GetComponent<GameSystem>();
+        
     }
 
     // Update is called once per frame
@@ -83,7 +82,7 @@ public class Timer : MonoBehaviour
     public void Overblended()
     {
         blendStatus.text = "Overblended";
-        gSys.Score -= 1;
+        
         blendStatus.color = Color.red;
     }
 }

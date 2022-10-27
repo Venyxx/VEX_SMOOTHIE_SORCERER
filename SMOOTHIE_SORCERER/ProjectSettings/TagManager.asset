@@ -8,6 +8,8 @@ TagManager:
   - Customer
   - SeatingManager
   - Blender
+  - CupStack
+  - Cup
   layers:
   - Default
   - TransparentFX

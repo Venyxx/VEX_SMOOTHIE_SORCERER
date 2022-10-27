@@ -13,6 +13,10 @@ public class Raycast : MonoBehaviour
     private Ticket ticketREF;
 
     private GameObject ticket;
+    public GameObject CupObj;
+    public GameObject CupSpawn;
+    private Vector3 cupVector;
+
     // Start is called before the first frame update
 
 
@@ -46,6 +50,15 @@ public class Raycast : MonoBehaviour
                 ticketREF.orderBlueberry = customerOrderREF.wantBlueberry;
 
                 
+            }
+
+            if (hit.collider.tag == "CupStack")
+            {
+                cupVector.x = CupSpawn.transform.position.x; 
+                cupVector.y = CupSpawn.transform.position.y;
+                cupVector.z =  CupSpawn.transform.position.z;
+                Debug.Log("got cupstack");
+                Instantiate(CupObj, cupVector, Quaternion.identity);
             }
         }
        }
