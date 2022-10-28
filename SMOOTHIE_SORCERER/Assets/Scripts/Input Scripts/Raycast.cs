@@ -10,7 +10,7 @@ public class Raycast : MonoBehaviour
     public TMP_Text currentorder;
     private RailWaypointNav customerNavREF;
     private CustomerOrder customerOrderREF;
-    private Ticket ticketREF;
+    //private Ticket ticketREF;
 
     private GameObject ticket;
     public GameObject CupObj;
@@ -43,11 +43,11 @@ public class Raycast : MonoBehaviour
                 //set the ticket
                 ticket = GameObject.Find("CurrentOrderTicket");
                 currentorder.text = "This customer wants Strawberry";
-                ticketREF = ticket.GetComponent<Ticket>();
+                //ticketREF = ticket.GetComponent<Ticket>();
 
-                ticketREF.orderBanana = customerOrderREF.wantBanana;
-                ticketREF.orderStrawberry = customerOrderREF.wantStrawberry;
-                ticketREF.orderBlueberry = customerOrderREF.wantBlueberry;
+               // ticketREF.orderBanana = customerOrderREF.wantBanana;
+                //ticketREF.orderStrawberry = customerOrderREF.wantStrawberry;
+                //ticketREF.orderBlueberry = customerOrderREF.wantBlueberry;
 
                 
             }

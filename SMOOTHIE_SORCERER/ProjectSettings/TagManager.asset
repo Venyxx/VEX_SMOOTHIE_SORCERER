@@ -11,6 +11,9 @@ TagManager:
   - CupStack
   - Cup
   - ChoppingBoard
+  - Left
+  - Right
+  - Middle
   layers:
   - Default
   - TransparentFX
