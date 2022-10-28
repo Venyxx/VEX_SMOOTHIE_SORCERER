@@ -35,7 +35,7 @@ public class SwipeRecog : MonoBehaviour
             if (endTouchPosition.y < startTouchPosition.y)
             {
                 //change camera behavior to point back counter
-                Debug.Log("noticed input to back");
+                //Debug.Log("noticed input to back");
                 backCamera.gameObject.SetActive(true);
             
             }
@@ -43,7 +43,7 @@ public class SwipeRecog : MonoBehaviour
             if (endTouchPosition.y > startTouchPosition.y)
             {
                 //face the front
-                Debug.Log("noticed input to front");
+                //Debug.Log("noticed input to front");
                 backCamera.gameObject.SetActive(false);
                 
             }

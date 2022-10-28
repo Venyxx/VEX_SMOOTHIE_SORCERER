@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour
         }
         SetTimerText();
 
- if(currentTime >= 16f )
+        if(currentTime >= 16f )
         {
                 Overblended();
         }
@@ -48,7 +48,7 @@ public class Timer : MonoBehaviour
                 WellBlended();
         }
 
-    }
+        }
     }
 
 

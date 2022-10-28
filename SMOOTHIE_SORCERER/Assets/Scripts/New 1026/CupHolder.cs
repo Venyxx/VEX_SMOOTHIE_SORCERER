@@ -29,7 +29,7 @@ public class CupHolder : MonoBehaviour
     {
        Debug.Log("were hitting the trigger");
 
-         if (col.gameObject.name == "Cube(Clone)")
+         if (col.gameObject.name == "Banana(Clone)")
           {
              hasBananaCup = true;
              Debug.Log("were hitting the banana");

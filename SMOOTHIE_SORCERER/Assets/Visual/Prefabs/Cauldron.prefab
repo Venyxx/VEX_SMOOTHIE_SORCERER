@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5743487859810953249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21128533190568086}
+  m_Layer: 0
+  m_Name: CupMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &21128533190568086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743487859810953249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.438, y: 0.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8225527660957404831}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8225527660957404826
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,9 +42,10 @@ GameObject:
   - component: {fileID: 8225527660957404831}
   - component: {fileID: 8225527660957404828}
   - component: {fileID: 8225527660957404829}
+  - component: {fileID: 794066185}
   m_Layer: 0
   m_Name: Cauldron
-  m_TagString: Untagged
+  m_TagString: Blender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,10 +59,11 @@ Transform:
   m_GameObject: {fileID: 8225527660957404826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7839506, y: 0.542, z: -3.95}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.66618, y: 0.66618, z: 0.66618}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8479232112935998815}
+  - {fileID: 21128533190568086}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51,9 +84,10 @@ MonoBehaviour:
   hasStrawberryCaul: 0
   wellBlended: 0
   overBlended: 0
-  StrBanana: {fileID: 0}
-  BananaSM: {fileID: 0}
-  StrawbSM: {fileID: 0}
+  StrBanana: {fileID: 919132149155446097, guid: e5f430844551c7b4f840416f544aac39,
+    type: 3}
+  BananaSM: {fileID: 919132149155446097, guid: 2df83ae3d1d7174409f11662c6b55a14, type: 3}
+  StrawbSM: {fileID: 919132149155446097, guid: 1894414562f731347bef1fa4d571165c, type: 3}
   cam: {fileID: 0}
   CauldronValue: 0
 --- !u!65 &8225527660957404829
@@ -67,8 +101,51 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.060000002, y: 0.03437438, z: 0.049632065}
-  m_Center: {x: -0.0000000027939677, y: 0.01718719, z: -9.313226e-10}
+  m_Size: {x: 0.060000006, y: 0.121754594, z: 0.049632065}
+  m_Center: {x: -0.0000000027960088, y: 0.060877297, z: 0}
+--- !u!114 &794066185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225527660957404826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d715d23712f1e947a43c96e272247b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  definedButton: {fileID: 0}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: TimerStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  cam: {fileID: 0}
+  Canvas: {fileID: 0}
+--- !u!65 &386025540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144444703042883557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.034374375, z: 0.04963206}
+  m_Center: {x: -0.0000000027939675, y: 0.017187187, z: -9.313225e-10}
 --- !u!65 &8225527660350634283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -82,6 +159,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06, y: 0.0045839194, z: 0.049632065}
   m_Center: {x: -0.0000000023004367, y: 0.0022919597, z: 0}
+--- !u!114 &386025541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144444703042883557}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92268594028a7b42a4ae149ff52fbb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBananaCaul: 0
+  hasBlueberryCaul: 0
+  hasStrawberryCaul: 0
+  wellBlended: 0
+  overBlended: 0
+  StrBanana: {fileID: 0}
+  BananaSM: {fileID: 0}
+  StrawbSM: {fileID: 0}
+  cam: {fileID: 0}
+  CauldronValue: 0
 --- !u!1001 &8225527662091694772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163,6 +262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4621d68e89eca4a4e9cb092ec03e305c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blender
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4621d68e89eca4a4e9cb092ec03e305c, type: 3}

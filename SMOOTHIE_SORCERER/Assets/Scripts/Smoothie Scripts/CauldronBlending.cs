@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 
 public class CauldronBlending : MonoBehaviour
@@ -16,30 +17,66 @@ public class CauldronBlending : MonoBehaviour
         public GameObject StrBanana;
         public GameObject BananaSM;
         public GameObject StrawbSM;
-        public Camera cam;
+        public GameObject mistake;
+        private Camera cam;
 
         [SerializeField] public float CauldronValue;
         private GameObject Cup;
+        private GameObject beerTap;
         private CupHolder cupREF;
+        private Transform cupMotive;
+        public Transform smoothieSpawn;
+        private CauldronTimer caulTimREF;
+        
+        public float currentTime;
+        [SerializeField] public bool isBlending;
+        public TextMeshProUGUI timerText;
+        public float maxWellBlended;
+        [SerializeField] public bool isFinished;
+     
 
     // Start is called before the first frame update
     public void Start()
     {
+        cam = Camera.main;
         wellBlended = false;
+        isBlending = false;
         overBlended = false;
+        
+        caulTimREF = gameObject.GetComponent<CauldronTimer>();
+        cupMotive = gameObject.transform.Find("CupMove");
+        //beerTap = GameObject.Find("PotionTap");
+        //smoothieSpawn = beerTap.transform.Find("SmoothieSpawn");
+        
     }
 
     public void Update()
     {
-         if (Input.GetMouseButtonDown(0)) 
+        timerText.text = currentTime.ToString("0");
+
+        if (isFinished)
+        {
+            //here is where we instantiate the smoothie and attach the values;
+            SmoothiePicker();
+        }
+        
+        if (isBlending)
+        {   
+             currentTime += Time.deltaTime;  
+        }
+
+        if (Input.GetMouseButtonDown(0)) 
         { 
             RaycastHit hit; 
             Ray ray = cam.ScreenPointToRay(Input.mousePosition); 
 
             if (Physics.Raycast(ray, out hit, 10.0f)) 
             {
-                if (hit.collider.tag == "Blender")
+                Debug.Log(hit.collider.tag);
+                //get values from previous step
+                if (hit.collider.tag == "Blender" && isBlending == false)
                 {
+                    Debug.Log("tagged it");
                     Cup = GameObject.FindGameObjectWithTag("Cup");
                     cupREF = Cup.GetComponent<CupHolder>();
 
@@ -49,30 +86,66 @@ public class CauldronBlending : MonoBehaviour
 
                     CauldronValue = cupREF.Value;
 
-                    //here is where we will set as child or just move transform relative to cauldron pos and run oneshot animation
-                    // then despawn cup
+                    Cup.transform.position = cupMotive.transform.position;
+                    Invoke ("CupKiller", 2f);
 
-               
+                    isBlending = true;
+
+                }else if (hit.collider.tag == "Blender" && isBlending == true)
+                {
+                    //timer
+
+                    isBlending = false;
+                    Debug.Log("sending value to smoothie");
+
+                    //we will have to break it down for each second decr value later
+                    //this is the send off, clear every cauldron value 
+                    if (currentTime > maxWellBlended)
+                    {
+                        CauldronValue =- 1;
+                        isFinished = true;
+
+                        //reset
+                        currentTime = 0;
+                        isFinished = false;
+                        isBlending = false;
+                    }
+                    
+                    //return value of current time
+                    
+
                 }
+
+                
 
             }
        
         }
+
+    }
+
+    private void CupKiller ()
+    {
+        Destroy(Cup);
     }
 
     private void SmoothiePicker ()
     {
+        Debug.Log("in smoothie picker");
         if (hasBananaCaul && hasStrawberryCaul)
         {
-            Instantiate(StrBanana);
+            Instantiate(StrBanana, smoothieSpawn);
         }
         else if (hasBananaCaul && hasBlueberryCaul)
         {
-            //Instantiate();
+            Instantiate(BananaSM, smoothieSpawn);
         }
         else if (hasBlueberryCaul && hasStrawberryCaul)
         {
-            //Instantiate();
+            Instantiate(StrawbSM, smoothieSpawn);
+        }else
+        {
+            Instantiate(mistake, smoothieSpawn);
         }
         
     }

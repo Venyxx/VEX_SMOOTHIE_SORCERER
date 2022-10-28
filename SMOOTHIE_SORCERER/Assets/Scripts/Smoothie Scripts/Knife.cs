@@ -9,12 +9,14 @@ public class Knife : MonoBehaviour
     public bool isCutting;
     public CameraBehaviors Cam;
     public TMP_Text ChopState;
+    private Camera cam;
 
     public float TimeElapsed = 0f;
     private float ClickTimeFrame = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
+        cam = Camera.main;
         screenBounds = new Rect(0, 0, Screen.width, Screen.height - 200);
     }
 
@@ -30,6 +32,7 @@ public class Knife : MonoBehaviour
         {
             TimeElapsed = 0f;
             SetCuttingState(true);
+            Debug.Log("chop");
             //ChopState.text = "Chopping";
         }
         else
@@ -43,5 +46,7 @@ public class Knife : MonoBehaviour
             }
             
         }
+
+        
     }
 }
