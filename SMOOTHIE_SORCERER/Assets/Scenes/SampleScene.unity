@@ -1296,29 +1296,6 @@ MonoBehaviour:
   startBlending: 0
   hasLimit: 0
   timerLimit: 20
---- !u!1 &794066183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8225527660957404826, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
-    type: 3}
-  m_PrefabInstance: {fileID: 8225527661357113817}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &794066189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794066183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6286a54f5091ea048b86fc128c2e094f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTime: 0
-  isBlending: 0
-  timerText: {fileID: 1961147656}
-  maxWellBlended: 0
-  isFinished: 0
 --- !u!1 &827711454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,7 +2958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Timer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3339,7 +3316,7 @@ PrefabInstance:
     - target: {fileID: 5409614963799601963, guid: d1afc427727fc194d9a0764c6a1454a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0128958225
+      value: 0.557
       objectReference: {fileID: 0}
     - target: {fileID: 5409614963799601963, guid: d1afc427727fc194d9a0764c6a1454a8,
         type: 3}
@@ -3380,6 +3357,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784277467933271632, guid: d1afc427727fc194d9a0764c6a1454a8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.224
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162449547522757385, guid: d1afc427727fc194d9a0764c6a1454a8,
+        type: 3}
+      propertyPath: m_Name
+      value: PotionTapModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1afc427727fc194d9a0764c6a1454a8, type: 3}
@@ -3894,6 +3881,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0748d42fc968afc47b3dff411fe50812, type: 3}
+--- !u!4 &7537645586674888367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7784277467933271632, guid: d1afc427727fc194d9a0764c6a1454a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 332236837251795199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7647329645597756080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4035,10 +4028,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 386025541, guid: b9fa2b5e8601a2e4083fb1f30c984d6a, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 963194227}
     - target: {fileID: 794066185, guid: b9fa2b5e8601a2e4083fb1f30c984d6a, type: 3}
       propertyPath: cam
       value: 
@@ -4048,17 +4037,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 181711934}
     - target: {fileID: 794066185, guid: b9fa2b5e8601a2e4083fb1f30c984d6a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 794066185, guid: b9fa2b5e8601a2e4083fb1f30c984d6a, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 181711939}
-    - target: {fileID: 794066185, guid: b9fa2b5e8601a2e4083fb1f30c984d6a, type: 3}
-      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 794066189, guid: b9fa2b5e8601a2e4083fb1f30c984d6a, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1961147656}
     - target: {fileID: 8225527660957404826, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
         type: 3}
       propertyPath: m_Name
@@ -4066,15 +4051,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8225527660957404828, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
         type: 3}
-      propertyPath: cam
+      propertyPath: timerText
       value: 
-      objectReference: {fileID: 963194227}
+      objectReference: {fileID: 1961147656}
     - target: {fileID: 8225527660957404828, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
         type: 3}
-      propertyPath: mistake
+      propertyPath: smoothieSpawn
       value: 
-      objectReference: {fileID: 919132149155446097, guid: cc4ddc3a5e8c65347bae8f06f932c942,
-        type: 3}
+      objectReference: {fileID: 7537645586674888367}
     - target: {fileID: 8225527660957404831, guid: b9fa2b5e8601a2e4083fb1f30c984d6a,
         type: 3}
       propertyPath: m_RootOrder

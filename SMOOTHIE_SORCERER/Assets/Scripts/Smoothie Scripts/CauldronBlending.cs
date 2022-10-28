@@ -27,6 +27,7 @@ public class CauldronBlending : MonoBehaviour
         private Transform cupMotive;
         public Transform smoothieSpawn;
         private CauldronTimer caulTimREF;
+        private Vector3 smoothieSPA;
         
         public float currentTime;
         [SerializeField] public bool isBlending;
@@ -58,6 +59,7 @@ public class CauldronBlending : MonoBehaviour
         {
             //here is where we instantiate the smoothie and attach the values;
             SmoothiePicker();
+            isFinished = false;
         }
         
         if (isBlending)
@@ -107,7 +109,6 @@ public class CauldronBlending : MonoBehaviour
 
                         //reset
                         currentTime = 0;
-                        isFinished = false;
                         isBlending = false;
                     }
                     
@@ -131,21 +132,30 @@ public class CauldronBlending : MonoBehaviour
 
     private void SmoothiePicker ()
     {
+        smoothieSPA.x = smoothieSpawn.transform.position.x;
+        smoothieSPA.y = smoothieSpawn.transform.position.y;
+        smoothieSPA.z = smoothieSpawn.transform.position.z;
+
+
         Debug.Log("in smoothie picker");
         if (hasBananaCaul && hasStrawberryCaul)
         {
-            Instantiate(StrBanana, smoothieSpawn);
+            Instantiate(StrBanana, smoothieSPA, Quaternion.identity);
+            Debug.Log("in smoothie picker 111");
         }
         else if (hasBananaCaul && hasBlueberryCaul)
         {
-            Instantiate(BananaSM, smoothieSpawn);
+            Instantiate(BananaSM, smoothieSPA, Quaternion.identity);
+            Debug.Log("in smoothie picker 222");
         }
         else if (hasBlueberryCaul && hasStrawberryCaul)
         {
-            Instantiate(StrawbSM, smoothieSpawn);
+            Instantiate(StrawbSM, smoothieSPA, Quaternion.identity);
+            Debug.Log("in smoothie picker333");
         }else
         {
-            Instantiate(mistake, smoothieSpawn);
+            Instantiate(mistake, smoothieSPA, Quaternion.identity);
+            Debug.Log("in smoothie picker mistake");
         }
         
     }

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8225527660957404828}
   - component: {fileID: 8225527660957404829}
   - component: {fileID: 794066185}
+  - component: {fileID: 794066189}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Blender
@@ -88,8 +89,14 @@ MonoBehaviour:
     type: 3}
   BananaSM: {fileID: 919132149155446097, guid: 2df83ae3d1d7174409f11662c6b55a14, type: 3}
   StrawbSM: {fileID: 919132149155446097, guid: 1894414562f731347bef1fa4d571165c, type: 3}
-  cam: {fileID: 0}
+  mistake: {fileID: 2552895989099188142, guid: da13b6f6b96a75f49bf83b40eef407b9, type: 3}
   CauldronValue: 0
+  smoothieSpawn: {fileID: 0}
+  currentTime: 0
+  isBlending: 0
+  timerText: {fileID: 0}
+  maxWellBlended: 0
+  isFinished: 0
 --- !u!65 &8225527660957404829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110,7 +117,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8225527660957404826}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d715d23712f1e947a43c96e272247b3, type: 3}
   m_Name: 
@@ -130,9 +137,26 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
   cam: {fileID: 0}
   Canvas: {fileID: 0}
+--- !u!114 &794066189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225527660957404826}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6286a54f5091ea048b86fc128c2e094f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 0
+  isBlending: 0
+  timerText: {fileID: 0}
+  maxWellBlended: 0
+  isFinished: 0
 --- !u!65 &386025540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -179,8 +203,14 @@ MonoBehaviour:
   StrBanana: {fileID: 0}
   BananaSM: {fileID: 0}
   StrawbSM: {fileID: 0}
-  cam: {fileID: 0}
+  mistake: {fileID: 0}
   CauldronValue: 0
+  smoothieSpawn: {fileID: 0}
+  currentTime: 0
+  isBlending: 0
+  timerText: {fileID: 0}
+  maxWellBlended: 0
+  isFinished: 0
 --- !u!1001 &8225527662091694772
 PrefabInstance:
   m_ObjectHideFlags: 0
