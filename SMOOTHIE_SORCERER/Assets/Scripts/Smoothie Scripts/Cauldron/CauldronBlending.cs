@@ -44,6 +44,8 @@ public class CauldronBlending : MonoBehaviour
         [SerializeField] public bool isFinished;
         [SerializeField] public bool isBlending;
 
+        Material smoothieMaterial;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -142,6 +144,7 @@ public class CauldronBlending : MonoBehaviour
 
     private void SmoothiePicker ()
     {
+        //this is silly but it works lol
         smoothieSPA.x = smoothieSpawn.transform.position.x;
         smoothieSPA.y = smoothieSpawn.transform.position.y;
         smoothieSPA.z = smoothieSpawn.transform.position.z;
@@ -150,21 +153,45 @@ public class CauldronBlending : MonoBehaviour
         Debug.Log("in smoothie picker");
         if (hasBananaCaul && hasStrawberryCaul)
         {
-            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
+            
+            smoothieMaterial = Resources.Load<Material>("s1");
+            Debug.Log(smoothieMaterial);
+            MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
+            mat.material = smoothieMaterial;
             Debug.Log("yellow");
         }
         else if (hasBananaCaul && hasBlueberryCaul)
         {
-            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
+            
+            smoothieMaterial = Resources.Load<Material>("s2");
+            Debug.Log(smoothieMaterial);
+            MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
+            mat.material = smoothieMaterial;
             Debug.Log("blue");
         }
         else if (hasBlueberryCaul && hasStrawberryCaul)
         {
-            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
+            
+            smoothieMaterial = Resources.Load<Material>("s3");
+            Debug.Log(smoothieMaterial);
+            MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
+            mat.material = smoothieMaterial;
             Debug.Log("red");
         }else
         {
-            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
+            
+            smoothieMaterial = Resources.Load<Material>("s4");
+            Debug.Log(smoothieMaterial);
+            MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
+            mat.material = smoothieMaterial;
             Debug.Log("brown");
         }
         
