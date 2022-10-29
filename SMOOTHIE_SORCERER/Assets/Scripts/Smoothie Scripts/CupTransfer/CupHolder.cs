@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class CupHolder : MonoBehaviour
 {
+        [Header("Fruits--------------")]
         public bool hasBananaCup;
         public bool hasBlueberryCup;
         public bool hasStrawberryCup;
+
+        [Header("Effects---------------")]
+        public bool hasSpeed;
+        public bool hasInvis;
+        public bool hasPoly;
         
         [SerializeField] public float Value; 
     

@@ -7,6 +7,8 @@ public class PotionTap : MonoBehaviour
     private Animator anim;
     private GameObject PotionTapModel;
     private Camera cam;
+    private GameObject smoothie;
+    private CupHolder smoothieREF;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +20,14 @@ public class PotionTap : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("hello?");
         if (col.gameObject.tag == "CupFull")
         {
             Debug.Log("saw the beertap smoothie");
+            smoothie = col.gameObject;
+            smoothieREF = smoothie.GetComponent<CupHolder>();
         }
+
+
     }
 
     // Update is called once per frame
@@ -38,18 +43,32 @@ public class PotionTap : MonoBehaviour
             if (hit.collider.tag == "Left")
             {
                 anim.SetTrigger("Left");
+                smoothieREF.hasInvis = true;
+                Debug.Log("invis");
             }
             else if (hit.collider.tag == "Middle")
             {
                 anim.SetTrigger("Middle");
+                smoothieREF.hasPoly = true;
+                Debug.Log("polym");
             }
             else if (hit.collider.tag == "Right")
             {
                 anim.SetTrigger("Right");
+                smoothieREF.hasSpeed = true;
+                Debug.Log("speed");
             }
 
             
         }
        }
+    }
+
+    void SwapSmoothies()
+    {
+        if (smoothieREF.hasInvis)
+        {
+            
+        }
     }
 }
