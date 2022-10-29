@@ -27,6 +27,19 @@ public class CauldronTimer : MonoBehaviour
             float percent = cauldronREF.currentTime/cauldronREF.maxWellBlended;
             imageRef.fillAmount = percent;
 
+            if (percent > .75 && percent <= .99)
+            {
+                imageRef.color = Color.green;
+            }
+            else if (percent > .99)
+            {
+                imageRef.color = Color.red;
+            }
+            else 
+            {
+                imageRef.color = Color.white;
+            }
+
         
     }
 

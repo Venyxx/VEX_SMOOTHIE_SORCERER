@@ -18,7 +18,8 @@ public class PotionTap : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Cup")
+        Debug.Log("hello?");
+        if (col.gameObject.tag == "CupFull")
         {
             Debug.Log("saw the beertap smoothie");
         }

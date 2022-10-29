@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5366215705085625555}
   m_Layer: 0
   m_Name: CupWSmoothie
-  m_TagString: Cup
+  m_TagString: CupFull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
