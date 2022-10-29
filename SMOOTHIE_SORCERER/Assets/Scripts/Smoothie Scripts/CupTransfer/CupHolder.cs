@@ -27,12 +27,12 @@ public class CupHolder : MonoBehaviour
 
     public void OnTriggerEnter (Collider col)
     {
-       Debug.Log("were hitting the trigger");
+       
 
          if (col.gameObject.name == "Banana(Clone)")
           {
              hasBananaCup = true;
-             Debug.Log("were hitting the banana");
+             
 
           }
 

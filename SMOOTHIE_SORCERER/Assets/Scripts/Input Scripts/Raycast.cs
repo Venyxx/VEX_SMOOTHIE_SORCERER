@@ -38,7 +38,7 @@ public class Raycast : MonoBehaviour
                 customerOrderREF = customer.GetComponent<CustomerOrder>();
                 customerNavREF = customer.GetComponent<RailWaypointNav>();
                 customerNavREF.clickedStartingOrder = true;
-                Debug.Log("raycast found the customer");
+               //Debug.Log("raycast found the customer");
 
                 //set the ticket
                 ticket = GameObject.Find("CurrentOrderTicket");
@@ -57,7 +57,7 @@ public class Raycast : MonoBehaviour
                 cupVector.x = CupSpawn.transform.position.x; 
                 cupVector.y = CupSpawn.transform.position.y;
                 cupVector.z =  CupSpawn.transform.position.z;
-                Debug.Log("got cupstack");
+                //Debug.Log("got cupstack");
                 Instantiate(CupObj, cupVector, Quaternion.identity);
             }
         }

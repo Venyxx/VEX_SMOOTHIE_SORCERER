@@ -7,34 +7,42 @@ using TMPro;
 
 public class CauldronBlending : MonoBehaviour
 {
-    
+        [Header("Smoothie Value")]
+        [SerializeField] public float CauldronValue;
+        [Header("Ingredients")]
         public bool hasBananaCaul;
         public bool hasBlueberryCaul;
         public bool hasStrawberryCaul;
+
+        [Header("Smoothie Prefabs")]
+        public GameObject CupSmoothie;
+        public GameObject mistake;
+        public Transform smoothieSpawn;
+
+         [Header("Timer")]
         public bool wellBlended;
         public bool overBlended;
+ 
         
-        public GameObject StrBanana;
-        public GameObject BananaSM;
-        public GameObject StrawbSM;
-        public GameObject mistake;
+        
+        //public TextMeshProUGUI timerTextie;
+
         private Camera cam;
 
-        [SerializeField] public float CauldronValue;
         private GameObject Cup;
         private GameObject beerTap;
         private CupHolder cupREF;
         private Transform cupMotive;
-        public Transform smoothieSpawn;
+        
         private CauldronTimer caulTimREF;
         private Vector3 smoothieSPA;
         
         public float currentTime;
-        [SerializeField] public bool isBlending;
-        public TextMeshProUGUI timerText;
+        
+        
         public float maxWellBlended;
         [SerializeField] public bool isFinished;
-     
+        [SerializeField] public bool isBlending;
 
     // Start is called before the first frame update
     public void Start()
@@ -53,13 +61,14 @@ public class CauldronBlending : MonoBehaviour
 
     public void Update()
     {
-        timerText.text = currentTime.ToString("0");
+        //timerTextie.text = currentTime.ToString("0");
 
         if (isFinished)
         {
             //here is where we instantiate the smoothie and attach the values;
             SmoothiePicker();
             isFinished = false;
+            Debug.Log("ran is finished");
         }
         
         if (isBlending)
@@ -78,7 +87,7 @@ public class CauldronBlending : MonoBehaviour
                 //get values from previous step
                 if (hit.collider.tag == "Blender" && isBlending == false)
                 {
-                    Debug.Log("tagged it");
+                    //Debug.Log("tagged it");
                     Cup = GameObject.FindGameObjectWithTag("Cup");
                     cupREF = Cup.GetComponent<CupHolder>();
 
@@ -95,11 +104,7 @@ public class CauldronBlending : MonoBehaviour
 
                 }else if (hit.collider.tag == "Blender" && isBlending == true)
                 {
-                    //timer
-
-                    isBlending = false;
-                    Debug.Log("sending value to smoothie");
-
+                    
                     //we will have to break it down for each second decr value later
                     //this is the send off, clear every cauldron value 
                     if (currentTime > maxWellBlended)
@@ -113,7 +118,12 @@ public class CauldronBlending : MonoBehaviour
                     }
                     
                     //return value of current time
-                    
+                    //timer
+
+                    isBlending = false;
+                    isFinished = true;
+                    currentTime = 0;
+                    Debug.Log("sending value to smoothie");
 
                 }
 
@@ -140,22 +150,22 @@ public class CauldronBlending : MonoBehaviour
         Debug.Log("in smoothie picker");
         if (hasBananaCaul && hasStrawberryCaul)
         {
-            Instantiate(StrBanana, smoothieSPA, Quaternion.identity);
-            Debug.Log("in smoothie picker 111");
+            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            Debug.Log("yellow");
         }
         else if (hasBananaCaul && hasBlueberryCaul)
         {
-            Instantiate(BananaSM, smoothieSPA, Quaternion.identity);
-            Debug.Log("in smoothie picker 222");
+            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            Debug.Log("blue");
         }
         else if (hasBlueberryCaul && hasStrawberryCaul)
         {
-            Instantiate(StrawbSM, smoothieSPA, Quaternion.identity);
-            Debug.Log("in smoothie picker333");
+            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            Debug.Log("red");
         }else
         {
-            Instantiate(mistake, smoothieSPA, Quaternion.identity);
-            Debug.Log("in smoothie picker mistake");
+            Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            Debug.Log("brown");
         }
         
     }

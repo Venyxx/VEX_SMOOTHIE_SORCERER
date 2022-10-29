@@ -24,7 +24,7 @@ public class Knife : MonoBehaviour
         screenBounds = new Rect(0, 0, Screen.width, Screen.height - 200);
         anim = gameObject.GetComponent<Animator>();
         particleSpawn = GameObject.Find("PoofSpawn");
-        Debug.Log(particleSpawn);
+        //Debug.Log(particleSpawn);
     }
 
     public void SetCuttingState(bool state)
@@ -39,7 +39,7 @@ public class Knife : MonoBehaviour
         {
             TimeElapsed = 0f;
             SetCuttingState(true);
-            Debug.Log("chop");
+            //Debug.Log("chop");
             anim.SetTrigger("Chopper");
             Instantiate (chopParticle, particleSpawn.transform);
             
