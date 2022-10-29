@@ -70,7 +70,7 @@ public class CauldronBlending : MonoBehaviour
             //here is where we instantiate the smoothie and attach the values;
             SmoothiePicker();
             isFinished = false;
-            Debug.Log("ran is finished");
+            //Debug.Log("ran is finished");
         }
         
         if (isBlending)
@@ -117,6 +117,7 @@ public class CauldronBlending : MonoBehaviour
                         //reset
                         currentTime = 0;
                         isBlending = false;
+
                     }
                     
                     //return value of current time
@@ -124,8 +125,9 @@ public class CauldronBlending : MonoBehaviour
 
                     isBlending = false;
                     isFinished = true;
+                    
                     currentTime = 0;
-                    Debug.Log("sending value to smoothie");
+                    //Debug.Log("sending value to smoothie");
 
                 }
 
@@ -153,47 +155,87 @@ public class CauldronBlending : MonoBehaviour
         Debug.Log("in smoothie picker");
         if (hasBananaCaul && hasStrawberryCaul)
         {
+            //spawn and set values
             GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            fullCup.GetComponent<CupHolder>().hasStrawberryCup = hasStrawberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBlueberryCup = hasBlueberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBananaCup = hasBananaCaul;
+            fullCup.GetComponent<CupHolder>().Value = CauldronValue;
+
+            //change smoothie color
             var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
-            
             smoothieMaterial = Resources.Load<Material>("s1");
-            Debug.Log(smoothieMaterial);
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
             Debug.Log("yellow");
+
+
+
+
         }
         else if (hasBananaCaul && hasBlueberryCaul)
         {
+               //spawn and set values
             GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            fullCup.GetComponent<CupHolder>().hasStrawberryCup = hasStrawberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBlueberryCup = hasBlueberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBananaCup = hasBananaCaul;
+            fullCup.GetComponent<CupHolder>().Value = CauldronValue;
+
+            //change smoothie color
             var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
-            
             smoothieMaterial = Resources.Load<Material>("s2");
-            Debug.Log(smoothieMaterial);
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
             Debug.Log("blue");
-        }
+
+
+
+
+
+        }  
         else if (hasBlueberryCaul && hasStrawberryCaul)
         {
+              //spawn and set values
             GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            fullCup.GetComponent<CupHolder>().hasStrawberryCup = hasStrawberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBlueberryCup = hasBlueberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBananaCup = hasBananaCaul;
+            fullCup.GetComponent<CupHolder>().Value = CauldronValue;
+
+            //change smoothie color
             var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
-            
             smoothieMaterial = Resources.Load<Material>("s3");
-            Debug.Log(smoothieMaterial);
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
             Debug.Log("red");
-        }else
+
+
+
+
+
+        }
+        else 
         {
+              //spawn and set values
             GameObject fullCup = Instantiate(CupSmoothie, smoothieSPA, Quaternion.identity);
+            fullCup.GetComponent<CupHolder>().hasStrawberryCup = hasStrawberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBlueberryCup = hasBlueberryCaul;
+            fullCup.GetComponent<CupHolder>().hasBananaCup = hasBananaCaul;
+            fullCup.GetComponent<CupHolder>().Value = CauldronValue;
+
+            //change smoothie color
             var smoothiePart = fullCup.transform.Find("smoothie").gameObject;
-            
             smoothieMaterial = Resources.Load<Material>("s4");
-            Debug.Log(smoothieMaterial);
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
-            Debug.Log("brown");
+            Debug.Log("purple");
         }
+
+
+        hasBananaCaul = false;
+        hasStrawberryCaul = false;
+        hasBlueberryCaul = false;
         
     }
     

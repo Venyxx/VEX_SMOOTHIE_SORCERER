@@ -41,6 +41,11 @@ public class CupHolder : MonoBehaviour
             hasStrawberryCup = true;
           }
 
+          if (col.gameObject.name == "Blueberry(Clone)")
+          {
+            hasBlueberryCup = true;
+          }
+
     }
 
     

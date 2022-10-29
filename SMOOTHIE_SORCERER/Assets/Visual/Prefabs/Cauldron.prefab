@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1679399662686242254}
   - component: {fileID: 3104618607187831849}
   m_Layer: 5
-  m_Name: IrritantContainer
+  m_Name: TimerContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &1685619759841847860
 GameObject:
@@ -139,9 +139,9 @@ GameObject:
   - component: {fileID: 8544232348960423961}
   - component: {fileID: 4953700730927901381}
   - component: {fileID: 5314391901785711278}
-  - component: {fileID: 2522550462714673696}
+  - component: {fileID: 1932272075}
   m_Layer: 5
-  m_Name: IrritantBar
+  m_Name: TimeCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2522550462714673696
+--- !u!114 &1932272075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,11 +214,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2974464058212358004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e33ed1c3974c954d953d02f8a50e5d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 6286a54f5091ea048b86fc128c2e094f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxIrritant: 80
-  customerREF: {fileID: 0}
+  cauldronREF: {fileID: 8225527660957404828}
 --- !u!1 &5743487859810953249
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,8 +260,6 @@ GameObject:
   - component: {fileID: 8225527660957404831}
   - component: {fileID: 8225527660957404828}
   - component: {fileID: 8225527660957404829}
-  - component: {fileID: 794066185}
-  - component: {fileID: 794066189}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Blender
@@ -279,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 8225527660957404826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7839506, y: 0.542, z: -3.95}
-  m_LocalScale: {x: 0.66618, y: 0.66618, z: 0.66618}
+  m_LocalScale: {x: 0.5435096, y: 0.5435096, z: 0.5435096}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8479232112935998815}
@@ -304,14 +301,14 @@ MonoBehaviour:
   hasBananaCaul: 0
   hasBlueberryCaul: 0
   hasStrawberryCaul: 0
-  CupSmoothie: {fileID: 0}
+  CupSmoothie: {fileID: 5438229831095957561, guid: 9ac3ba3bd7825a447bec8498142f01ec,
+    type: 3}
   mistake: {fileID: 2552895989099188142, guid: da13b6f6b96a75f49bf83b40eef407b9, type: 3}
   smoothieSpawn: {fileID: 0}
   wellBlended: 0
   overBlended: 0
-  timerText: {fileID: 0}
   currentTime: 0
-  maxWellBlended: 0
+  maxWellBlended: 16
   isFinished: 0
   isBlending: 0
 --- !u!65 &8225527660957404829
@@ -327,53 +324,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.060000006, y: 0.121754594, z: 0.049632065}
   m_Center: {x: -0.0000000027960088, y: 0.060877297, z: 0}
---- !u!114 &794066185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8225527660957404826}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d715d23712f1e947a43c96e272247b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  definedButton: {fileID: 0}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: TimerStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-  cam: {fileID: 0}
-  Canvas: {fileID: 0}
---- !u!114 &794066189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8225527660957404826}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6286a54f5091ea048b86fc128c2e094f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTime: 0
-  isBlending: 0
-  timerText: {fileID: 0}
-  maxWellBlended: 0
-  isFinished: 0
 --- !u!1 &8700167313677235135
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +337,7 @@ GameObject:
   - component: {fileID: 8355031027915960142}
   - component: {fileID: 569822718247846893}
   m_Layer: 5
-  m_Name: IrritantBarOutline
+  m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -492,32 +442,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06, y: 0.0045839194, z: 0.049632065}
   m_Center: {x: -0.0000000023004367, y: 0.0022919597, z: 0}
---- !u!114 &386025541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9144444703042883557}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92268594028a7b42a4ae149ff52fbb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CauldronValue: 0
-  hasBananaCaul: 0
-  hasBlueberryCaul: 0
-  hasStrawberryCaul: 0
-  CupSmoothie: {fileID: 0}
-  mistake: {fileID: 0}
-  smoothieSpawn: {fileID: 0}
-  wellBlended: 0
-  overBlended: 0
-  timerText: {fileID: 0}
-  currentTime: 0
-  maxWellBlended: 0
-  isFinished: 0
-  isBlending: 0
 --- !u!1001 &8225527662091694772
 PrefabInstance:
   m_ObjectHideFlags: 0

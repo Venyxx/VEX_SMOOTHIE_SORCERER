@@ -16,6 +16,14 @@ public class PotionTap : MonoBehaviour
         anim = PotionTapModel.GetComponent<Animator>();
     }
 
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "Cup")
+        {
+            Debug.Log("saw the beertap smoothie");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
