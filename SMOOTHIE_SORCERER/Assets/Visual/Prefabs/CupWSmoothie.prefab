@@ -65,6 +65,10 @@ MonoBehaviour:
   hasBananaCup: 0
   hasBlueberryCup: 0
   hasStrawberryCup: 0
+  hasSpeed: 0
+  hasInvis: 0
+  hasPoly: 0
+  moveSpots: []
   Value: 0
 --- !u!65 &5366215705085625555
 BoxCollider:

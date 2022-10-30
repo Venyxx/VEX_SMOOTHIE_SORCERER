@@ -13,8 +13,14 @@ public class CupHolder : MonoBehaviour
         public bool hasSpeed;
         public bool hasInvis;
         public bool hasPoly;
-        
+
+        [Header("Finished Smoothie Spawns")]
+        public bool finished;
+
         [SerializeField] public float Value; 
+
+        
+        
     
     // Start is called before the first frame update
     void Start()
@@ -23,13 +29,16 @@ public class CupHolder : MonoBehaviour
          bool hasBananaCup = false;
          bool hasBlueberryCup = false;
          bool hasStrawberryCup = false;
+         bool finished = false;
+         
+
+        // moveSpots = gameObject.name = "Spawn1";
+
+         
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void OnTriggerEnter (Collider col)
     {
@@ -52,7 +61,18 @@ public class CupHolder : MonoBehaviour
             hasBlueberryCup = true;
           }
 
+          if(col.gameObject.tag == "FinishSMTH")
+          {
+            finished = true;
+          }
+
     }
 
-    
+    void Update()
+    {
+        if (hasPoly == true)
+        {
+          transform.position =  new Vector3(0.5f,0.7f,-4.5f);// * Time.deltaTime;
+        }
+    }
 }
