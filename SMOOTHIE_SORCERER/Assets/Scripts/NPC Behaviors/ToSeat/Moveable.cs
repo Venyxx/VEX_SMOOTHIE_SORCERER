@@ -17,29 +17,21 @@ public class Moveable : MonoBehaviour
 
     private Action onCompleteCallback;
 
-    private void Start ()
-    {
-        
-    }
-
     private void Update ()
     {
-        
-        
-        
+  
         if (destination.HasValue ==false)
         {
-            Debug.Log("returning");
+            Debug.Log("returning1");
             return;
         }
 
         if (elapsedLerpDuration>= totalLerpDuration && totalLerpDuration > 0)
         {
-            Debug.Log("returning");
-            return;
+            //Debug.Log("returning2");
+            //return;
         }
 
-        
 
         elapsedLerpDuration += Time.deltaTime;
         float percent = (elapsedLerpDuration / totalLerpDuration);
@@ -49,7 +41,6 @@ public class Moveable : MonoBehaviour
         if (elapsedLerpDuration >= totalLerpDuration)
         {
             onCompleteCallback?.Invoke();
-
         }
     } 
     

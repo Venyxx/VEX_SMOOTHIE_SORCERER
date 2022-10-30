@@ -11,9 +11,11 @@ public class RailWaypointNav : MonoBehaviour
     [SerializeField] public bool canOrder;
     [SerializeField] public bool clickedStartingOrder;
     [SerializeField] public bool isLeaving;
+    private bool hasSeat;
 
     public List<Transform> waypoints;
     public List<Transform> seats;
+    public List<GameObject> seatsGameObjects;
 
     public GameObject pathHolder;
     public GameObject seatHolder;
@@ -25,29 +27,34 @@ public class RailWaypointNav : MonoBehaviour
 
     private void Start ()
     {
-        GameObject seatManager = GameObject.FindGameObjectWithTag("SeatingManager");
-        
+        GameObject seatManager = GameObject.FindGameObjectWithTag("SeatingManager"); 
         SeatChecker = seatManager.GetComponent<SeatChecker>(); 
         seated = false;
+
+        foreach (Transform seat in seats)
+        {
+            seatsGameObjects.Add(seat.gameObject);
+        }
+        Debug.Log(seatsGameObjects);
+
     }
+
+
     private void OnEnable ()
     {
         
             waypoints = pathHolder.GetComponentsInChildren<Transform>().ToList(); 
             seats = seatHolder.GetComponentsInChildren<Transform>().ToList(); 
+            seats.RemoveAt(index: 0);
             waypoints.RemoveAt(index: 0);
             MoveToNextWaypoint();
-
-            
-            
-        
     }
 
     private void Update()
     {
         if (seated)
         {
-            Invoke ("FaceCounter", 1f);
+            Invoke ("FaceCounter", 3f);
         }
             
     }
@@ -58,29 +65,18 @@ public class RailWaypointNav : MonoBehaviour
         {
             
             waiting = true;
-
-            if (SeatChecker.seat1 == false)
-            {
-                //Debug.Log("reached seating point");
-                var seatWayPoint = seats[0];
-                target.MoveTo(seatWayPoint.position, MoveToNextWaypoint);
-                target.transform.LookAt(seatWayPoint.position);
-                seated = true;
-            }
-
-            //make the rules for all the other seats
-
+            ChoosingSeat();
 
         }
         else if (nextWayPointIndex < waypoints.Count) // keep moving along
         {
             //Debug.Log("keep moving");
             var targetWayPointTransform = waypoints[nextWayPointIndex];
-        target.MoveTo(targetWayPointTransform.position, MoveToNextWaypoint);
+            target.MoveTo(targetWayPointTransform.position, MoveToNextWaypoint);
 
-        target.transform.LookAt(waypoints[nextWayPointIndex].position); //CURRENTLY CHANGES LOOK DIRECTION
+            target.transform.LookAt(waypoints[nextWayPointIndex].position); //CURRENTLY CHANGES LOOK DIRECTION
 
-        nextWayPointIndex++;
+            nextWayPointIndex++;
         }
         
         
@@ -91,5 +87,27 @@ public class RailWaypointNav : MonoBehaviour
         target.transform.LookAt(player.transform.position);
         canOrder = true;
         //Debug.Log(canOrder);
+    }
+
+    private void ChoosingSeat ()
+    {
+
+         if (!seated)
+         {
+            foreach (Transform seat in seats)
+            {
+                if (seat.gameObject.GetComponent<SeatItself>().hasCustomer == false)
+                {
+                    var seatWayPoint = seat.gameObject;
+                    target.MoveTo(seatWayPoint.transform.position, MoveToNextWaypoint);
+                    target.transform.LookAt(seatWayPoint.transform.position);
+                    seated = true;
+
+                    break;   
+                }
+            }
+            
+         }
+             
     }
 }
