@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class PostProcess : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Material mat;
+    private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Graphics.Blit(source, destination, mat);
     }
 }
