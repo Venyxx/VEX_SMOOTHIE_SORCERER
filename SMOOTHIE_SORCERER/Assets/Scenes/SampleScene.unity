@@ -3835,8 +3835,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36538702, y: 0.48851675, z: 0.18495512}
-  m_Center: {x: 0.0811868, y: 0.25574163, z: 0.06296849}
+  m_Size: {x: 0.36538702, y: 0.48851675, z: 0.22018528}
+  m_Center: {x: 0.0811868, y: 0.25574163, z: 0.08058357}
 --- !u!4 &2043426634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5102235149673938702, guid: 8257b50d503759c498a66673cca3142f,
@@ -4389,7 +4389,7 @@ PrefabInstance:
     - target: {fileID: 4687878619766720256, guid: 28f63e8f42cff5442bc1096340ea4dd5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3
+      value: -0.404
       objectReference: {fileID: 0}
     - target: {fileID: 6246830036305495988, guid: 28f63e8f42cff5442bc1096340ea4dd5,
         type: 3}
@@ -4400,6 +4400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tray
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860518287302039519, guid: 28f63e8f42cff5442bc1096340ea4dd5,
+        type: 3}
+      propertyPath: m_TagString
+      value: FinishSMTH
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28f63e8f42cff5442bc1096340ea4dd5, type: 3}

@@ -15,6 +15,7 @@ TagManager:
   - Right
   - Middle
   - CupFull
+  - FinishSMTH
   layers:
   - Default
   - TransparentFX
