@@ -436,6 +436,8 @@ GameObject:
   - component: {fileID: 8170604273171059299}
   - component: {fileID: 8170604273171059231}
   - component: {fileID: 8170604273171059424}
+  - component: {fileID: 1591213088}
+  - component: {fileID: 1591213094}
   m_Layer: 0
   m_Name: StandardCustomer
   m_TagString: Customer
@@ -505,9 +507,11 @@ MonoBehaviour:
   waiting: 0
   seated: 0
   canOrder: 0
+  clickedStartingOrder: 0
   isLeaving: 0
   waypoints: []
   seats: []
+  seatsGameObjects: []
   pathHolder: {fileID: 0}
   seatHolder: {fileID: 0}
   player: {fileID: 0}
@@ -539,6 +543,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OrderingSprite: {fileID: 2065493223}
   IrritantContainer: {fileID: 678126881704974929}
+--- !u!114 &1591213088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8170604273171059298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a048417cec1f24cb7d97fb373c45d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wantStrawberry: 0
+  wantBlueberry: 0
+  wantBanana: 0
+  wantInvis: 0
+  wantPolymorph: 0
+  wantSpeed: 0
+--- !u!114 &1591213094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8170604273171059298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1ec66637f8fce4a9c4d2b860be8eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8035033413764146803
 PrefabInstance:
   m_ObjectHideFlags: 0
