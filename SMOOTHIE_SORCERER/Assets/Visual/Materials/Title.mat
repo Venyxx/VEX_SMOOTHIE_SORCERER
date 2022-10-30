@@ -73,7 +73,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ShadowIntensity: 0.301
+    - _ShadowIntensity: 0.099
     - _ShadowThreshold: 0.2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -83,5 +83,5 @@ Material:
     m_Colors:
     - _Color: {r: 0.9622642, g: 0.9082002, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TexColor: {r: 0, g: 0.8541601, b: 1, a: 0}
+    - _TexColor: {r: 1, g: 0.7777906, b: 0.7490566, a: 0}
   m_BuildTextureStacks: []
