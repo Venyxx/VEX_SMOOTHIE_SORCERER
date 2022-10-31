@@ -16,6 +16,9 @@ public class CupHolder : MonoBehaviour
 
         [Header("Finished Smoothie Spawns")]
         public bool finished;
+        public GameObject Invisible;
+        public GameObject PolyCup;
+        public Transform[] finishCups;
 
         [SerializeField] public float Value; 
 
@@ -72,7 +75,14 @@ public class CupHolder : MonoBehaviour
     {
         if (hasPoly == true)
         {
-          transform.position =  new Vector3(0.5f,0.7f,-4.5f);// * Time.deltaTime;
+          // transform.position =  new Vector3(0.5f,0.7f,-4.5f);// * Time.deltaTime;
+          Instantiate(PolyCup, new Vector3(0.5f,0.4f,-4.5f), Quaternion.identity);
+          Destroy(gameObject);
+        }
+        else if (hasInvis == true)
+        {
+          Instantiate(Invisible, new Vector3(0.5f,0.85f,-4.20f), Quaternion.identity);
+          Destroy(gameObject);
         }
     }
 }

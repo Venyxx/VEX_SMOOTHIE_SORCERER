@@ -9,6 +9,9 @@ public class PotionTap : MonoBehaviour
     private Camera cam;
     private GameObject smoothie;
     private CupHolder smoothieREF;
+    // public GameObject Invisible;
+    // public GameObject PolyCup;
+    //public GameObject SpeedCup;
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +71,12 @@ public class PotionTap : MonoBehaviour
     {
         if (smoothieREF.hasInvis)
         {
-            
+            // Instantiate(Invisible, new Vector3(0.5f,0.7f,-4.5f), Quaternion.identity);
         }
+        else if (smoothieREF.hasPoly)
+        {
+            // Instantiate(PolyCup, new Vector3(0.5f,0.7f,-3.5f), Quaternion.identity);
+        }
+        
     }
 }
