@@ -14,11 +14,29 @@ public class CustomerOrder : MonoBehaviour
     [SerializeField] public bool wantInvis;
     [SerializeField] public bool wantPolymorph;
     [SerializeField] public bool wantSpeed;
+
+    [Header("Sprites Red")]
+    public GameObject coconutSpriteRed;
+    public GameObject barberCupSpriteRed;
+    public GameObject shoeSpriteRed;
+
+    [Header("Sprites Blue")]
+    public GameObject coconutSpriteBlue;
+    public GameObject barberCupSpriteBlue;
+    public GameObject shoeSpriteBlue;
+
+    [Header("Sprites Yellow")]
+    public GameObject coconutSpriteYellow;
+    public GameObject barberCupSpriteYellow;
+    public GameObject shoeSpriteYellow;
+
+
     private bool choseOrder;
     private bool chosePotion;
+    public RailWaypointNav charREF;
 
     int xPotion;
-     int xOrder;
+    int xOrder;
     
     // Start is called before the first frame update
     void Start()
@@ -34,39 +52,92 @@ public class CustomerOrder : MonoBehaviour
     void Update()
     {
         
-        if (!choseOrder)
+        if (!choseOrder && charREF.clickedStartingOrder)
         {
-            chooseOrder();
+            chooseTheOrder();
         }
 
-          if (!chosePotion)
-        {
-            choosePotion();
-        }
 
     }
 
-    void choosePotion ()
+    void chooseTheOrder ()
     {
-        if (xPotion == 1)
+        if (xPotion == 1 && xOrder == 1)
         {
-            Debug.Log("customer wants invis");
+            Debug.Log("customer wants invis // straw banana // yellow glass");
+            wantStrawberry = true;
+            wantBanana = true;
             wantInvis = true;
+            barberCupSpriteYellow.SetActive(true);
 
-
-        } else if  (xPotion == 2)
+        } else if  (xPotion == 2 && xOrder == 1)
         {
-            Debug.Log("customer wants polymorph");
+            Debug.Log("customer wants polymorph // straw banana // yellow coconut");
+            wantStrawberry = true;
+            wantBanana = true;
             wantPolymorph = true;
+            coconutSpriteYellow.SetActive(true);
         }
-        else if  (xPotion == 3)
+        else if  (xPotion == 3 && xOrder == 1)
         {
-            Debug.Log("customer wants speed");
+            Debug.Log("customer wants speed// straw banana // yellow shoe");
+            wantStrawberry = true;
+            wantBanana = true;
             wantSpeed = true;
-    
+            shoeSpriteYellow.SetActive(true);
         }
+       
+          else if (xPotion == 1 && xOrder == 2)
+        {
+            Debug.Log("customer wants invis // blueberry banan // blue glass");
+            wantBlueberry = true;
+            wantBanana = true;
+            wantInvis = true;
+            barberCupSpriteBlue.SetActive(true);
+        }
+         else if (xPotion == 2 && xOrder == 2)
+        {
+            Debug.Log("customer wants polymorph // blueberry banan // blue coconut");
+            wantBlueberry = true;
+            wantBanana = true;
+            wantPolymorph = true;
+            coconutSpriteBlue.SetActive(true);
+        }
+          else if (xPotion == 3 && xOrder == 2)
+        {
+            Debug.Log("customer wants speed // blueberry banan // blue shoe");
+            wantBlueberry = true;
+            wantBanana = true;
+            wantSpeed = true;
+            shoeSpriteBlue.SetActive(true);
+        }
+          else if (xPotion == 1 && xOrder == 3)
+        {
+            Debug.Log("customer wants invis // blueberry straw // red glass");
+            wantBlueberry = true;
+            wantStrawberry = true;
+            wantInvis = true;
+            barberCupSpriteRed.SetActive(true);
+        }
+             else if (xPotion == 2 && xOrder == 3)
+        {
+            Debug.Log("customer wants polymorph // blueberry straw // red coconut");
+            wantBlueberry = true;
+            wantStrawberry = true;
+            wantPolymorph = true;
+            coconutSpriteRed.SetActive(true);
+        }
+             else if (xPotion == 3 && xOrder == 3)
+        {
+            Debug.Log("customer wants speed // blueberry straw // red shoe");
+            wantBlueberry = true;
+            wantStrawberry = true;
+            wantSpeed = true;
+            shoeSpriteRed.SetActive(true);
+        }
+       
 
-        chosePotion = true;
+        choseOrder = true;
     }
     void chooseOrder()
     {
