@@ -22,6 +22,7 @@ public class CauldronBlending : MonoBehaviour
          [Header("Timer")]
         public bool wellBlended;
         public bool overBlended;
+         
  
         
         
@@ -59,6 +60,14 @@ public class CauldronBlending : MonoBehaviour
         //beerTap = GameObject.Find("PotionTap");
         //smoothieSpawn = beerTap.transform.Find("SmoothieSpawn");
         
+    }
+
+    private void OnTriggerEnter (Collider fruit)
+    {
+        if (fruit.gameObject.tag == "Slice")
+        {
+            isBlending = true;
+        }
     }
 
     public void Update()
@@ -111,6 +120,7 @@ public class CauldronBlending : MonoBehaviour
                     //this is the send off, clear every cauldron value 
                     if (currentTime > maxWellBlended)
                     {
+                        
                         CauldronValue =- 1;
                         isFinished = true;
 
