@@ -7,13 +7,16 @@ public class CameraBehaviors : MonoBehaviour
 {
     public CinemachineVirtualCamera frontCamera;
     public CinemachineVirtualCamera backCamera;
-    public bool isFacingFront;
+    private SwipeRecog swipeScript;
+    //public bool isFacingFront;
     // Start is called before the first frame update
     void Start()
     {
+        swipeScript = gameObject.GetComponent<SwipeRecog>();
         frontCamera.gameObject.SetActive(true);
-        isFacingFront = true;
+        swipeScript.isFacingFront = true;
         backCamera.gameObject.SetActive(false);
+        
         
     }
 
@@ -21,14 +24,14 @@ public class CameraBehaviors : MonoBehaviour
     void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.C) && isFacingFront == true)
+        if (Input.GetKeyDown(KeyCode.C) && swipeScript.isFacingFront == true)
         {
             //Debug.Log("noticed input to back");
             backCamera.gameObject.SetActive(true);
             Invoke ("CameraBool", 0.1f);
             
         }
-        else if (Input.GetKeyDown(KeyCode.C) && isFacingFront == false)
+        else if (Input.GetKeyDown(KeyCode.C) && swipeScript.isFacingFront == false)
         {
             //Debug.Log("noticed input to front");
             backCamera.gameObject.SetActive(false);
@@ -39,14 +42,14 @@ public class CameraBehaviors : MonoBehaviour
 
     void CameraBool ()
     {
-        if (isFacingFront)
+        if (swipeScript.isFacingFront)
         {
-            isFacingFront = false;
+            swipeScript.isFacingFront = false;
             //Debug.Log("changed front to false");
         }
-        else if (!isFacingFront)
+        else if (!swipeScript.isFacingFront)
         {
-           isFacingFront = true; 
+           swipeScript.isFacingFront = true; 
             //Debug.Log("changed front to true");
         }
         

@@ -30,10 +30,10 @@ public class CauldronBlending : MonoBehaviour
 
         private Camera cam;
 
-        private GameObject Cup;
+       // private GameObject Cup;
         private GameObject beerTap;
-        private CupHolder cupREF;
-        private Transform cupMotive;
+       // private CupHolder cupREF;
+        //private Transform cupMotive;
         
         private CauldronTimer caulTimREF;
         private Vector3 smoothieSPA;
@@ -56,7 +56,7 @@ public class CauldronBlending : MonoBehaviour
         overBlended = false;
         
         caulTimREF = gameObject.GetComponent<CauldronTimer>();
-        cupMotive = gameObject.transform.Find("CupMove");
+        //cupMotive = gameObject.transform.Find("CupMove");
         //beerTap = GameObject.Find("PotionTap");
         //smoothieSpawn = beerTap.transform.Find("SmoothieSpawn");
         
@@ -67,6 +67,18 @@ public class CauldronBlending : MonoBehaviour
         if (fruit.gameObject.tag == "Slice")
         {
             isBlending = true;
+
+            if (fruit.gameObject.name == "Banana(Clone)")
+            {
+                hasBananaCaul = true;
+
+            } else if (fruit.gameObject.name == "Blueberry(Clone)")
+            {
+                hasBlueberryCaul = true;
+            } else if (fruit.gameObject.name == "Strawberry_export(Clone)")
+            {
+                hasStrawberryCaul = true;
+            }
         }
     }
 
@@ -98,20 +110,10 @@ public class CauldronBlending : MonoBehaviour
                 //get values from previous step
                 if (hit.collider.tag == "Blender" && isBlending == false)
                 {
-                    //Debug.Log("tagged it");
-                    Cup = GameObject.FindGameObjectWithTag("Cup");
-                    cupREF = Cup.GetComponent<CupHolder>();
 
-                    hasBananaCaul = cupREF.hasBananaCup;
-                    hasStrawberryCaul = cupREF.hasStrawberryCup;
-                    hasBlueberryCaul = cupREF.hasBlueberryCup;
 
-                    CauldronValue = cupREF.Value;
-
-                    Cup.transform.position = cupMotive.transform.position;
-                    Invoke ("CupKiller", 2f);
-
-                    isBlending = true;
+                    Debug.Log("this is now the active cauldron");
+                    //isBlending = true;
 
                 }else if (hit.collider.tag == "Blender" && isBlending == true)
                 {
@@ -151,7 +153,7 @@ public class CauldronBlending : MonoBehaviour
     
     private void CupKiller ()
     {
-        Destroy(Cup);
+        //Destroy(Cup);
     }
 
     private void SmoothiePicker ()

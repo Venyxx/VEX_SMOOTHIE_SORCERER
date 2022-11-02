@@ -9,6 +9,7 @@ public class SwipeRecog : MonoBehaviour
     private Vector2 endTouchPosition;
     public CinemachineVirtualCamera frontCamera;
     public CinemachineVirtualCamera backCamera;
+    [SerializeField] public bool isFacingFront;
 
 
 
@@ -37,6 +38,7 @@ public class SwipeRecog : MonoBehaviour
                 //change camera behavior to point back counter
                 //Debug.Log("noticed input to back");
                 backCamera.gameObject.SetActive(true);
+                isFacingFront = false;
             
             }
 
@@ -45,6 +47,7 @@ public class SwipeRecog : MonoBehaviour
                 //face the front
                 //Debug.Log("noticed input to front");
                 backCamera.gameObject.SetActive(false);
+                isFacingFront = true;
                 
             }
 

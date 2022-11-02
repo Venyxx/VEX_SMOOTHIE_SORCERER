@@ -43,23 +43,20 @@ public class Cutter : MonoBehaviour
        col.gameObject.GetComponent<Rigidbody>().isKinematic = false;
        col.gameObject.GetComponent<MoveableObject>().speed = 0;
 
-      //coroutine = MoveFruit(col);
-      //StartCoroutine(coroutine);
-
-      //idk how COROUTINES WORK
+    
       //instead of moving the oject we may consider spawning the objects cut variant -v
        CutFruitVec.x = CutFruitSpawnLocation.transform.position.x;
        CutFruitVec.y = CutFruitSpawnLocation.transform.position.y;
        CutFruitVec.z = CutFruitSpawnLocation.transform.position.z;
 
        col.gameObject.transform.position = CutFruitVec;
-      //col.gameObject.GetComponent<Rigidbody>().AddTorque;
+      
 
         
 
         GameSystem.System.OnVegetableCut();
 
-        //Destroy(col.gameObject, 4f);
+        Destroy(col.gameObject, 4f);
         
     }
   }
@@ -88,7 +85,7 @@ public class Cutter : MonoBehaviour
    
   }
 
-  //private IEnumerator MoveFruit()
+  
   
 
 }

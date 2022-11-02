@@ -5,8 +5,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
-    public TextMeshProUGUI blendStatus;
+    //public TextMeshProUGUI timerText;
+    //public TextMeshProUGUI blendStatus;
     public float currentTime;
     public bool startBlending;
     public bool hasLimit;
@@ -18,8 +18,8 @@ public class Timer : MonoBehaviour
     {
         startBlending = false;
         hasLimit = true;
-        blendStatus.text = " ";
-        timerText.text = " ";
+        //blendStatus.text = " ";
+       // timerText.text = " ";
         
     }
 
@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
         {
             currentTime = timerLimit;
             SetTimerText();
-            timerText.color = Color.red;
+            //timerText.color = Color.red;
             enabled = false;
         }
         SetTimerText();
@@ -54,7 +54,7 @@ public class Timer : MonoBehaviour
 
     private void SetTimerText()
     {
-        timerText.text = currentTime.ToString("0");
+       // timerText.text = currentTime.ToString("0");
     }
 
     public void TimerStart()
@@ -73,16 +73,16 @@ public class Timer : MonoBehaviour
 
     public void WellBlended()
     {
-        blendStatus.text = "Well Blended";
-        blendStatus.color = Color.green;
+       // blendStatus.text = "Well Blended";
+       // blendStatus.color = Color.green;
     }
 
    
 
     public void Overblended()
     {
-        blendStatus.text = "Overblended";
+       // blendStatus.text = "Overblended";
         
-        blendStatus.color = Color.red;
+       // blendStatus.color = Color.red;
     }
 }
