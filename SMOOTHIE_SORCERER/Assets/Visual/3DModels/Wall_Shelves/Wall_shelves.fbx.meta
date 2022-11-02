@@ -3,7 +3,12 @@ guid: 439255a9baca84443a92f47abba031cc
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_shelf_material
+    second: {fileID: 2100000, guid: bb0e075c81846d9468b6885d56350728, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
