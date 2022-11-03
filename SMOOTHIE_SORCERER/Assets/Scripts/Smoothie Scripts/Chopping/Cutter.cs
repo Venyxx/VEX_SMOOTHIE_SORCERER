@@ -18,26 +18,18 @@ public class Cutter : MonoBehaviour
 
   private AudioSource audiosource;
   private IEnumerator coroutine;
-  public GameObject CameraHandler;
-  public SwipeRecog swipeRecog;
-
   
 
   void Start ()
   {
     audiosource = gameObject.GetComponent<AudioSource>();
     float randomNumber = Random.Range(1, 5);
-    //swipeRecog = GetComponent<SwipeRecog>();
   }
 
 
 
   void OnTriggerStay(Collider col)
   {
-    if (swipeRecog.isFacingFront == false)
-    {
-
-    
     //Debug.Log("recog");
     if (col.gameObject.tag == "Slice" && Knife.GetComponent<Knife>().isCutting)
     {
@@ -69,7 +61,7 @@ public class Cutter : MonoBehaviour
     }
   }
 
-   void ChooseAudio (float num)
+  private void ChooseAudio (float num)
   {
   
     if (num == 1)
@@ -96,5 +88,4 @@ public class Cutter : MonoBehaviour
   
   
 
-}
 }
