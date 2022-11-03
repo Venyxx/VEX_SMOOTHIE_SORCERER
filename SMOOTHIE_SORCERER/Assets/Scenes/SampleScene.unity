@@ -4041,6 +4041,8 @@ MonoBehaviour:
   chop3: {fileID: 8300000, guid: a0da8bc47bd34554391c7c8e9344719f, type: 3}
   chop4: {fileID: 8300000, guid: c6d9758888eda024bb1a3c6183f0c9b1, type: 3}
   chop5: {fileID: 8300000, guid: 1b67852f509cd37458c517923175db94, type: 3}
+  CameraHandler: {fileID: 827711454}
+  swipeRecog: {fileID: 827711457}
 --- !u!82 &1287254760
 AudioSource:
   m_ObjectHideFlags: 0
