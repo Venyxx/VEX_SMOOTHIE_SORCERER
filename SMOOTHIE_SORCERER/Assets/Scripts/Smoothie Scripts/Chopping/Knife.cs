@@ -21,7 +21,7 @@ public class Knife : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        screenBounds = new Rect(0, 0, Screen.width, Screen.height - 200);
+        screenBounds = new Rect(0, 0, Screen.width, Screen.height - 250);
         anim = gameObject.GetComponent<Animator>();
         particleSpawn = GameObject.Find("PoofSpawn");
         //Debug.Log(particleSpawn);

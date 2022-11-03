@@ -738,7 +738,11 @@ RectTransform:
   m_Children:
   - {fileID: 1376055415}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 15
+=======
+  m_RootOrder: 14
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -771,7 +775,11 @@ PrefabInstance:
     - target: {fileID: 1241572950738454275, guid: 8e2b59e20a787104f9dbc8a5fe5574fb,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 33
+=======
+      value: 32
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1241572950738454275, guid: 8e2b59e20a787104f9dbc8a5fe5574fb,
         type: 3}
@@ -1364,7 +1372,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f5b7df4c86e9cfe4d98d7027c971c42c,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 5
+=======
+      value: 4
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5b7df4c86e9cfe4d98d7027c971c42c,
         type: 3}
@@ -1714,6 +1726,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1366198561}
     m_Modifications:
+    - target: {fileID: 1709542692930330337, guid: b756c5862864e774dbe1cca37530e182,
+        type: 3}
+      propertyPath: m_TagString
+      value: ChoppingBoard
+      objectReference: {fileID: 0}
     - target: {fileID: 2085822662634521691, guid: b756c5862864e774dbe1cca37530e182,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2223,7 +2240,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 38
+=======
+  m_RootOrder: 37
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &773865154
 MonoBehaviour:
@@ -2256,7 +2277,11 @@ PrefabInstance:
     - target: {fileID: 8170604273171059230, guid: 9e50f07d510ef964b88dc608b8f99c4b,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 26
+=======
+      value: 25
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8170604273171059230, guid: 9e50f07d510ef964b88dc608b8f99c4b,
         type: 3}
@@ -2563,7 +2588,11 @@ PrefabInstance:
     - target: {fileID: 3570209415457764029, guid: 856f9914dec244f469cc532220d7a3f6,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 7
+=======
+      value: 6
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3570209415457764029, guid: 856f9914dec244f469cc532220d7a3f6,
         type: 3}
@@ -3704,7 +3733,11 @@ PrefabInstance:
     - target: {fileID: 1241572950738454275, guid: 8e2b59e20a787104f9dbc8a5fe5574fb,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 34
+=======
+      value: 33
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1241572950738454275, guid: 8e2b59e20a787104f9dbc8a5fe5574fb,
         type: 3}
@@ -3984,11 +4017,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1287254758}
   - component: {fileID: 1287254757}
-  - component: {fileID: 1287254759}
+  - component: {fileID: 1287254762}
   - component: {fileID: 1287254760}
   m_Layer: 0
   m_Name: Cutter
-  m_TagString: Untagged
+  m_TagString: ChoppingBoard
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4004,8 +4037,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.24251926, y: 0.4066065, z: 0.366508}
-  m_Center: {x: 0.087406695, y: -0.046696752, z: -0.316746}
+  m_Size: {x: 0.45154876, y: 0.4066065, z: 0.366508}
+  m_Center: {x: 0.06925318, y: -0.046696752, z: -0.316746}
 --- !u!4 &1287254758
 Transform:
   m_ObjectHideFlags: 0
@@ -4021,26 +4054,6 @@ Transform:
   m_Father: {fileID: 1881564398}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1287254759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287254756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c56d026e95c6846855c5a2dffa47cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Knife: {fileID: 149517411}
-  CutFruitSpawnLocation: {fileID: 650235441}
-  speed: 10
-  chop1: {fileID: 8300000, guid: cb4cd0a6e73c890499d4c1724ec43239, type: 3}
-  chop2: {fileID: 8300000, guid: 532e6b95a6962614599c49ea1e1fdcb1, type: 3}
-  chop3: {fileID: 8300000, guid: a0da8bc47bd34554391c7c8e9344719f, type: 3}
-  chop4: {fileID: 8300000, guid: c6d9758888eda024bb1a3c6183f0c9b1, type: 3}
-  chop5: {fileID: 8300000, guid: 1b67852f509cd37458c517923175db94, type: 3}
 --- !u!82 &1287254760
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4137,6 +4150,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1287254762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287254756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c56d026e95c6846855c5a2dffa47cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Knife: {fileID: 149517411}
+  CutFruitSpawnLocation: {fileID: 650235441}
+  speed: 10
+  chop1: {fileID: 8300000, guid: cb4cd0a6e73c890499d4c1724ec43239, type: 3}
+  chop2: {fileID: 8300000, guid: 532e6b95a6962614599c49ea1e1fdcb1, type: 3}
+  chop3: {fileID: 8300000, guid: a0da8bc47bd34554391c7c8e9344719f, type: 3}
+  chop4: {fileID: 8300000, guid: c6d9758888eda024bb1a3c6183f0c9b1, type: 3}
+  chop5: {fileID: 8300000, guid: 1b67852f509cd37458c517923175db94, type: 3}
+  CameraHandler: {fileID: 827711454}
+  swipeRecog: {fileID: 827711457}
 --- !u!1 &1288522224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4388,7 +4423,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 439255a9baca84443a92f47abba031cc,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 3
+=======
+      value: 2
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 439255a9baca84443a92f47abba031cc,
         type: 3}
@@ -4517,7 +4556,11 @@ Transform:
   - {fileID: 533307577}
   - {fileID: 440311950}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 17
+=======
+  m_RootOrder: 16
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1376055414
 GameObject:
@@ -5316,7 +5359,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 25
+=======
+  m_RootOrder: 24
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1642597979
 PrefabInstance:
@@ -5412,7 +5459,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 40b654cff342e6d4698b6cbb8503976a,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 6
+=======
+      value: 5
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 40b654cff342e6d4698b6cbb8503976a,
         type: 3}
@@ -5527,7 +5578,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 19
+=======
+  m_RootOrder: 18
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1767394294
 PrefabInstance:
@@ -5708,7 +5763,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 23
+=======
+  m_RootOrder: 22
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1878889297
 GameObject:
@@ -5775,7 +5834,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 40
+=======
+  m_RootOrder: 39
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881564397
 GameObject:
@@ -5812,7 +5875,11 @@ Transform:
   - {fileID: 1549082587}
   - {fileID: 1547608828}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 31
+=======
+  m_RootOrder: 30
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &1910915897
 PrefabInstance:
@@ -6410,7 +6477,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 21
+=======
+  m_RootOrder: 20
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2136032569
 PrefabInstance:
@@ -7249,7 +7320,11 @@ PrefabInstance:
     - target: {fileID: 8308453966256681769, guid: a4bb695e3cc7a304eba35f51e81cd5af,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 4
+=======
+      value: 3
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8308453966256681769, guid: a4bb695e3cc7a304eba35f51e81cd5af,
         type: 3}
@@ -7325,7 +7400,11 @@ PrefabInstance:
     - target: {fileID: 1241572950738454275, guid: 8e2b59e20a787104f9dbc8a5fe5574fb,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 29
+=======
+      value: 28
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1241572950738454275, guid: 8e2b59e20a787104f9dbc8a5fe5574fb,
         type: 3}
@@ -7401,6 +7480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219653985172377911, guid: 8257b50d503759c498a66673cca3142f,
+        type: 3}
+      propertyPath: m_TagString
+      value: ChoppingBoard
       objectReference: {fileID: 0}
     - target: {fileID: 5102235149673938702, guid: 8257b50d503759c498a66673cca3142f,
         type: 3}

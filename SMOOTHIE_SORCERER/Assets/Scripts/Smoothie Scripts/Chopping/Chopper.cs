@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cutter : MonoBehaviour
+public class Chopper : MonoBehaviour
 {
   public GameObject Knife;
   public GameObject CutFruitSpawnLocation;
   private Vector3 CutFruitVec;
   public float speed;
   private bool chopped;
+  private Camera cam;
 
   public AudioClip chop1;
   public AudioClip chop2;
@@ -16,35 +17,40 @@ public class Cutter : MonoBehaviour
   public AudioClip chop4;
   public AudioClip chop5;
 
-  private AudioSource audiosource;
+  public AudioSource audiosource;
   private IEnumerator coroutine;
-  public GameObject CameraHandler;
-  public SwipeRecog swipeRecog;
-
   
 
   void Start ()
   {
-    audiosource = gameObject.GetComponent<AudioSource>();
+   // audiosource = gameObject.GetComponent<AudioSource>();
     float randomNumber = Random.Range(1, 5);
-    //swipeRecog = GetComponent<SwipeRecog>();
+    cam = Camera.main;
   }
 
 
 
-  void OnTriggerStay(Collider col)
+  public void OnTriggerStay(Collider col)
   {
-    if (swipeRecog.isFacingFront == false)
-    {
-
-    
     //Debug.Log("recog");
-    if (col.gameObject.tag == "Slice" && Knife.GetComponent<Knife>().isCutting)
+    if (Input.GetMouseButtonDown(0)) 
+        { 
+            RaycastHit hit; 
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition); 
+            Debug.DrawRay(transform.position, Input.mousePosition - transform.position, Color.blue);
+
+            if (Physics.Raycast(ray, out hit, 10.0f)) 
+            {
+             if (hit.collider.tag == "ChoppingBoard")
+             {
+              Debug.Log("hit that board baby");
+             if (Knife.GetComponent<Knife>().isCutting && col.gameObject.tag == "Slice") 
     {
-      
+     
       Knife.GetComponent<Knife>().SetCuttingState(true);
-      float randomNumber = Random.Range(1, 5);
-      ChooseAudio(randomNumber);
+      // Debug.Log("Chopping board");
+       //float randomNumber = Random.Range(1, 5);
+      //ChooseAudio(randomNumber);
       
        col.gameObject.GetComponent<Animator>().SetBool("Chopped", chopped);
        chopped = true;
@@ -68,33 +74,36 @@ public class Cutter : MonoBehaviour
         
     }
   }
+            }
+        }
 
-   void ChooseAudio (float num)
-  {
+  //  void ChooseAudio (float num)
+  // {
   
-    if (num == 1)
-    audiosource.PlayOneShot(chop1, 0.7f);
+  //   if (num == 1)
+  //   audiosource.PlayOneShot(chop1, 0.7f);
     
 
-    if (num == 2)
-    audiosource.PlayOneShot(chop2, 0.7f);
+  //   if (num == 2)
+  //   audiosource.PlayOneShot(chop2, 0.7f);
     
 
-    if (num == 3)
-    audiosource.PlayOneShot(chop3, 0.7f);
+  //   if (num == 3)
+  //   audiosource.PlayOneShot(chop3, 0.7f);
    
 
-    if (num == 4)
-    audiosource.PlayOneShot(chop4, 0.7f);
+  //   if (num == 4)
+  //   audiosource.PlayOneShot(chop4, 0.7f);
     
 
-    if (num == 5)
-    audiosource.PlayOneShot(chop5, 0.7f);
+  //   if (num == 5)
+  //   audiosource.PlayOneShot(chop5, 0.7f);
    
-  }
+  // }
 
   
   
 
 }
 }
+  
