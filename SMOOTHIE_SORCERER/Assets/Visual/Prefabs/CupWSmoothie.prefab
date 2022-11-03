@@ -69,9 +69,12 @@ MonoBehaviour:
   hasInvis: 0
   hasPoly: 0
   finished: 0
-  Invisible: {fileID: 4427945369886134393, guid: 92b8d12e1e2072241b6d55b98e7c6786,
+  Invisible: {fileID: 3563066652895160177, guid: a4bb695e3cc7a304eba35f51e81cd5af,
     type: 3}
   PolyCup: {fileID: 3507887957044293233, guid: 856f9914dec244f469cc532220d7a3f6, type: 3}
+  SpeedCup: {fileID: 4608635368590060550, guid: 148a2eec1ea267e46b8b723828da673a,
+    type: 3}
+  finishCups: []
   Value: 0
 --- !u!65 &5366215705085625555
 BoxCollider:

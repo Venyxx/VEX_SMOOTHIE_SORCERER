@@ -46,20 +46,23 @@ public class PotionTap : MonoBehaviour
             if (hit.collider.tag == "Left")
             {
                 anim.SetTrigger("Left");
-                smoothieREF.hasInvis = true;
-                Debug.Log("invis");
+                smoothieREF.hasSpeed = true;
+                Debug.Log("speed");
+                
             }
             else if (hit.collider.tag == "Middle")
             {
                 anim.SetTrigger("Middle");
-                smoothieREF.hasPoly = true;
-                Debug.Log("polym");
+                smoothieREF.hasInvis = true;
+                Debug.Log("invis");
+                
             }
             else if (hit.collider.tag == "Right")
             {
                 anim.SetTrigger("Right");
-                smoothieREF.hasSpeed = true;
-                Debug.Log("speed");
+                smoothieREF.hasPoly = true;
+                Debug.Log("polym");
+               
             }
 
             

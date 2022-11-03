@@ -17,6 +17,7 @@ TagManager:
   - CupFull
   - FinishSMTH
   - FinishedOrder
+  - FrontCounter
   layers:
   - Default
   - TransparentFX
