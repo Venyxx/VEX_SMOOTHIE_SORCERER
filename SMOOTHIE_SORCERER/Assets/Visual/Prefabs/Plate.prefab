@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7278352885719084692}
   - component: {fileID: 1056017524821887522}
   - component: {fileID: 7622430114354495854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 1241572950738454275}
   - component: {fileID: 9196374292363624862}
   - component: {fileID: 3232275556980497646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

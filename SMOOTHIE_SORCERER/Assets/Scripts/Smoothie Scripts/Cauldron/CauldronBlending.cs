@@ -22,6 +22,7 @@ public class CauldronBlending : MonoBehaviour
          [Header("Timer")]
         public bool wellBlended;
         public bool overBlended;
+        
          
  
         
@@ -37,6 +38,8 @@ public class CauldronBlending : MonoBehaviour
         
         private CauldronTimer caulTimREF;
         private Vector3 smoothieSPA;
+        private Animator anim;
+        private GameObject CauldronModel;
         
         public float currentTime;
         
@@ -54,6 +57,8 @@ public class CauldronBlending : MonoBehaviour
         wellBlended = false;
         isBlending = false;
         overBlended = false;
+        CauldronModel = transform.Find("CauldronNew").gameObject;
+        anim = CauldronModel.GetComponent<Animator>();
         
         caulTimREF = gameObject.GetComponent<CauldronTimer>();
         //cupMotive = gameObject.transform.Find("CupMove");
@@ -67,17 +72,21 @@ public class CauldronBlending : MonoBehaviour
         if (fruit.gameObject.tag == "Slice")
         {
             isBlending = true;
+            anim.SetBool("CauldronON", true);
 
             if (fruit.gameObject.name == "Banana(Clone)")
             {
                 hasBananaCaul = true;
+                fruit.transform.parent = CauldronModel.transform;
 
             } else if (fruit.gameObject.name == "Blueberry(Clone)")
             {
                 hasBlueberryCaul = true;
+                fruit.transform.parent = CauldronModel.transform;
             } else if (fruit.gameObject.name == "Strawberry_export(Clone)")
             {
                 hasStrawberryCaul = true;
+                fruit.transform.parent = CauldronModel.transform;
             }
         }
     }
@@ -120,6 +129,7 @@ public class CauldronBlending : MonoBehaviour
                     
                     //we will have to break it down for each second decr value later
                     //this is the send off, clear every cauldron value 
+                    anim.SetBool("CauldronON", false);
                     if (currentTime > maxWellBlended)
                     {
                         

@@ -13,12 +13,14 @@ public class CupHolder : MonoBehaviour
         public bool hasSpeed;
         public bool hasInvis;
         public bool hasPoly;
+        public bool mistake;
 
         [Header("Finished Smoothie Spawns")]
         public bool finished;
         public GameObject Invisible;
         public GameObject PolyCup;
         public GameObject SpeedCup;
+        public GameObject mistakeCup;
         public Transform[] finishCups;
 
         [SerializeField] public float Value; 
@@ -26,9 +28,15 @@ public class CupHolder : MonoBehaviour
         private GameObject tray;
         Material smoothieMaterial;
 
+
+
+
+        public List<bool> trayBools = new List<bool> { false, false, false};
+        public List<Transform> traySlots;
+        public List<GameObject> traySlotsGameObjects;
+
         
-        
-    
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +48,14 @@ public class CupHolder : MonoBehaviour
          
          tray = GameObject.Find("Tray");
 
+         traySlots.RemoveAt(index: 0);
+
         // moveSpots = gameObject.name = "Spawn1";
+
+        foreach (Transform i in traySlots)
+        {
+            traySlotsGameObjects.Add(i.gameObject);
+        }
 
          
     }
@@ -55,8 +70,6 @@ public class CupHolder : MonoBehaviour
          if (col.gameObject.name == "Banana(Clone)")
           {
              hasBananaCup = true;
-             
-
           }
 
           if (col.gameObject.name == "Strawberry_export(Clone)")
@@ -78,10 +91,15 @@ public class CupHolder : MonoBehaviour
 
     void Update()
     {
+        
+        
+        
+        
         if (hasPoly == true)
         {
+          
           transform.position =  new Vector3(0.5f,0.7f,-4.5f);
-          GameObject theNewSmoothie = Instantiate(PolyCup, new Vector3(0.5f,0.4f,-4.5f), Quaternion.identity);
+          GameObject theNewSmoothie = Instantiate(PolyCup, new Vector3(0.5f,0.7f,-4.5f), Quaternion.identity);
           theNewSmoothie.transform.parent = tray.transform;
 
             //this section is just long because i dont want to set up proper methods
@@ -110,6 +128,13 @@ public class CupHolder : MonoBehaviour
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
             Debug.Log("red");
+            } else 
+            {
+            var smoothiePart = theNewSmoothie.transform.Find("smoothie").gameObject;
+            smoothieMaterial = Resources.Load<Material>("s4");
+            MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
+            mat.material = smoothieMaterial;
+            Debug.Log("purple");
             }
 
             var newSMTHScript = theNewSmoothie.GetComponent<FinishedSmoothie>();
@@ -134,8 +159,6 @@ public class CupHolder : MonoBehaviour
             mat.material = smoothieMaterial;
             Debug.Log("yellow");
 
-
-
             } else if (hasBananaCup && hasBlueberryCup)
             {
             var smoothiePart = theNewSmoothie.transform.Find("smoothie").gameObject;
@@ -151,6 +174,14 @@ public class CupHolder : MonoBehaviour
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
             Debug.Log("red");
+            }
+             else 
+            {
+            var smoothiePart = theNewSmoothie.transform.Find("smoothie").gameObject;
+            smoothieMaterial = Resources.Load<Material>("s4");
+            MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
+            mat.material = smoothieMaterial;
+            Debug.Log("purple");
             }
 
             var newSMTHScript = theNewSmoothie.GetComponent<FinishedSmoothie>();
@@ -191,6 +222,14 @@ public class CupHolder : MonoBehaviour
             mat.material = smoothieMaterial;
             Debug.Log("red");
             }
+             else 
+            {
+            var smoothiePart = theNewSmoothie.transform.Find("smoothie").gameObject;
+            smoothieMaterial = Resources.Load<Material>("s4");
+            MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
+            mat.material = smoothieMaterial;
+            Debug.Log("purple");
+            }
 
             var newSMTHScript = theNewSmoothie.GetComponent<FinishedSmoothie>();
             newSMTHScript.hasBananaFIN = hasBananaCup;
@@ -199,7 +238,12 @@ public class CupHolder : MonoBehaviour
             newSMTHScript.SmoothieValue = Value;
           Destroy(gameObject);
 
-
         }
+
+
+        
+          
+
+
     }
 }

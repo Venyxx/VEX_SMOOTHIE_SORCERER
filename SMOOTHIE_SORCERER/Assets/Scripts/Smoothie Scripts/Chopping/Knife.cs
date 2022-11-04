@@ -11,7 +11,7 @@ public class Knife : MonoBehaviour
     //public TMP_Text ChopState;
     private Camera cam;
     private Animator anim;
-    public ParticleSystem chopParticle;
+    //public ParticleSystem chopParticle;
     private GameObject particleSpawn;
     
 
@@ -23,7 +23,7 @@ public class Knife : MonoBehaviour
         cam = Camera.main;
         screenBounds = new Rect(0, 0, Screen.width, Screen.height - 200);
         anim = gameObject.GetComponent<Animator>();
-        particleSpawn = GameObject.Find("PoofSpawn");
+        //particleSpawn = GameObject.Find("PoofSpawn");
         //Debug.Log(particleSpawn);
     }
 
@@ -41,7 +41,7 @@ public class Knife : MonoBehaviour
             SetCuttingState(true);
             //Debug.Log("chop");
             anim.SetTrigger("Chopper");
-            Instantiate (chopParticle, particleSpawn.transform);
+            //Instantiate (chopParticle, particleSpawn.transform);
             
             //ChopState.text = "Chopping";
         }

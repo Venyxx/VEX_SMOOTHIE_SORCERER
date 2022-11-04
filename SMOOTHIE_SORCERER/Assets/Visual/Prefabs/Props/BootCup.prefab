@@ -217,6 +217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e2487cc80d16843a2a6c8c63cdee32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasBananaFIN: 0
+  hasBlueberryFIN: 0
+  hasStrawberryFIN: 0
+  SmoothieValue: 0
 --- !u!65 &6491889093996572232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -244,7 +248,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 8
   m_CollisionDetection: 0
 --- !u!1 &8141325024296675101
 GameObject:
