@@ -20,8 +20,9 @@ public class RailWaypointNav : MonoBehaviour
     public GameObject pathHolder;
     public GameObject seatHolder;
     public GameObject player;
+    
 
-    private int nextWayPointIndex;
+     public int nextWayPointIndex;
     private SeatChecker SeatChecker;
     
 
@@ -31,11 +32,12 @@ public class RailWaypointNav : MonoBehaviour
         SeatChecker = seatManager.GetComponent<SeatChecker>(); 
         seated = false;
 
+
         foreach (Transform seat in seats)
         {
             seatsGameObjects.Add(seat.gameObject);
         }
-        Debug.Log(seatsGameObjects);
+        
 
     }
 
@@ -47,12 +49,13 @@ public class RailWaypointNav : MonoBehaviour
             seats = seatHolder.GetComponentsInChildren<Transform>().ToList(); 
             seats.RemoveAt(index: 0);
             waypoints.RemoveAt(index: 0);
+            //Debug.Log(waypoints.Count);
             MoveToNextWaypoint();
     }
 
     private void Update()
     {
-        if (seated)
+        if (seated && !isLeaving)
         {
             Invoke ("FaceCounter", 3f);
         }
@@ -61,16 +64,16 @@ public class RailWaypointNav : MonoBehaviour
 
     private void MoveToNextWaypoint ()
     {
-        if (nextWayPointIndex == waypoints.Count) // reached the waiting, to be seated, area
+        if (nextWayPointIndex == 3) // reached the waiting, to be seated, area
         {
             
             waiting = true;
             ChoosingSeat();
 
         }
-        else if (nextWayPointIndex < waypoints.Count) // keep moving along
+        else if (nextWayPointIndex <= waypoints.Count) // keep moving along
         {
-            //Debug.Log("keep moving");
+            //Debug.Log(nextWayPointIndex);
             var targetWayPointTransform = waypoints[nextWayPointIndex];
             target.MoveTo(targetWayPointTransform.position, MoveToNextWaypoint);
 

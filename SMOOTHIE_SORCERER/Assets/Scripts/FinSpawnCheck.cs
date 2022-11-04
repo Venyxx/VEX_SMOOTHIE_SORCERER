@@ -5,6 +5,7 @@ using UnityEngine;
 public class FinSpawnCheck : MonoBehaviour
 {
     private CupHolder finishedREF;
+    public bool hasCup;
 
     // Start is called before the first frame update
     void Start ()

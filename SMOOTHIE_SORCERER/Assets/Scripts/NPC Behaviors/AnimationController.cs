@@ -16,7 +16,7 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (characterREF.canOrder)
+        if (characterREF.canOrder && characterREF.isLeaving == false)
         {
             animator.SetFloat("Blend", 1);
         }

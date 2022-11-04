@@ -33,7 +33,7 @@ public class GameSystem : MonoBehaviour
             return _system;
         }
     }
-    public int Score = 0;
+    public float Score = 0;
 
     public void IncreaseScore()
     {
