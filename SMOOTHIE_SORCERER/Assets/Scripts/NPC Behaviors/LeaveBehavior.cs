@@ -8,6 +8,11 @@ public class LeaveBehavior : MonoBehaviour
     private Rigidbody rb;
     private GameObject CharacterModel;
     private Animator anim;
+
+    private bool polyLeave;
+    private bool speedLeave;
+    private bool invisLeave;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +25,7 @@ public class LeaveBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (characterREF.isLeaving == true && characterREF.nextWayPointIndex < 4)
         {
          characterREF.nextWayPointIndex ++;
