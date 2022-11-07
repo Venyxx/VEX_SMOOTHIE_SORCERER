@@ -14,7 +14,7 @@ public class GameSystem : MonoBehaviour
 
     void Start()
     {
-        ScoreText.text = " ";
+        ScoreText.text = "$0";
         //value = GameObject.FindGameObjectWithTag("FinishedSmoothie");//finishedSmoothie.SmoothieValue;
     }
     
@@ -46,7 +46,7 @@ public class GameSystem : MonoBehaviour
     public void IncreaseScore()
     {
         Score += value;
-        ScoreText.text = Score.ToString();
+        ScoreText.text =("$ " + Score.ToString());
     }
 
     public void OnVegetableCut()

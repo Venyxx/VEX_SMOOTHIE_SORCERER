@@ -11,6 +11,15 @@ public class SelectionScript : MonoBehaviour
     public buttonServe ButtonServe;
     private Transform _selection;
 
+    private GameObject localButtons;
+
+    void Start ()
+    {
+        localButtons = GameObject.Find("buttons");
+        localButtons.SetActive(false);
+
+    }
+
     private void Update()
     {
         if(_selection != null)
@@ -28,7 +37,8 @@ public class SelectionScript : MonoBehaviour
         {
             if (hit.collider.tag == "FinishedOrder")
             {
-                
+                Debug.Log("hit button check");
+                localButtons.SetActive(true);
                 ButtonServe.currentSmoothie = hit.collider.gameObject;
             }
         }
