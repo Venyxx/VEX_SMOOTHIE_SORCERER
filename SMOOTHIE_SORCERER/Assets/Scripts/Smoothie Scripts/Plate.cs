@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Plate : MonoBehaviour
 {
-    private bool isCustomer;
+    public bool isCustomer;
     private GameObject customer;
-
+    
     
         [SerializeField]public bool hasBananaLEAVE;
         [SerializeField]public bool hasBlueberryLEAVE;
         [SerializeField]public bool hasStrawberryLEAVE;
         [SerializeField]public float SmoothieValueLEAVE;
+        
     // Start is called before the first frame update
     void Start()
     {
@@ -31,23 +32,23 @@ public class Plate : MonoBehaviour
         { 
             //SmoothieValueLEAVE = col.GetComponent<FinishedSmoothie>().SmoothieValueFIN;
 
-            if (col.gameObject.name == "BootCup(Clone)")
-            {
-                Debug.Log("speed leave");
-                customer.GetComponent<RailWaypointNav>().isLeaving = true;
+            // if (col.gameObject.name == "BootCup(Clone)")
+            // {
+            //     Debug.Log("speed leave");
+            //     customer.GetComponent<RailWaypointNav>().isLeaving = true;
                 
-            } else if (col.gameObject.name == "BarberCup(Clone)")
-            {
-                Debug.Log("invis leave");
-                customer.GetComponent<RailWaypointNav>().isLeaving = true;
-            }
-            else if (col.gameObject.name == "Coconut(Clone)")
-            {
-                Debug.Log("poly leave");
-                customer.GetComponent<RailWaypointNav>().isLeaving = true;
-            }
+            // } else if (col.gameObject.name == "BarberCup(Clone)")
+            // {
+            //     Debug.Log("invis leave");
+            //    customer.GetComponent<RailWaypointNav>().isLeaving = true;
+            // }
+            // else if (col.gameObject.name == "Coconut(Clone)")
+            // {
+            //     Debug.Log("poly leave");
+            //     customer.GetComponent<RailWaypointNav>().isLeaving = true;
+            // }
 
-            
+            customer.GetComponent<RailWaypointNav>().isLeaving = true;
             Debug.Log("im giving them the shit");
             var Smoothie = col.gameObject;
             customer.GetComponent<LeaveBehavior>();

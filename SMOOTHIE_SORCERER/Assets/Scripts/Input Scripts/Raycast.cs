@@ -17,6 +17,8 @@ public class Raycast : MonoBehaviour
     public GameObject CupSpawn;
     private Vector3 cupVector;
 
+    public buttonServe ButtonServe;
+
     // Start is called before the first frame update
 
 
@@ -59,6 +61,11 @@ public class Raycast : MonoBehaviour
                 cupVector.z =  CupSpawn.transform.position.z;
                 //Debug.Log("got cupstack");
                 Instantiate(CupObj, cupVector, Quaternion.identity);
+            }
+
+            if (hit.collider.tag == "FinishedOrder")
+            {
+                
             }
         }
        }

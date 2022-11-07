@@ -15,14 +15,41 @@ public class buttonServe : MonoBehaviour
    {
 
    }
+   // Update is called once per frame
+    // void Update()
+    // {
+    //     if (Input.GetMouseButtonDown(0)) 
+    //    {
+    //     RaycastHit hit; 
+    //     Ray ray = cam.ScreenPointToRay(Input.mousePosition); 
+
+    //     if (Physics.Raycast(ray, out hit, 10.0f)) 
+    //    }
+
+    // } 
     // Start is called before the first frame update
     public void Left ()
     {
         currentSmoothie.transform.position = plate1.position;
+        currentSmoothie = null;
     }
-    // Update is called once per frame
-    void Update()
+
+    public void MidLeft()
     {
-        
+        currentSmoothie.transform.position = plate2.position;
+        currentSmoothie = null;
     }
+
+    public void MidRight()
+    {
+        currentSmoothie.transform.position = plate4.position;
+        currentSmoothie = null;
+    }
+
+    public void Right()
+    {
+        currentSmoothie.transform.position = plate3.position;
+        currentSmoothie = null;
+    }
+    
 }
