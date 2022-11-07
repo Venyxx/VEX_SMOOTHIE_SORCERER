@@ -8,6 +8,7 @@ public class LeaveBehavior : MonoBehaviour
     private Rigidbody rb;
     private GameObject CharacterModel;
     private Animator anim;
+    private GameCompletion gameComp;
 
     private bool polyLeave;
     private bool speedLeave;
@@ -20,6 +21,8 @@ public class LeaveBehavior : MonoBehaviour
         CharacterModel = transform.Find("Character_Animated").gameObject;
         anim = CharacterModel.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
+        gameComp = GameObject.Find("Game System").GetComponent<GameCompletion>();
+
     }
 
     // Update is called once per frame
@@ -29,7 +32,7 @@ public class LeaveBehavior : MonoBehaviour
         if (characterREF.isLeaving == true && characterREF.nextWayPointIndex < 4)
         {
          characterREF.nextWayPointIndex ++;
-         
+         gameComp.CurrentCustomers ++;
          anim.SetFloat("Blend", 0);
         }
     }

@@ -99,7 +99,7 @@ public class CupHolder : MonoBehaviour
         {
           
           transform.position =  new Vector3(0.5f,0.7f,-4.5f);
-          GameObject theNewSmoothie = Instantiate(PolyCup, new Vector3(0.5f,0.7f,-4.5f), Quaternion.identity);
+          GameObject theNewSmoothie = Instantiate(PolyCup, new Vector3(0.6f,0.50f,-4.5f), Quaternion.identity);
           theNewSmoothie.transform.parent = tray.transform;
 
             //this section is just long because i dont want to set up proper methods

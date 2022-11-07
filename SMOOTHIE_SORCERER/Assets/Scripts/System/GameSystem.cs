@@ -14,6 +14,7 @@ public class GameSystem : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         ScoreText.text = "$0";
         //value = GameObject.FindGameObjectWithTag("FinishedSmoothie");//finishedSmoothie.SmoothieValue;
     }
