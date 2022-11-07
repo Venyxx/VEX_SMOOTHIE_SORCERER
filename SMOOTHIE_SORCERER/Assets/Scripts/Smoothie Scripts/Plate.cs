@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Plate : MonoBehaviour
 {
     public bool isCustomer;
     private GameObject customer;
+    public GameSystem gameSystem;
     
     
         [SerializeField]public bool hasBananaLEAVE;
@@ -16,11 +18,13 @@ public class Plate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
     }
 
     void OnTriggerEnter (Collider col)
     {
+        GameObject other = col.gameObject;
+
         if (col.gameObject.tag == "Customer")
         {
             isCustomer = true;
@@ -30,7 +34,7 @@ public class Plate : MonoBehaviour
 
         if (col.gameObject.tag == "FinishedOrder" && isCustomer)
         { 
-            //SmoothieValueLEAVE = col.GetComponent<FinishedSmoothie>().SmoothieValueFIN;
+            SmoothieValueLEAVE = col.GetComponent<FinishedSmoothie>().SmoothieValue;
 
             // if (col.gameObject.name == "BootCup(Clone)")
             // {
@@ -48,11 +52,12 @@ public class Plate : MonoBehaviour
             //     customer.GetComponent<RailWaypointNav>().isLeaving = true;
             // }
 
-            customer.GetComponent<RailWaypointNav>().isLeaving = true;
+           
+            gameSystem.IncreaseScore(); //+= SmoothieValueLEAVE;
             Debug.Log("im giving them the shit");
             var Smoothie = col.gameObject;
-            customer.GetComponent<LeaveBehavior>();
-
+           customer.GetComponent<RailWaypointNav>().isLeaving = true;
+            //customer.GetComponent<LeaveBehavior>();
             Destroy(col.gameObject);
 
         } else if (col.gameObject.tag == "FinishedOrder" && !isCustomer)

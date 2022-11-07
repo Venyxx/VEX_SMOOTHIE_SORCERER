@@ -18,6 +18,7 @@ TagManager:
   - FinishSMTH
   - FinishedOrder
   - FrontCounter
+  - Canvas
   layers:
   - Default
   - TransparentFX

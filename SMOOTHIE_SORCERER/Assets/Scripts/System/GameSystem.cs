@@ -9,10 +9,18 @@ public class GameSystem : MonoBehaviour
     static GameSystem _system;
     public GameObject GameScoreCanvas;
     public TMP_Text ScoreText;
+    public float value;
+    public FinishedSmoothie finishedSmoothie;
 
     void Start()
     {
         ScoreText.text = " ";
+        //value = GameObject.FindGameObjectWithTag("FinishedSmoothie");//finishedSmoothie.SmoothieValue;
+    }
+    
+    void Update()
+    {
+        
     }
 
     public static GameSystem System
@@ -37,7 +45,7 @@ public class GameSystem : MonoBehaviour
 
     public void IncreaseScore()
     {
-        Score += 1;
+        Score += value;
         ScoreText.text = Score.ToString();
     }
 
