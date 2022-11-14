@@ -3026,6 +3026,7 @@ MonoBehaviour:
   selectableTag: FinishedOrder
   HighLightMaterial: {fileID: 2100000, guid: 3b780a69ca1009940bb83626431b9686, type: 2}
   cam: {fileID: 963194227}
+  swipe: {fileID: 827711457}
   ButtonServe: {fileID: 181711940}
   selectedObject: {fileID: 0}
 --- !u!114 &773865156

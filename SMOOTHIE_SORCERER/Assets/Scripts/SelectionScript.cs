@@ -33,9 +33,9 @@ public class SelectionScript : MonoBehaviour
         {
             GameObject hitObject = hit.transform.root.gameObject;
             SelectObject(hitObject);
-            if (hit.collider.tag == "FinishedOrder")
+            if (hit.collider.tag == "FinishedOrder" )
             {
-                Renderer r = selectedObject.GetComponent<Renderer>();
+                //Renderer r = selectedObject.GetComponent<Renderer>();
             
                 Debug.Log("hit button check");
                 localButtons.SetActive(true);
