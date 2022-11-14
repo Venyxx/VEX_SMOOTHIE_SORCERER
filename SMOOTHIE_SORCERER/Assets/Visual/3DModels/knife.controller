@@ -135,7 +135,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: chop
-  m_Speed: 5.06
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4481439197203427529}
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1827226128182048838, guid: dc5736281154aea42a44639549efa81f,
+  m_Motion: {fileID: -7753227349842223383, guid: dc5736281154aea42a44639549efa81f,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
