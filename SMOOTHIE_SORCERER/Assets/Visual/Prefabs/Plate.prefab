@@ -143,8 +143,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.50151515, y: 0.36305892, z: 1.5499203}
-  m_Center: {x: 0.016616464, y: -0.024923742, z: 0.53526545}
+  m_Size: {x: 0.50151515, y: 0.0817011, z: 2.4988606}
+  m_Center: {x: 0.016616464, y: -0.011729032, z: 1.0097355}
 --- !u!114 &3232275556980497646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b0745f6b204b14fbf2903168a5ecbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCustomer: 0
+  gameSystem: {fileID: 0}
+  hasBananaLEAVE: 0
+  hasBlueberryLEAVE: 0
+  hasStrawberryLEAVE: 0
+  SmoothieValueLEAVE: 0

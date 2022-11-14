@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 304016147}
   - component: {fileID: 304016145}
   - component: {fileID: 304016146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seat01
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9195426100140717866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77, y: 0, z: -1.51}
+  m_LocalPosition: {x: 0.67, y: 0, z: -1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 69802605}
   - component: {fileID: 69802603}
   - component: {fileID: 69802604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seat03
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -99,7 +99,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9195426101467240346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0483797, y: 0, z: -1.51}
+  m_LocalPosition: {x: -2.36, y: 0, z: -1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 2099917524}
   - component: {fileID: 2099917522}
   - component: {fileID: 2099917523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seat02
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -171,7 +171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9195426101615314964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11, y: 0, z: -1.51}
+  m_LocalPosition: {x: -0.81, y: 0, z: -1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 9195426101771564718}
   - component: {fileID: 9195426101771564717}
   - component: {fileID: 203301829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seat00
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9195426101771564715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.45, y: 0, z: -1.51}
+  m_LocalPosition: {x: 2.22, y: 0, z: -1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -297,7 +297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9195426101883434958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Seats
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -127,7 +127,7 @@ public class CupHolder : MonoBehaviour
             smoothieMaterial = Resources.Load<Material>("s3");
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
-            Debug.Log("red");
+            Debug.Log("redp");
             } else 
             {
             var smoothiePart = theNewSmoothie.transform.Find("smoothie").gameObject;
@@ -173,7 +173,7 @@ public class CupHolder : MonoBehaviour
             smoothieMaterial = Resources.Load<Material>("s3");
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
-            Debug.Log("red");
+            Debug.Log("redi");
             }
              else 
             {
@@ -220,7 +220,7 @@ public class CupHolder : MonoBehaviour
             smoothieMaterial = Resources.Load<Material>("s3");
             MeshRenderer mat = smoothiePart.GetComponent<MeshRenderer>();      
             mat.material = smoothieMaterial;
-            Debug.Log("red");
+            Debug.Log("reds");
             }
              else 
             {

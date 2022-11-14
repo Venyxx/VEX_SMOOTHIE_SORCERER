@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 7183771790341183080}
   - component: {fileID: 6881839911523795575}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: smoothie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 2444311411812501725}
   - component: {fileID: 9131210019015360704}
   m_Layer: 0
-  m_Name: smoothie
+  m_Name: notsmoothie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
