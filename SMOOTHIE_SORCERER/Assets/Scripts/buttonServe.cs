@@ -5,6 +5,7 @@ using UnityEngine;
 public class buttonServe : MonoBehaviour
 {
    public GameObject currentSmoothie;
+   public SelectionScript selection;
    public Transform plate1; 
    public Transform plate2;
    public Transform plate3;
