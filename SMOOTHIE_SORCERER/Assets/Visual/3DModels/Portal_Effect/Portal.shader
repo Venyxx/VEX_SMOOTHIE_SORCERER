@@ -8,9 +8,9 @@ Shader "Unlit/Portal"
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" }
+        Tags { "RenderType"="Opaque" }
         LOD 100
-        ColorMask RGB
+        //ColorMask RGB
         AlphaToMask on
 
         Pass
