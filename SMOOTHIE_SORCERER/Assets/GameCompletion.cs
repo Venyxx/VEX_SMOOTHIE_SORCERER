@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameCompletion : MonoBehaviour
 {
@@ -36,5 +37,10 @@ public class GameCompletion : MonoBehaviour
         var localScore = gameObject.GetComponent<GameSystem>().Score;
         earnings.text  =("$ " + localScore.ToString());
 
+    }
+
+    public void NextLevel ()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

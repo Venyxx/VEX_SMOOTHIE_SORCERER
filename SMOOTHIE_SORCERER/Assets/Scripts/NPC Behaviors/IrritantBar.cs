@@ -9,7 +9,11 @@ public class IrritantBar : MonoBehaviour
     private float currentIrritant;
     public float maxIrritant;
     
+    public Sprite happy;
+    public Sprite mid;
+    public Sprite sad;
 
+    float percent; 
     
     public RailWaypointNav customerREF; 
 
@@ -27,12 +31,28 @@ public class IrritantBar : MonoBehaviour
         {
             currentIrritant += Time.deltaTime;
 
-            float percent = currentIrritant/maxIrritant;
+             percent = currentIrritant/maxIrritant;
             imageRef.fillAmount = percent;
             if (currentIrritant >= maxIrritant)
                  {
                      customerREF.isLeaving = true;
                  }
+        }
+
+        if (percent < .33)
+        {
+            imageRef.sprite = happy;
+            imageRef.color = new Color32(153, 255, 153, 100);
+        }
+        else if (percent > .33 && percent < .66)
+        {
+            imageRef.sprite = mid;
+            imageRef.color = new Color32(255, 255, 153, 100);
+        }
+        else if (percent > .66)
+        {
+            imageRef.sprite = sad;
+            imageRef.color = new Color32(255, 77, 77, 100);
         }
         
     }

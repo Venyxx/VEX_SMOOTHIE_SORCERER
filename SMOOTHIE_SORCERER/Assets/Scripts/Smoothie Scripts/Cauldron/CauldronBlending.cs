@@ -22,6 +22,7 @@ public class CauldronBlending : MonoBehaviour
          [Header("Timer")]
         public bool wellBlended;
         public bool overBlended;
+        private GameObject portal;
         
          
  
@@ -58,6 +59,8 @@ public class CauldronBlending : MonoBehaviour
         isBlending = false;
         overBlended = false;
         CauldronModel = transform.Find("CauldronNew").gameObject;
+        portal = CauldronModel.transform.Find("Portal_VFX").gameObject;
+        portal.SetActive(false);
         anim = CauldronModel.GetComponent<Animator>();
         
         caulTimREF = gameObject.GetComponent<CauldronTimer>();
@@ -73,6 +76,7 @@ public class CauldronBlending : MonoBehaviour
         {
             isBlending = true;
             anim.SetBool("CauldronON", true);
+            portal.SetActive(true);
 
             if (fruit.gameObject.name == "Banana(Clone)")
             {
@@ -122,11 +126,12 @@ public class CauldronBlending : MonoBehaviour
 
 
                     Debug.Log("this is now the active cauldron");
+                    portal.SetActive(true);
                     //isBlending = true;
 
                 }else if (hit.collider.tag == "Blender" && isBlending == true)
                 {
-                    
+                    portal.SetActive(false);
                     //we will have to break it down for each second decr value later
                     //this is the send off, clear every cauldron value 
                     anim.SetBool("CauldronON", false);
