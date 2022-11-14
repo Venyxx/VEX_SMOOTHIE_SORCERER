@@ -8,6 +8,7 @@ public class SelectionScript : MonoBehaviour
     [SerializeField] private Material HighLightMaterial;
     //[SerializeField] private Material DefaultMaterial;
     public Camera cam;
+    public SwipeRecog swipe;
     public buttonServe ButtonServe;
     private Transform _selection;
     private GameObject localButtons;
@@ -23,7 +24,7 @@ public class SelectionScript : MonoBehaviour
     private void Update()
     {
         
-         if (Input.GetMouseButtonDown(0)) 
+         if (Input.GetMouseButtonDown(0) && swipe.isFacingFront == true) 
          {
 
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
