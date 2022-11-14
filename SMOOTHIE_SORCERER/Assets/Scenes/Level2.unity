@@ -1304,7 +1304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302601234}
   - component: {fileID: 302601233}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: FrontCounterStayManager
   m_TagString: FrontCounter
   m_Icon: {fileID: 0}
@@ -1322,8 +1322,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.8319097, y: 0.4032659, z: 0.25227737}
-  m_Center: {x: 1.9159553, y: -0.29836705, z: -0.14345443}
+  m_Size: {x: 4.8319097, y: 0.03175561, z: 0.25227737}
+  m_Center: {x: 1.9159553, y: -0.484123, z: -0.14345442}
 --- !u!4 &302601234
 Transform:
   m_ObjectHideFlags: 0
