@@ -18,7 +18,27 @@ ModelImporter:
   - first:
       74: 3060872287085348379
     second: Dance
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body2
+    second: {fileID: 2100000, guid: 2eb70882d85009646943423541103a9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pants_Color
+    second: {fileID: 2100000, guid: f133cbcab073510449e1119c44573e45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoes
+    second: {fileID: 2100000, guid: 1445f5f010d3607439286b7f7d7ef015, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: b2f12f381c4fbf441a34f25a4ba7543a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
