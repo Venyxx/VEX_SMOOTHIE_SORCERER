@@ -135,7 +135,8 @@ public class CauldronBlending : MonoBehaviour
                     //we will have to break it down for each second decr value later
                     //this is the send off, clear every cauldron value 
                     anim.SetBool("CauldronON", false);
-                    if (currentTime > maxWellBlended)
+                    float percent = currentTime/maxWellBlended;
+                    if (currentTime > maxWellBlended || percent < .75)
                     {
                         
                         CauldronValue =- 1;
