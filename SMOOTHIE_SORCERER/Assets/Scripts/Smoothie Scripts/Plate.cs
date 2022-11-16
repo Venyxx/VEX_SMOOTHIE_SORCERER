@@ -36,27 +36,29 @@ public class Plate : MonoBehaviour
         { 
             SmoothieValueLEAVE = col.GetComponent<FinishedSmoothie>().SmoothieValue;
 
-            // if (col.gameObject.name == "BootCup(Clone)")
-            // {
-            //     Debug.Log("speed leave");
-            //     customer.GetComponent<RailWaypointNav>().isLeaving = true;
+             if (col.gameObject.name == "BootCup(Clone)")
+             {
+                 Debug.Log("speed leave");
+                customer.GetComponent<Moveable>().speedMetersPerSecond = 15.0f;
+                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
                 
-            // } else if (col.gameObject.name == "BarberCup(Clone)")
-            // {
-            //     Debug.Log("invis leave");
-            //    customer.GetComponent<RailWaypointNav>().isLeaving = true;
-            // }
-            // else if (col.gameObject.name == "Coconut(Clone)")
-            // {
-            //     Debug.Log("poly leave");
-            //     customer.GetComponent<RailWaypointNav>().isLeaving = true;
-            // }
+                
+             } else if (col.gameObject.name == "BarberCup(Clone)")
+             {
+                 Debug.Log("invis leave");
+                customer.GetComponent<RailWaypointNav>().isLeaving = true;
+             }
+             else if (col.gameObject.name == "Coconut(Clone)")
+             {
+                 Debug.Log("poly leave");
+                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
+             }
 
            
             gameSystem.IncreaseScore(); //+= SmoothieValueLEAVE;
             Debug.Log("im giving them the shit");
             var Smoothie = col.gameObject;
-           customer.GetComponent<RailWaypointNav>().isLeaving = true;
+           //customer.GetComponent<RailWaypointNav>().isLeaving = true;
             //customer.GetComponent<LeaveBehavior>();
             Destroy(col.gameObject);
 

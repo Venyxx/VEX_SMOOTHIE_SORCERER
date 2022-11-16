@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Moveable : MonoBehaviour
 {
-    [SerializeField] private float speedMetersPerSecond = 1.5f;
+    [SerializeField] public float speedMetersPerSecond = 1.5f;
 
     private Vector3? destination;
     private Vector3 startPosition;
