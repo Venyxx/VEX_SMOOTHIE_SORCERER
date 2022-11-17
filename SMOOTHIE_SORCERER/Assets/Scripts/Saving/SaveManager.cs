@@ -10,11 +10,12 @@ public class SaveManager : MonoBehaviour
 
         private void Awake ()
     {
+        
         DontDestroyOnLoad(gameObject);
         Instance = this;
         Load();
 
-        Debug.Log(Helper.Serialize<SaveState>(state));
+        
     }
 
     //save whole state
