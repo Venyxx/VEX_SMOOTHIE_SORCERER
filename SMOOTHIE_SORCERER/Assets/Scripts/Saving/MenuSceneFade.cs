@@ -14,6 +14,14 @@ public class MenuSceneFade : MonoBehaviour
     public Transform levelPanel;
     public RectTransform menuContainer;
 
+    public Text paperBuySetText;
+    public Text themeBuySetText;
+
+    private int [] paperCost = new int [] {0,20,30};
+    private int [] themeCost = new int [] {100,110,110};
+    private int selectedPaperIndex;
+    private int selectedThemeIndex;
+
     private Vector3 desiredMenuPosition;
 
     private void Start()
@@ -106,6 +114,22 @@ public class MenuSceneFade : MonoBehaviour
         }
     }
 
+    private void SetPaper (int index)
+    {
+        //change room material
+
+        //change buy set text
+        paperBuySetText.text = "current";
+    }
+
+    private void SetTheme (int index)
+    {
+        //change theme material
+
+        //change buy set text
+        themeBuySetText.text = "current";
+    }
+
     //buttons
     public void OnPlayClick ()
     {
@@ -122,14 +146,41 @@ public class MenuSceneFade : MonoBehaviour
 
     private void OnPaperSelect(int currentIndex)
     {
-        throw new NotImplementedException();
         Debug.Log("select paper button" + currentIndex);
+        //set selected paper
+        selectedPaperIndex = currentIndex;
+
+        // change content od buy set button
+        if (SaveManager.Instance.IsPaperOwned(currentIndex))
+        {
+            //owned wallpaper color
+            paperBuySetText.text = "Select";
+        }
+        else 
+        {
+            //not owned
+             paperBuySetText.text = "Buy" + paperCost[currentIndex].ToString();
+        }
+
     }
-    
     private void OnThemeSelect(int currentIndex)
     {
-        throw new NotImplementedException();
         Debug.Log("select theme button" + currentIndex);
+        
+        //set selected theme
+        selectedThemeIndex = currentIndex;
+
+        // change content od buy set button
+        if (SaveManager.Instance.IsThemeOwned(currentIndex))
+        {
+            //owned wallpaper color
+            themeBuySetText.text = "Select";
+        }
+        else 
+        {
+            //not owned
+             themeBuySetText.text = "Buy" + themeCost[currentIndex].ToString();
+        }
     }
     private void OnLevelSelect(int currentIndex)
     {
@@ -142,9 +193,51 @@ public class MenuSceneFade : MonoBehaviour
     public void OnPaperBuySet ()
     {
         Debug.Log("buy or set paper");
+        //is it owned
+        if (SaveManager.Instance.IsPaperOwned(selectedPaperIndex))
+        {
+            //set color
+            SetPaper(selectedPaperIndex);
+        }
+        else
+        {
+            //attempt to buy
+            if (SaveManager.Instance.BuyPaper(selectedPaperIndex, paperCost[selectedPaperIndex]))
+            {
+                //success
+                SetPaper(selectedPaperIndex);
+
+            }else
+            {
+                Debug.Log("youre broke");
+                
+            }
+
+        }
     }
     public void OnThemeBuySet ()
     {
         Debug.Log("buy or set theme");
+        
+        //is it owned
+        if (SaveManager.Instance.IsThemeOwned(selectedThemeIndex))
+        {
+            //set color theme
+            SetTheme(selectedThemeIndex);
+        }
+        else
+        {
+            //attempt to buy
+            if (SaveManager.Instance.BuyTheme(selectedThemeIndex, themeCost[selectedThemeIndex]))
+            {
+                //success
+                SetTheme(selectedThemeIndex);
+
+            }else
+            {
+                Debug.Log("youre broke");
+            }
+
+        }
     }
 }

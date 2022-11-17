@@ -37,17 +37,71 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    //Check if item is owned
-    public bool IsColorOwned(int index)
+    //Check if item wallpaper color is owned
+    public bool IsPaperOwned(int index)
     {
         //check if bit is set, if yes its owned
-        return (state.colorOwned & (1 << index)) != 0;
+        return (state.paperOwned & (1 << index)) != 0;
     }
 
-    //unlock a color way
-    public void UnlockColor (int index)
+    //Check if item wallpaper color is owned
+    public bool IsThemeOwned(int index)
     {
-        state.colorOwned |= 1 << index;
+        //check if bit is set, if yes its owned
+        return (state.themeOwned & (1 << index)) != 0;
+    }
+
+    //try to buy color paper
+    public bool BuyPaper( int index, int cost)
+    {
+        if (state.Money >= cost)
+        {
+            //enough cash
+            state.Money  -= cost;
+            UnlockPaper(index);
+
+            //save
+            Save();
+            return true;
+        }
+        else 
+        {
+            //broke 
+            return false;
+        }
+    }
+
+    //try to buy theme
+    public bool BuyTheme( int index, int cost)
+    {
+        if (state.Money >= cost)
+        {
+            //enough cash
+            state.Money  -= cost;
+            UnlockTheme(index);
+
+            //save
+            Save();
+            return true;
+        }
+        else 
+        {
+            //broke 
+            return false;
+        }
+    }
+
+
+    //unlock a color way
+    public void UnlockPaper (int index)
+    {
+        state.paperOwned |= 1 << index;
+    }
+
+     //unlock a theme way
+    public void UnlockTheme (int index)
+    {
+        state.themeOwned |= 1 << index;
     }
 
     //reset the save

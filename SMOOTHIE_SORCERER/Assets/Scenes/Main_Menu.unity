@@ -517,7 +517,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3406bb0bcad09d74f9f117ce61bbfad4, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2401,6 +2401,8 @@ MonoBehaviour:
   themePanel: {fileID: 1671071136}
   levelPanel: {fileID: 85974989}
   menuContainer: {fileID: 1119824011}
+  paperBuySetText: {fileID: 1545052556}
+  themeBuySetText: {fileID: 57396245}
 --- !u!4 &622700763
 Transform:
   m_ObjectHideFlags: 0
@@ -5295,7 +5297,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3406bb0bcad09d74f9f117ce61bbfad4, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
