@@ -8,4 +8,6 @@ public class SaveState
 
     public int activePaper = 0;
     public int activeTheme = 0;
+
+    public int completedLevel = 0;
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuSceneFade : MonoBehaviour
 {
@@ -122,6 +123,29 @@ public class MenuSceneFade : MonoBehaviour
             int currentIndex = i;
             Button b = t.GetComponent<Button>();
             //b.onClick.AddListener(() => OnLevelSelect(currentIndex));
+
+            Image img = t.GetComponent<Image>();
+            if (i <= SaveManager.Instance.state.completedLevel)
+            {
+                //its unlocked fr
+                if (i == SaveManager.Instance.state.completedLevel)
+                {
+                    img.color = Color.white;
+                    //in progress
+                }
+                else 
+                {
+                    //level is completed
+                    img.color = Color.green;
+                }
+            } else
+            {
+                //not completed or unlocked
+                b.interactable = false;
+                img.color = Color.grey;
+            }
+
+            //is it unlocked
 
             i++;
         }
@@ -274,7 +298,8 @@ public class MenuSceneFade : MonoBehaviour
     }
     private void OnLevelSelect(int currentIndex)
     {
-        
+        Manager.Instance.currentLevel = currentIndex;
+        SceneManager.LoadScene("SampleScene");
         Debug.Log("select level button" + currentIndex);
     }
 
