@@ -19,6 +19,7 @@ public class Plate : MonoBehaviour
     void Start()
     {
         // canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
+        gameSystem = GameObject.Find("Game System").GetComponent<GameSystem>();
     }
 
     void OnTriggerEnter (Collider col)
@@ -34,7 +35,7 @@ public class Plate : MonoBehaviour
 
         if (col.gameObject.tag == "FinishedOrder" && isCustomer)
         { 
-            SmoothieValueLEAVE = col.GetComponent<FinishedSmoothie>().SmoothieValue;
+            
 
              if (col.gameObject.name == "BootCup(Clone)")
              {
@@ -54,7 +55,7 @@ public class Plate : MonoBehaviour
                  customer.GetComponent<RailWaypointNav>().isLeaving = true;
              }
 
-           
+            gameSystem.value = col.GetComponent<FinishedSmoothie>().SmoothieValue;
             gameSystem.IncreaseScore(); //+= SmoothieValueLEAVE;
             Debug.Log("im giving them the shit");
             var Smoothie = col.gameObject;

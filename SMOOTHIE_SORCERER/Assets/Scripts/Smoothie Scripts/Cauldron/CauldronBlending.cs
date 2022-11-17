@@ -41,6 +41,7 @@ public class CauldronBlending : MonoBehaviour
         private Vector3 smoothieSPA;
         private Animator anim;
         private GameObject CauldronModel;
+        public float baseValue;
         
         public float currentTime;
         
@@ -54,6 +55,7 @@ public class CauldronBlending : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        CauldronValue = baseValue;
         cam = Camera.main;
         wellBlended = false;
         isBlending = false;
@@ -99,13 +101,7 @@ public class CauldronBlending : MonoBehaviour
     {
         //timerTextie.text = currentTime.ToString("0");
 
-        if (isFinished)
-        {
-            //here is where we instantiate the smoothie and attach the values;
-            SmoothiePicker();
-            isFinished = false;
-            //Debug.Log("ran is finished");
-        }
+       
         
         if (isBlending)
         {   
@@ -132,14 +128,17 @@ public class CauldronBlending : MonoBehaviour
                 }else if (hit.collider.tag == "Blender" && isBlending == true)
                 {
                     portal.SetActive(false);
+                    Debug.Log("HELLO?");
                     //we will have to break it down for each second decr value later
                     //this is the send off, clear every cauldron value 
                     anim.SetBool("CauldronON", false);
                     float percent = currentTime/maxWellBlended;
+                    Debug.Log(percent);
                     if (currentTime > maxWellBlended || percent < .75)
                     {
                         
-                        CauldronValue =- 1;
+                        CauldronValue -= 1;
+                        //Debug.Log("minus" + CauldronValue);
                         isFinished = true;
 
                         //reset
@@ -155,8 +154,18 @@ public class CauldronBlending : MonoBehaviour
                     isFinished = true;
                     
                     currentTime = 0;
+                   
                     //Debug.Log("sending value to smoothie");
 
+                }
+
+
+                 if (isFinished)
+                 {
+                    //here is where we instantiate the smoothie and attach the values;
+                    SmoothiePicker();
+                    isFinished = false;
+                    //Debug.Log("ran is finished");
                 }
 
                 
@@ -179,8 +188,8 @@ public class CauldronBlending : MonoBehaviour
         smoothieSPA.y = smoothieSpawn.transform.position.y;
         smoothieSPA.z = smoothieSpawn.transform.position.z;
 
-
-        Debug.Log("in smoothie picker");
+        
+        //Debug.Log(CauldronValue + "smoothie picer");
         if (hasBananaCaul && hasStrawberryCaul)
         {
             //spawn and set values
@@ -264,6 +273,7 @@ public class CauldronBlending : MonoBehaviour
         hasBananaCaul = false;
         hasStrawberryCaul = false;
         hasBlueberryCaul = false;
+        CauldronValue = baseValue;
         
     }
     

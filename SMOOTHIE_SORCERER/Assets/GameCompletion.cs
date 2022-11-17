@@ -11,6 +11,7 @@ public class GameCompletion : MonoBehaviour
     [SerializeField] public int CurrentCustomers;
     [SerializeField] public TextMeshProUGUI earnings;
 
+
     public GameObject endMenuUI;
 
     // Start is called before the first frame update
@@ -32,10 +33,13 @@ public class GameCompletion : MonoBehaviour
 
     void LevelCompletion ()
     {
+        
         Time.timeScale = 0f;
         endMenuUI.SetActive(true);
         var localScore = gameObject.GetComponent<GameSystem>().Score;
+        
         earnings.text  =("$ " + localScore.ToString());
+        
 
     }
 

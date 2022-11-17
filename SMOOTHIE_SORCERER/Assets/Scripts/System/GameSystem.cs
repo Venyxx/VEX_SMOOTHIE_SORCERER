@@ -8,15 +8,18 @@ public class GameSystem : MonoBehaviour
 {
     static GameSystem _system;
     public GameObject GameScoreCanvas;
+    private GameCompletion GameCompletion;
     public TMP_Text ScoreText;
     public float value;
-    public FinishedSmoothie finishedSmoothie;
+    public int Level;
+    public float Score = 0;
+
 
     void Start()
     {
         Time.timeScale = 1f;
         ScoreText.text = "$0";
-        //value = GameObject.FindGameObjectWithTag("FinishedSmoothie");//finishedSmoothie.SmoothieValue;
+        GameCompletion.MaxCustomers = Level;
     }
     
     void Update()
@@ -42,7 +45,7 @@ public class GameSystem : MonoBehaviour
             return _system;
         }
     }
-    public float Score = 0;
+    
 
     public void IncreaseScore()
     {
