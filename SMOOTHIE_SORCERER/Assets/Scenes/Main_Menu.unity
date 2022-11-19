@@ -3007,7 +3007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 4949916280004845567}
-  endOfPathInstruction: 0
+  endOfPathInstruction: 1
   speed: 0.5
 --- !u!1 &468364443
 GameObject:
@@ -11679,7 +11679,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 188
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0
     showTransformTool: 1
@@ -11785,7 +11785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4981372327987522045}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -45.21, y: 0.0400002, z: 4.1}
+  m_LocalPosition: {x: -45.21, y: 0, z: 4.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
