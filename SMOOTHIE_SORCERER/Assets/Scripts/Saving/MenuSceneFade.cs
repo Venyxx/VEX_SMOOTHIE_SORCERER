@@ -4,15 +4,22 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class MenuSceneFade : MonoBehaviour
 {
     public CanvasGroup fadeGroup;
-    private float fadeInSpeed = 0.33f;
+    private float fadeInSpeed = 0.66f;
+    public CinemachineVirtualCamera frontCamera;
+    public CinemachineVirtualCamera backCamera;
+    public CinemachineVirtualCamera shopCamera;
+    public CinemachineVirtualCamera skyCamera;
+
 
     public Transform paperPanel;
     public Transform themePanel;
     public Transform levelPanel;
+    public Transform creditsPanel;
     public RectTransform menuContainer;
 
     public Text paperBuySetText;
@@ -31,16 +38,23 @@ public class MenuSceneFade : MonoBehaviour
 
     private void Start()
     {
+        frontCamera.gameObject.SetActive(true);
+        backCamera.gameObject.SetActive(false);
+        shopCamera.gameObject.SetActive(false);
+        skyCamera.gameObject.SetActive(false);
         Debug.Log("in start method");
         //temp starting money
         SaveManager.Instance.state.Money = 999;
+
+        //pos camera on focus menu 
+        SetCameraTo(Manager.Instance.menuFocus);
         ///current money
         UpdateMoneyText();
         
-        //fadeGroup = FindObjectOfType<CanvasGroup>();
+        fadeGroup = GameObject.Find("Fade").GetComponent<CanvasGroup>();
 
         //white on start
-        fadeGroup.alpha = 1;
+        //fadeGroup.alpha = 1;
 
         // button on click events to shop 
         InitShop();
@@ -63,7 +77,7 @@ public class MenuSceneFade : MonoBehaviour
 
     private void Update ()
     {
-        
+        //Debug.Log(fadeGroup.alpha);
         fadeGroup.alpha = 1 - Time.timeSinceLevelLoad * fadeInSpeed;
 
         menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.1f);
@@ -151,6 +165,12 @@ public class MenuSceneFade : MonoBehaviour
         }
     }
 
+    private void SetCameraTo (int menuIndex)
+    {
+        NavigateTo(menuIndex);
+        menuContainer.anchoredPosition3D = desiredMenuPosition;
+    }
+
     private void NavigateTo (int menuIndex)
     {
         switch  (menuIndex)
@@ -159,13 +179,17 @@ public class MenuSceneFade : MonoBehaviour
             case 0:
                 desiredMenuPosition = Vector3.zero;
                 break;
-            //1 = play menu
             case 1:
                 desiredMenuPosition = Vector3.right * 1280;
-                break;
+                break;    
             case 2:
                 desiredMenuPosition = Vector3.left * 1280;
                 break;
+            case 3: 
+                desiredMenuPosition = Vector3.down * 720;
+                break;
+
+                //1 is play, 2 shop, 3 credits , 4 back? idk how 
         }
     }
 
@@ -205,14 +229,24 @@ public class MenuSceneFade : MonoBehaviour
     public void OnPlayClick ()
     {
         NavigateTo(1);
-    }
-    public void OnBackClick()
-    {
-        NavigateTo(3);
+        backCamera.gameObject.SetActive(true);
     }
     public void OnShopClick ()
     {
         NavigateTo(2);
+        shopCamera.gameObject.SetActive(true);
+    }
+    public void OnBackClick()
+    {
+        backCamera.gameObject.SetActive(false);
+        shopCamera.gameObject.SetActive(false);
+        skyCamera.gameObject.SetActive(false);
+        NavigateTo(4);
+    }
+    public void OnCreditsClick ()
+    {
+        skyCamera.gameObject.SetActive(true);
+        NavigateTo(3);
     }
 
     private void OnPaperSelect(int currentIndex)
@@ -296,6 +330,7 @@ public class MenuSceneFade : MonoBehaviour
              themeBuySetText.text = "Buy" + themeCost[currentIndex].ToString();
         }
     }
+
     private void OnLevelSelect(int currentIndex)
     {
         Manager.Instance.currentLevel = currentIndex;

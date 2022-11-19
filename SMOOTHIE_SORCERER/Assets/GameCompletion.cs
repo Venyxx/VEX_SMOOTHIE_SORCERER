@@ -33,14 +33,30 @@ public class GameCompletion : MonoBehaviour
 
     void LevelCompletion ()
     {
-        
+        //save and add to completable levels
+        SaveManager.Instance.CompleteLevel(Manager.Instance.currentLevel);
+
+        //focus level selection on return
+        Manager.Instance.menuFocus = 1;
+
+        //ExitScene();
         Time.timeScale = 0f;
-        endMenuUI.SetActive(true);
+        if (endMenuUI)
+        {
+            endMenuUI.SetActive(true);
+        }
+        
         var localScore = gameObject.GetComponent<GameSystem>().Score;
         
         earnings.text  =("$ " + localScore.ToString());
+
         
 
+    }
+
+    public void ExitScene ()
+    {
+        SceneManager.LoadScene("Main_Menu");
     }
 
     public void NextLevel ()

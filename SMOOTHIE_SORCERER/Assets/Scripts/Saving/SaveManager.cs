@@ -105,6 +105,17 @@ public class SaveManager : MonoBehaviour
         state.themeOwned |= 1 << index;
     }
 
+    //complete level
+    public void CompleteLevel (int index)
+    {
+        //if current lvl 
+        if (state.completedLevel == index)
+        {
+            state.completedLevel++;
+            Save();
+        }
+    }
+
     //reset the save
     public void ResetSave()
     {

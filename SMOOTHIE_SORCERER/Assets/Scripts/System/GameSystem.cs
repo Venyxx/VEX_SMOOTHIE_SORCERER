@@ -19,7 +19,8 @@ public class GameSystem : MonoBehaviour
     {
         Time.timeScale = 1f;
         ScoreText.text = "$0";
-        GameCompletion.MaxCustomers = Level;
+        var adding = gameObject.GetComponent<GameCompletion>().MaxCustomers;
+        
     }
     
     void Update()
