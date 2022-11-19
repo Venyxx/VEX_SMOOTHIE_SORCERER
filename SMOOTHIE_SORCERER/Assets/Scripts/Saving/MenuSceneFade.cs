@@ -45,7 +45,7 @@ public class MenuSceneFade : MonoBehaviour
         skyCamera.gameObject.SetActive(false);
         
         //temp starting money
-        SaveManager.Instance.state.Money = 999;
+        //SaveManager.Instance.state.Money = 999;
 
         //pos camera on focus menu 
         SetCameraTo(Manager.Instance.menuFocus);
