@@ -8,17 +8,12 @@ public class Plate : MonoBehaviour
     public bool isCustomer;
     private GameObject customer;
     public GameSystem gameSystem;
-    
-    
-        [SerializeField]public bool hasBananaLEAVE;
-        [SerializeField]public bool hasBlueberryLEAVE;
-        [SerializeField]public bool hasStrawberryLEAVE;
-        [SerializeField]public float SmoothieValueLEAVE;
+    private CustomerOrder CustomerOrder;
+    private FinishedSmoothie finishedScript;
         
     // Start is called before the first frame update
     void Start()
     {
-        // canvas = GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>();
         gameSystem = GameObject.Find("Game System").GetComponent<GameSystem>();
     }
 
@@ -30,36 +25,69 @@ public class Plate : MonoBehaviour
         {
             isCustomer = true;
             customer = col.gameObject;
-            Debug.Log("customer woo");
+            CustomerOrder = customer.GetComponent<CustomerOrder>();
+            //Debug.Log("customer woo");
         }
 
         if (col.gameObject.tag == "FinishedOrder" && isCustomer)
         { 
-            
-
+            //finsmoothie ref
+            finishedScript = col.gameObject.GetComponent<FinishedSmoothie>();
+            //what to add to the score
+            var ADDTHIS = col.gameObject.GetComponent<FinishedSmoothie>().SmoothieValue;
+            //leave behavior
              if (col.gameObject.name == "BootCup(Clone)")
              {
-                 Debug.Log("speed leave");
+                //Debug.Log("speed leave");
                 customer.GetComponent<Moveable>().speedMetersPerSecond = 15.0f;
-                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
-                
-                
-             } else if (col.gameObject.name == "BarberCup(Clone)")
-             {
-                 Debug.Log("invis leave");
                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
-             }
-             else if (col.gameObject.name == "Coconut(Clone)")
+                bool bootcup = true;
+                if (bootcup != CustomerOrder.wantSpeed)
+                {
+                    ADDTHIS -= 1;
+                }
+   
+             }else if (col.gameObject.name == "BarberCup(Clone)")
              {
-                 Debug.Log("poly leave");
-                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
+                Debug.Log("invis leave");
+                customer.GetComponent<RailWaypointNav>().isLeaving = true;
+                bool invis = true;
+                if (invis != CustomerOrder.wantInvis)
+                {
+                    ADDTHIS -= 1;
+                }
+
+             }else if (col.gameObject.name == "Coconut(Clone)")
+             {
+                Debug.Log("poly leave");
+                customer.GetComponent<RailWaypointNav>().isLeaving = true;
+                bool poly = true;
+                if (poly != CustomerOrder.wantPolymorph)
+                {
+                    ADDTHIS -= 1;
+                }
              }
 
-            gameSystem.value = col.GetComponent<FinishedSmoothie>().SmoothieValue;
-            gameSystem.IncreaseScore(); //+= SmoothieValueLEAVE;
-            Debug.Log("im giving them the shit");
-            var Smoothie = col.gameObject;
-           //customer.GetComponent<RailWaypointNav>().isLeaving = true;
+             
+            // minus for wrong fruits
+             if (CustomerOrder.wantBanana != finishedScript.hasBananaFIN)
+             {
+                ADDTHIS -= 1; 
+             }
+             if (CustomerOrder.wantStrawberry != finishedScript.hasStrawberryFIN)
+             {
+                ADDTHIS -= 1; 
+             }
+             if (CustomerOrder.wantBlueberry != finishedScript.hasBlueberryFIN)
+             {
+                ADDTHIS -= 1; 
+             }
+
+            //actually adding to the score
+            gameSystem.IncreaseScore(ADDTHIS);
+            
+            
+            //customer.GetComponent<RailWaypointNav>().isLeaving = true;
             //customer.GetComponent<LeaveBehavior>();
             Destroy(col.gameObject);
 

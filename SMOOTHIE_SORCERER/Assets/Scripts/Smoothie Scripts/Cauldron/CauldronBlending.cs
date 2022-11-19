@@ -120,15 +120,12 @@ public class CauldronBlending : MonoBehaviour
                 if (hit.collider.tag == "Blender" && isBlending == false)
                 {
 
-
-                    Debug.Log("this is now the active cauldron");
                     portal.SetActive(true);
-                    //isBlending = true;
-
+                    
                 }else if (hit.collider.tag == "Blender" && isBlending == true)
                 {
                     portal.SetActive(false);
-                    Debug.Log("HELLO?");
+                    //Debug.Log("HELLO?");
                     //we will have to break it down for each second decr value later
                     //this is the send off, clear every cauldron value 
                     anim.SetBool("CauldronON", false);
@@ -138,7 +135,7 @@ public class CauldronBlending : MonoBehaviour
                     {
                         
                         CauldronValue -= 1;
-                        //Debug.Log("minus" + CauldronValue);
+                        Debug.Log("minus" + CauldronValue);
                         isFinished = true;
 
                         //reset

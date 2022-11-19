@@ -48,9 +48,9 @@ public class GameSystem : MonoBehaviour
     }
     
 
-    public void IncreaseScore()
+    public void IncreaseScore(float addingValue)
     {
-        Score += value;
+        Score += addingValue;
         ScoreText.text =("$ " + Score.ToString());
     }
 

@@ -40,15 +40,13 @@ public class CupHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Value = 6.0f;
+        
          bool hasBananaCup = false;
          bool hasBlueberryCup = false;
          bool hasStrawberryCup = false;
          bool finished = false;
          
          tray = GameObject.Find("Tray");
-
-         traySlots.RemoveAt(index: 0);
 
         // moveSpots = gameObject.name = "Spawn1";
 

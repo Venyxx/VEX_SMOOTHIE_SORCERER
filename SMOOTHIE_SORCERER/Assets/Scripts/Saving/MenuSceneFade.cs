@@ -38,11 +38,12 @@ public class MenuSceneFade : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         frontCamera.gameObject.SetActive(true);
         backCamera.gameObject.SetActive(false);
         shopCamera.gameObject.SetActive(false);
         skyCamera.gameObject.SetActive(false);
-        Debug.Log("in start method");
+        
         //temp starting money
         SaveManager.Instance.state.Money = 999;
 
@@ -78,7 +79,7 @@ public class MenuSceneFade : MonoBehaviour
     private void Update ()
     {
         //Debug.Log(fadeGroup.alpha);
-        fadeGroup.alpha = 1 - Time.timeSinceLevelLoad * fadeInSpeed;
+        fadeGroup.alpha = 1 - (Time.timeSinceLevelLoad + 0.1f) * fadeInSpeed;
 
         if (skyCamera.gameObject.activeInHierarchy == true)
         {
