@@ -80,7 +80,14 @@ public class MenuSceneFade : MonoBehaviour
         //Debug.Log(fadeGroup.alpha);
         fadeGroup.alpha = 1 - Time.timeSinceLevelLoad * fadeInSpeed;
 
-        menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.1f);
+        if (skyCamera.gameObject.activeInHierarchy == true)
+        {
+            menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.01f);
+        } else 
+        {
+            menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.1f);
+        }
+        
     }
 
     private void InitShop ()
