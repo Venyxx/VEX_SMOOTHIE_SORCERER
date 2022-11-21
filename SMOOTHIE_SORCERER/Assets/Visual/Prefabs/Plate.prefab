@@ -160,10 +160,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCustomer: 0
   gameSystem: {fileID: 0}
+  Human: {fileID: 0}
+  Trans: {fileID: 0}
   speedSound: {fileID: 8300000, guid: 031e8d7cadfd23e4689486594911a38b, type: 3}
   invisSound: {fileID: 8300000, guid: c9bdfc6fa39b1fc41af67f95f15e996e, type: 3}
   polySound: {fileID: 8300000, guid: d8b4f0acfa78c494da1135889c83636e, type: 3}
-  audioSource: {fileID: 0}
 --- !u!82 &7759385340602664586
 AudioSource:
   m_ObjectHideFlags: 0
