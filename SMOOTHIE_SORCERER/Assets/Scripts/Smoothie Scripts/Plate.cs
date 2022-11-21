@@ -54,7 +54,7 @@ public class Plate : MonoBehaviour
              {
                 Debug.Log("invis leave");
                 customer.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh = null;
-                //customer.GetComponentInChildren<SkinnedMeshRenderer>()m_Materials
+           
                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
                 bool invis = true;
                 if (invis != CustomerOrder.wantInvis)
