@@ -38,7 +38,7 @@ public class Cutter : MonoBehaviour
     {
     if (col.gameObject.tag == "Slice" && Knife.GetComponent<Knife>().isCutting)
     {
-      AndroidManager.HapticFeedback();
+      
       Knife.GetComponent<Knife>().SetCuttingState(true);
       float randomNumber = Random.Range(1, 5);
       ChooseAudio(randomNumber);

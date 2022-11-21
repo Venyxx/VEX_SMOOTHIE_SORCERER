@@ -26,10 +26,6 @@ public class MenuSceneFade : MonoBehaviour
     public Text themeBuySetText;
     public Text moneyText;
 
-    public AudioClip clip;
-    public AudioClip close;
-    AudioSource audioSource;
-
     private int [] paperCost = new int [] {0,20,30};
     private int [] themeCost = new int [] {100,110,110};
     private int selectedPaperIndex;
@@ -39,13 +35,9 @@ public class MenuSceneFade : MonoBehaviour
 
 
     private Vector3 desiredMenuPosition;
-    public GameObject helpScreen;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        helpScreen = GameObject.Find("HelpScreenPNG");
-        helpScreen.SetActive(false);
         Time.timeScale = 1f;
         frontCamera.gameObject.SetActive(true);
         backCamera.gameObject.SetActive(false);
@@ -53,14 +45,14 @@ public class MenuSceneFade : MonoBehaviour
         skyCamera.gameObject.SetActive(false);
         
         //temp starting money
-        SaveManager.Instance.state.Money = 999;
+        //SaveManager.Instance.state.Money = 999;
 
         //pos camera on focus menu 
         SetCameraTo(Manager.Instance.menuFocus);
         ///current money
         UpdateMoneyText();
         
-        //fadeGroup = GameObject.Find("Fade").GetComponent<CanvasGroup>();
+        fadeGroup = GameObject.Find("Fade").GetComponent<CanvasGroup>();
 
         //white on start
         //fadeGroup.alpha = 1;
@@ -87,11 +79,11 @@ public class MenuSceneFade : MonoBehaviour
     private void Update ()
     {
         //Debug.Log(fadeGroup.alpha);
-        //fadeGroup.alpha = 1 - (Time.timeSinceLevelLoad + 0.1f) * fadeInSpeed;
+        fadeGroup.alpha = 1 - (Time.timeSinceLevelLoad + 0.1f) * fadeInSpeed;
 
         if (skyCamera.gameObject.activeInHierarchy == true)
         {
-            menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.05f);
+            menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.01f);
         } else 
         {
             menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.1f);
@@ -415,16 +407,5 @@ public class MenuSceneFade : MonoBehaviour
             }
 
         }
-    }
-
-      public void HelpMenuOpen ()
-    {
-        helpScreen.SetActive(true);
-        audioSource.PlayOneShot(clip, 0.7F);
-    }
-     public void HelpMenuClose ()
-    {
-        helpScreen.SetActive(false);
-        audioSource.PlayOneShot(close, 0.7F);
     }
 }

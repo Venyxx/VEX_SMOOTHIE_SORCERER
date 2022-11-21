@@ -37,7 +37,6 @@ public class Knife : MonoBehaviour
     {
         if(Input.GetMouseButton(0) && screenBounds.Contains(Input.mousePosition) && isCutting == false)
         {
-            
             TimeElapsed = 0f;
             SetCuttingState(true);
             //Debug.Log("chop");
