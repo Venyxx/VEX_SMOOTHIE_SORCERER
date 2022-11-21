@@ -10,11 +10,14 @@ public class Plate : MonoBehaviour
     public GameSystem gameSystem;
     private CustomerOrder CustomerOrder;
     private FinishedSmoothie finishedScript;
+    //[SerializeField] public RuntimeAnimatorController catAnim;
+    [SerializeField] public GameObject Human, Trans;
         
     // Start is called before the first frame update
     void Start()
     {
         gameSystem = GameObject.Find("Game System").GetComponent<GameSystem>();
+        Trans.SetActive(false);
     }
 
     void OnTriggerEnter (Collider col)
@@ -47,9 +50,11 @@ public class Plate : MonoBehaviour
                     ADDTHIS -= 1;
                 }
    
-             }else if (col.gameObject.name == "BarberCup(Clone)")
+             }else if (col.gameObject.name == "Barber_Cup(Clone)")
              {
                 Debug.Log("invis leave");
+                customer.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh = null;
+                //customer.GetComponentInChildren<SkinnedMeshRenderer>()m_Materials
                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
                 bool invis = true;
                 if (invis != CustomerOrder.wantInvis)
@@ -60,7 +65,12 @@ public class Plate : MonoBehaviour
              }else if (col.gameObject.name == "Coconut(Clone)")
              {
                 Debug.Log("poly leave");
+                customer.GetComponent<ModelSwap>().CatSwap();
+                
                 customer.GetComponent<RailWaypointNav>().isLeaving = true;
+                
+                // customer.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh = Resources.Load<Mesh>("Wizard_Cat_Final");
+                // customer.GetComponentInChildren<Animator>().runtimeAnimatorController = Resources.Load("CatController") as RuntimeAnimatorController;
                 bool poly = true;
                 if (poly != CustomerOrder.wantPolymorph)
                 {
