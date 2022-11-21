@@ -14,9 +14,12 @@ public class LeaveBehavior : MonoBehaviour
     private bool speedLeave;
     private bool invisLeave;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         characterREF = gameObject.GetComponent<RailWaypointNav>();
         CharacterModel = transform.Find("Character_Animated").gameObject;
         anim = CharacterModel.GetComponent<Animator>();

@@ -6,22 +6,19 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-
+    public GameObject helpScreen;
     public GameObject pauseMenuUI;
 
-    // void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.Escape))
-    //     {
-    //         if (GameIsPaused)
-    //         {
-    //             Resume();
-    //         } else
-    //         {
-    //             Pause();
-    //         }
-    //     }
-    // }
+    public AudioClip clip;
+    public AudioClip close;
+    AudioSource audioSource;
+
+    void Start ()
+    {
+        helpScreen = GameObject.Find("HelpScreenPNG");
+         helpScreen.SetActive(false);
+         audioSource = GetComponent<AudioSource>();
+    }
 
     public void PauseGame()
     {
@@ -61,4 +58,16 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
+
+      public void HelpMenuOpen ()
+    {
+        helpScreen.SetActive(true);
+        audioSource.PlayOneShot(clip, 0.7F);
+    }
+     public void HelpMenuClose ()
+    {
+        helpScreen.SetActive(false);
+        audioSource.PlayOneShot(close, 0.7F);
+    }
+
 }
