@@ -10,7 +10,7 @@ public class SaveManager : MonoBehaviour
 
         private void Awake ()
     {
-        
+        //ResetSave();
         DontDestroyOnLoad(gameObject);
         Instance = this;
         Load();
@@ -108,10 +108,12 @@ public class SaveManager : MonoBehaviour
     //complete level
     public void CompleteLevel (int index)
     {
+        Debug.Log("tried to run complete level");
         //if current lvl 
         if (state.completedLevel == index)
         {
             state.completedLevel++;
+            Debug.Log("level completed max is: " + state.completedLevel);
             Save();
         }
     }

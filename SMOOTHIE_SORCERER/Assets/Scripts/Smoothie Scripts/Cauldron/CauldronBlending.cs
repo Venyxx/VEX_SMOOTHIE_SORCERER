@@ -22,7 +22,7 @@ public class CauldronBlending : MonoBehaviour
          [Header("Timer")]
         public bool wellBlended;
         public bool overBlended;
-        private GameObject portal;
+        public GameObject portal;
         
          
  
@@ -61,7 +61,7 @@ public class CauldronBlending : MonoBehaviour
         isBlending = false;
         overBlended = false;
         CauldronModel = transform.Find("CauldronNew").gameObject;
-        portal = CauldronModel.transform.Find("Portal_VFX").gameObject;
+        //portal = CauldronModel.transform.Find("Cauldron_Particle_New").gameObject;
         portal.SetActive(false);
         anim = CauldronModel.GetComponent<Animator>();
         
