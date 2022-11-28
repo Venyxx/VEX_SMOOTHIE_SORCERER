@@ -624,6 +624,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2542cdac7678bc941897d271bb135039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallMaterial: {fileID: 2100000, guid: 3dbb9845ecf420b479d37016d37da352, type: 2}
+  roomThemeGameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  roomWallPapers:
+  - {fileID: 2100000, guid: bf6198b70ec7f4b44ba00fcd2f66cf15, type: 2}
+  - {fileID: 2100000, guid: ea2b9cad0d801f242a795342fa3ecde3, type: 2}
+  - {fileID: 2100000, guid: 749d353ba44aa0242a1b5999455ac827, type: 2}
+  - {fileID: 2100000, guid: fa3a36aa864c1e94f81b187b572e6485, type: 2}
+  - {fileID: 2100000, guid: c35344f3c231c044d9f320ed4dd5aa78, type: 2}
+  - {fileID: 2100000, guid: bf6198b70ec7f4b44ba00fcd2f66cf15, type: 2}
+  - {fileID: 2100000, guid: c35344f3c231c044d9f320ed4dd5aa78, type: 2}
+  - {fileID: 2100000, guid: ea2b9cad0d801f242a795342fa3ecde3, type: 2}
   currentLevel: 0
   menuFocus: 0
 --- !u!4 &1773595932

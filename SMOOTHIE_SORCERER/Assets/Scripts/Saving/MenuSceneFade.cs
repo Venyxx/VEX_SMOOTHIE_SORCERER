@@ -89,6 +89,8 @@ public class MenuSceneFade : MonoBehaviour
         //Debug.Log(fadeGroup.alpha);
         //fadeGroup.alpha = 1 - (Time.timeSinceLevelLoad + 0.1f) * fadeInSpeed;
 
+        
+
         if (skyCamera.gameObject.activeInHierarchy == true)
         {
             menuContainer.anchoredPosition3D = Vector3.Lerp(menuContainer.anchoredPosition3D, desiredMenuPosition, 0.05f);
@@ -215,6 +217,7 @@ public class MenuSceneFade : MonoBehaviour
         activePaperIndex = index;
         SaveManager.Instance.state.activePaper = index;
         //change room material
+        Manager.Instance.wallMaterial = Manager.Instance.roomWallPapers[index];
 
         //change buy set text
         paperBuySetText.text = "Current";
@@ -351,7 +354,7 @@ public class MenuSceneFade : MonoBehaviour
     {
         Manager.Instance.currentLevel = currentIndex;
         SceneManager.LoadScene("SampleScene");
-        Debug.Log("select level button" + currentIndex);
+        Debug.Log("select level button: " + currentIndex);
     }
 
     
