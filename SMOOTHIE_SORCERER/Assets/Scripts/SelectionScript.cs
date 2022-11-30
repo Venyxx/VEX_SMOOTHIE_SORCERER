@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelectionScript : MonoBehaviour
 {
      public string selectableTag = "FinishedOrder";
-    [SerializeField] private Material HighLightMaterial;
+    //[SerializeField] private Material HighLightMaterial;
     //[SerializeField] private Material DefaultMaterial;
     public Camera cam;
     public SwipeRecog swipe;
@@ -55,13 +55,13 @@ public class SelectionScript : MonoBehaviour
             }
             selectedObject = obj;
             
-            Renderer[] rs = selectedObject.GetComponentsInChildren<Renderer>();
-            foreach(Renderer r in rs)
-            {
-                Material m = r.material;
-                m.color = Color.green;
-                r.material = m;
-            }
+            // Renderer[] rs = selectedObject.GetComponentsInChildren<Renderer>();
+            // foreach(Renderer r in rs)
+            // {
+            //     Material m = r.material;
+            //     m.color = Color.green;
+            //     r.material = m;
+            // }
         }
 
         void ClearSelection()
@@ -69,13 +69,13 @@ public class SelectionScript : MonoBehaviour
             if(selectedObject == null)
             return;
 
-            Renderer[] rs = selectedObject.GetComponentsInChildren<Renderer>();
-            foreach(Renderer r in rs)
-            {
-                Material m = r.material;
-                m.color = Color.white;
-                r.material = m;
-            }
+            // Renderer[] rs = selectedObject.GetComponentsInChildren<Renderer>();
+            // foreach(Renderer r in rs)
+            // {
+            //     Material m = r.material;
+            //     m.color = Color.white;
+            //     r.material = m;
+            // }
 
             selectedObject = null;
         }
