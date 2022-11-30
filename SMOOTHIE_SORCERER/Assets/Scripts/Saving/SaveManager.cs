@@ -122,6 +122,7 @@ public class SaveManager : MonoBehaviour
     public void ResetSave()
     {
         PlayerPrefs.DeleteKey("save");
+        Debug.Log("reset!");
     }
 }
 

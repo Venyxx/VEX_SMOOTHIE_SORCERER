@@ -28,7 +28,7 @@ public class WallpaperAndTheme : MonoBehaviour
         else if (SaveManager.Instance.state.activePaper == 4)
             ChangingMaterial("W_Tails_Of_Yarn");
         else if (SaveManager.Instance.state.activePaper == 5)
-            ChangingMaterial("W_MelodyKnight");
+            ChangingMaterial("W_Melody_Knight");
         else if (SaveManager.Instance.state.activePaper == 6)
             ChangingMaterial("s2"); // temp
         else if (SaveManager.Instance.state.activePaper == 7)

@@ -33,8 +33,11 @@ public class GameCompletion : MonoBehaviour
 
     void LevelCompletion ()
     {
+        var localScore = gameObject.GetComponent<GameSystem>().Score;
+        SaveManager.Instance.state.Money += gameObject.GetComponent<GameSystem>().Score;
         //save and add to completable levels
         SaveManager.Instance.CompleteLevel(Manager.Instance.currentLevel);
+        SaveManager.Instance.Save();
 
         //focus level selection on return
         Manager.Instance.menuFocus = 1;
@@ -46,7 +49,7 @@ public class GameCompletion : MonoBehaviour
             endMenuUI.SetActive(true);
         }
         
-        var localScore = gameObject.GetComponent<GameSystem>().Score;
+        
         
         earnings.text  =("$ " + localScore.ToString());
 

@@ -54,7 +54,7 @@ public class MenuSceneFade : MonoBehaviour
         skyCamera.gameObject.SetActive(false);
         
         //temp starting money
-        SaveManager.Instance.state.Money = 999;
+        
 
         //pos camera on focus menu 
         SetCameraTo(Manager.Instance.menuFocus);
@@ -223,7 +223,7 @@ public class MenuSceneFade : MonoBehaviour
 
 
         //change buy set text
-        paperBuySetText.text = "Current";
+        paperBuySetText.text = "Current Wallpaper!";
          Debug.Log("ran set paper");
 
         SaveManager.Instance.Save();
@@ -237,7 +237,7 @@ public class MenuSceneFade : MonoBehaviour
         //change theme material
 
         //change buy set text
-        themeBuySetText.text = "current";
+        themeBuySetText.text = "Current Theme!";
 
          SaveManager.Instance.Save();
     }
@@ -298,7 +298,7 @@ public class MenuSceneFade : MonoBehaviour
             //is it alr current?
             if (activePaperIndex == currentIndex)
             {
-                paperBuySetText.text = "Current";
+                paperBuySetText.text = "Current Wallpaper!";
             }else 
             {
                 paperBuySetText.text = "Select";
@@ -339,7 +339,7 @@ public class MenuSceneFade : MonoBehaviour
              //is it alr current?
             if (activeThemeIndex == currentIndex)
             {
-                themeBuySetText.text = "Current";
+                themeBuySetText.text = "Current Theme!";
             }else 
             {
                 themeBuySetText.text = "Select";
@@ -432,6 +432,13 @@ public class MenuSceneFade : MonoBehaviour
     {
         helpScreen.SetActive(false);
         audioSource.PlayOneShot(close, 0.7F);
+    }
+
+    public void ResetThatSave()
+    {
+        SaveManager.Instance.ResetSave();
+        Application.Quit();
+        Debug.Log("im trying to wipe");
     }
 
   
