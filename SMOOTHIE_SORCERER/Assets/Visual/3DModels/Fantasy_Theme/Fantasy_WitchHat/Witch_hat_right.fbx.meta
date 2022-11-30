@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 493aca84d2f9f1d4e8a0cbb3253bd133
+guid: bce98b34209485340944331bac9e7ed0
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,18 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Holly
-    second: {fileID: 2100000, guid: 5785469ae568ab943bd4c5c0703dacd7, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 03799139f640c1541ba0bb9fcbd5cb0b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wreath
-    second: {fileID: 2100000, guid: 58f557d7a8a2be54a99a542e61a24a59, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: red
-    second: {fileID: 2100000, guid: 507df263e60918645a5503adb3bca49b, type: 2}
+      name: Material.002
+    second: {fileID: 2100000, guid: 69001864e65fd2346b92ed788ed3e815, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

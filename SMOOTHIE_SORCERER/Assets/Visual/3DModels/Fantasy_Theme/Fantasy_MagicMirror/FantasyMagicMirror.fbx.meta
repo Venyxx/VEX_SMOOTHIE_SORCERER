@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 493aca84d2f9f1d4e8a0cbb3253bd133
+guid: 47ec187cf1a58e84e98fda46578418ac
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Holly
-    second: {fileID: 2100000, guid: 5785469ae568ab943bd4c5c0703dacd7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wreath
-    second: {fileID: 2100000, guid: 58f557d7a8a2be54a99a542e61a24a59, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: red
-    second: {fileID: 2100000, guid: 507df263e60918645a5503adb3bca49b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
