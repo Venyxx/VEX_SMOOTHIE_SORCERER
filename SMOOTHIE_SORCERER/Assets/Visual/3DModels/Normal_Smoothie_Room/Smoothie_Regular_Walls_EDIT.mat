@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Smoothie_Regular_Walls
+  m_Name: Smoothie_Regular_Walls_EDIT
   m_Shader: {fileID: 4800000, guid: 191fff8753ce5ff4fa953c92540ddd1e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

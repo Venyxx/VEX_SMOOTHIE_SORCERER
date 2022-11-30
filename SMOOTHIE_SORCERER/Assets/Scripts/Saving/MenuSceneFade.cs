@@ -30,7 +30,7 @@ public class MenuSceneFade : MonoBehaviour
     public AudioClip close;
     AudioSource audioSource;
 
-    private int [] paperCost = new int [] {0,20,30};
+    private int [] paperCost = new int [] {0,20,30,40,50,60,70,80};
     private int [] themeCost = new int [] {100,110,110};
     private int selectedPaperIndex;
     private int selectedThemeIndex;
@@ -216,8 +216,10 @@ public class MenuSceneFade : MonoBehaviour
         //set active
         activePaperIndex = index;
         SaveManager.Instance.state.activePaper = index;
+
+        
         //change room material
-        Manager.Instance.wallMaterial = Manager.Instance.roomWallPapers[index];
+
 
         //change buy set text
         paperBuySetText.text = "Current";
@@ -430,4 +432,6 @@ public class MenuSceneFade : MonoBehaviour
         helpScreen.SetActive(false);
         audioSource.PlayOneShot(close, 0.7F);
     }
+
+  
 }

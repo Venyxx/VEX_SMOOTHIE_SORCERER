@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tropical
+  m_Name: W_Melody_Knight
   m_Shader: {fileID: 4800000, guid: 191fff8753ce5ff4fa953c92540ddd1e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,9 +40,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d58492087707be1449ff9b9131b44ca2, type: 3}
-        m_Scale: {x: 10, y: 10}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 4fa4673133f33aa47b92ba2fcadd9a43, type: 3}
+        m_Scale: {x: 2.47, y: 4.15}
+        m_Offset: {x: -0.78, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
