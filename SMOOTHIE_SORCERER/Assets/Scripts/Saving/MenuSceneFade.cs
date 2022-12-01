@@ -30,8 +30,8 @@ public class MenuSceneFade : MonoBehaviour
     public AudioClip close;
     AudioSource audioSource;
 
-    private int [] paperCost = new int [] {0,20,30,40,50,60,70,80};
-    private int [] themeCost = new int [] {100,110,110};
+    private int [] paperCost = new int [] {0,20,25,30,50,55,60,65};
+    private int [] themeCost = new int [] {0,50,55,60};
     private int selectedPaperIndex;
     private int selectedThemeIndex;
     private int activePaperIndex;
@@ -311,7 +311,7 @@ public class MenuSceneFade : MonoBehaviour
         else 
         {
             //not owned
-             paperBuySetText.text = "Buy" + paperCost[currentIndex].ToString();
+             paperBuySetText.text = "Buy " + paperCost[currentIndex].ToString();
         }
 
     }
@@ -351,7 +351,7 @@ public class MenuSceneFade : MonoBehaviour
         else 
         {
             //not owned
-             themeBuySetText.text = "Buy" + themeCost[currentIndex].ToString();
+             themeBuySetText.text = "Buy " + themeCost[currentIndex].ToString();
         }
     }
 
