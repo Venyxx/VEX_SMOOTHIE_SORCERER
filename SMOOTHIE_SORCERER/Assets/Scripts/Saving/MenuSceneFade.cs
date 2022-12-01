@@ -44,6 +44,7 @@ public class MenuSceneFade : MonoBehaviour
     private void Start()
     {
         GameObject.Find("Manager").GetComponent<LevelDifficulty>().isSetAmount = false;
+        GameObject.Find("Manager").GetComponent<WallpaperAndTheme>().found = false;
         
         audioSource = GetComponent<AudioSource>();
         helpScreen = GameObject.Find("HelpScreenPNG");
