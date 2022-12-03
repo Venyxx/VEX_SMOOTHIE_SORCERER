@@ -26,20 +26,22 @@ public class WallpaperAndTheme : MonoBehaviour
     void Update()
     {
         if (SaveManager.Instance.state.activePaper == 0)
-            ChangingMaterial("W_Chismas");
+            ChangingMaterial("W_Normal");
         else if (SaveManager.Instance.state.activePaper == 1)
-            ChangingMaterial("W_Tropical");
+            ChangingMaterial("W_Chismas");
         else if (SaveManager.Instance.state.activePaper == 2)
-            ChangingMaterial("W_Stars");
+            ChangingMaterial("W_Tropical");
         else if (SaveManager.Instance.state.activePaper == 3)
-            ChangingMaterial("W_Scurry");
+            ChangingMaterial("W_Stars");
         else if (SaveManager.Instance.state.activePaper == 4)
-            ChangingMaterial("W_Tails_Of_Yarn");
+            ChangingMaterial("W_Scurry");
         else if (SaveManager.Instance.state.activePaper == 5)
-            ChangingMaterial("W_Melody_Knight");
+            ChangingMaterial("W_Tails_Of_Yarn");
         else if (SaveManager.Instance.state.activePaper == 6)
-            ChangingMaterial("W_Bee");
+            ChangingMaterial("W_Melody_Knight");
         else if (SaveManager.Instance.state.activePaper == 7)
+            ChangingMaterial("W_Bee");
+        else if (SaveManager.Instance.state.activePaper == 8)
             ChangingMaterial("W_My_Spy");
 
         if (!found && SceneManager.GetActiveScene().name == "SampleScene")

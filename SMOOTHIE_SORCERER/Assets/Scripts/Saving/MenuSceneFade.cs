@@ -32,7 +32,7 @@ public class MenuSceneFade : MonoBehaviour
     public AudioClip close;
     AudioSource audioSource;
 
-    private int [] paperCost = new int [] {0,20,25,30,50,55,60,65};
+    private int [] paperCost = new int [] {0,15,20,25,30,50,55,60,65};
     private int [] themeCost = new int [] {0,50,55,60};
     private int selectedPaperIndex;
     private int selectedThemeIndex;

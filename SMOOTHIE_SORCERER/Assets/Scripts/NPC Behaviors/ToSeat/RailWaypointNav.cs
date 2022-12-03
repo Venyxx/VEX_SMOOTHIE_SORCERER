@@ -71,7 +71,7 @@ public class RailWaypointNav : MonoBehaviour
             ChoosingSeat();
 
             if (!seated)
-                isLeaving = true;
+                Destroy(gameObject);
 
         }
         else if (nextWayPointIndex <= waypoints.Count) // keep moving along
@@ -108,6 +108,7 @@ public class RailWaypointNav : MonoBehaviour
                     target.MoveTo(seatWayPoint.transform.position, MoveToNextWaypoint);
                     target.transform.LookAt(seatWayPoint.transform.position);
                     seated = true;
+                    Debug.Log(gameObject + " is going to seat " + seat.gameObject);
 
                     break;   
                 }
