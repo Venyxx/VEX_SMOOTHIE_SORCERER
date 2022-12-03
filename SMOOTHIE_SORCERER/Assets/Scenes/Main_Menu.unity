@@ -3633,6 +3633,7 @@ MonoBehaviour:
   paperBuySetText: {fileID: 1545052556}
   themeBuySetText: {fileID: 57396245}
   moneyText: {fileID: 2135152331}
+  highscoreText: {fileID: 2131720560}
   clip: {fileID: 8300000, guid: 1167d91cc737b5240ab2ea761a9db0f1, type: 3}
   close: {fileID: 8300000, guid: f26d30cce834b8c4090f2bcd5aca76be, type: 3}
   helpScreen: {fileID: 0}
@@ -7411,8 +7412,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 622700762}
         m_TargetAssemblyTypeName: MenuSceneFade, Assembly-CSharp
-        m_MethodName: OnLevelSelect
-        m_Mode: 3
+        m_MethodName: GoToEndless
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

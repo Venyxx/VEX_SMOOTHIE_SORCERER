@@ -106,6 +106,9 @@ public class Plate : MonoBehaviour
 
             //actually adding to the score
             gameSystem.IncreaseScore(ADDTHIS);
+
+            if (ADDTHIS != 6)
+                gameSystem.DecreaseHappyCustomers(1);
             
             
             //customer.GetComponent<RailWaypointNav>().isLeaving = true;
@@ -128,9 +131,4 @@ public class Plate : MonoBehaviour
         }
     }
 
-   private void CheckCustomerOrder (GameObject customer, string givenSmoothie)
-   {
-       // var storage = customer.GetComponent<CustomerOrder>();
-        //if (storage.wantStrawberry && storage.wantBanana && givenSmoothie = "")
-   }
 }

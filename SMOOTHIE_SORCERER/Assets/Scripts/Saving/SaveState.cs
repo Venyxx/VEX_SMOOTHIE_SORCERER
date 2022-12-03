@@ -10,4 +10,5 @@ public class SaveState
     public int activeTheme = 0;
 
     public int completedLevel = 0;
+    public float endlessHighScore = 0;
 }

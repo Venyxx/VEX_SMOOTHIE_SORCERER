@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+using TMPro;
 
 public class MenuSceneFade : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class MenuSceneFade : MonoBehaviour
     public Text paperBuySetText;
     public Text themeBuySetText;
     public Text moneyText;
+    public TextMeshProUGUI highscoreText;
 
     public AudioClip clip;
     public AudioClip close;
@@ -44,7 +46,10 @@ public class MenuSceneFade : MonoBehaviour
     private void Start()
     {
         GameObject.Find("Manager").GetComponent<LevelDifficulty>().isSetAmount = false;
+        GameObject.Find("Manager").GetComponent<LevelDifficulty>().isEndless = false;
         GameObject.Find("Manager").GetComponent<WallpaperAndTheme>().found = false;
+
+        SetHighScoreText();
         
         audioSource = GetComponent<AudioSource>();
         helpScreen = GameObject.Find("HelpScreenPNG");
@@ -441,6 +446,16 @@ public class MenuSceneFade : MonoBehaviour
         SaveManager.Instance.ResetSave();
         Application.Quit();
         Debug.Log("im trying to wipe");
+    }
+
+    public void GoToEndless ()
+    {
+        SceneManager.LoadScene("Endless1");
+    }
+
+    public void SetHighScoreText ()
+    {
+        highscoreText.text = "$" + SaveManager.Instance.state.endlessHighScore;
     }
 
   

@@ -59,7 +59,25 @@ public class WallpaperAndTheme : MonoBehaviour
             else if (SaveManager.Instance.state.activeTheme == 3)
                 ChangingTheme("TropicalTheme");
         }
+
         
+        if (!found && SceneManager.GetActiveScene().name == "Endless1")
+        {
+            FindThemes();
+            found = true;
+        }
+
+        if (found && SceneManager.GetActiveScene().name == "Endless1")
+        {
+            if (SaveManager.Instance.state.activeTheme == 0)
+                ChangingTheme("NormalTheme");
+            else if (SaveManager.Instance.state.activeTheme == 1)
+                ChangingTheme("ChristmasTheme");
+            else if (SaveManager.Instance.state.activeTheme == 2)
+                ChangingTheme("FantasyTheme");
+            else if (SaveManager.Instance.state.activeTheme == 3)
+                ChangingTheme("TropicalTheme");
+        }
     }
 
     private void ChangingMaterial( string MaterialName )

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameSystem : MonoBehaviour
 {
@@ -10,22 +11,51 @@ public class GameSystem : MonoBehaviour
     public GameObject GameScoreCanvas;
     private GameCompletion GameCompletion;
     public TMP_Text ScoreText;
+    public TMP_Text HappyCustomerText;
     public float value;
+    public int happyCurrent;
+    public int maxHappy;
     public int Level;
     public float Score = 0;
+    public bool isEndless;
 
 
     void Start()
     {
+        GameCompletion = GetComponent<GameCompletion>();
+        
         Time.timeScale = 1f;
         ScoreText.text = "$0";
-        var adding = gameObject.GetComponent<GameCompletion>().MaxCustomers;
+
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "Endless1")
+        {
+            isEndless = true;
+            maxHappy = 5;
+            happyCurrent = maxHappy;
+            HappyCustomerText.text = happyCurrent + "/" + maxHappy;
+        }else 
+            HappyCustomerText.gameObject.SetActive(false);
+        
+        
+
         
     }
     
     void Update()
     {
-        
+        if (isEndless)
+        {
+             HappyCustomerText.text = happyCurrent + "/" + maxHappy;
+
+             if (happyCurrent == 0)
+             {
+                //end state setting
+                GameCompletion.MaxCustomers = GameCompletion.CurrentCustomers;
+             }
+        }
+           
     }
 
     public static GameSystem System
@@ -52,6 +82,11 @@ public class GameSystem : MonoBehaviour
     {
         Score += addingValue;
         ScoreText.text =("$ " + Score.ToString());
+    }
+
+    public void DecreaseHappyCustomers (int subtract)
+    {
+        happyCurrent -= subtract;
     }
 
     public void OnVegetableCut()

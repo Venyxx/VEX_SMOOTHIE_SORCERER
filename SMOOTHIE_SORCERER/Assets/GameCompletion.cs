@@ -10,6 +10,7 @@ public class GameCompletion : MonoBehaviour
     [SerializeField] public int MaxCustomers;
     [SerializeField] public int CurrentCustomers;
     [SerializeField] public TextMeshProUGUI earnings;
+    private bool canAddMoney;
 
 
     public GameObject endMenuUI;
@@ -19,6 +20,7 @@ public class GameCompletion : MonoBehaviour
     {
         endMenuUI.SetActive(false);
         CurrentCustomers = 0;
+        canAddMoney = true;
     }
 
     // Update is called once per frame
@@ -33,25 +35,33 @@ public class GameCompletion : MonoBehaviour
 
     void LevelCompletion ()
     {
-        var localScore = gameObject.GetComponent<GameSystem>().Score;
-        SaveManager.Instance.state.Money += gameObject.GetComponent<GameSystem>().Score;
-        //save and add to completable levels
-        SaveManager.Instance.CompleteLevel(Manager.Instance.currentLevel);
-        SaveManager.Instance.Save();
-
-        //focus level selection on return
-        Manager.Instance.menuFocus = 1;
-
-        //ExitScene();
-        Time.timeScale = 0f;
-        if (endMenuUI)
+        if (canAddMoney)
         {
-            endMenuUI.SetActive(true);
+            var localScore = gameObject.GetComponent<GameSystem>().Score;
+            SaveManager.Instance.state.Money += gameObject.GetComponent<GameSystem>().Score;
+
+            if (SaveManager.Instance.state.endlessHighScore < gameObject.GetComponent<GameSystem>().Score)
+                SaveManager.Instance.state.endlessHighScore = gameObject.GetComponent<GameSystem>().Score;
+
+                
+            //save and add to completable levels
+            SaveManager.Instance.CompleteLevel(Manager.Instance.currentLevel);
+            SaveManager.Instance.Save();
+
+            //focus level selection on return
+            Manager.Instance.menuFocus = 1;
+
+            //ExitScene();
+            Time.timeScale = 0f;
+            if (endMenuUI)
+            {
+                endMenuUI.SetActive(true);
+            }
+
+            earnings.text  =("$ " + localScore.ToString());
+            canAddMoney = false;
         }
         
-        
-        
-        earnings.text  =("$ " + localScore.ToString());
 
         
 
