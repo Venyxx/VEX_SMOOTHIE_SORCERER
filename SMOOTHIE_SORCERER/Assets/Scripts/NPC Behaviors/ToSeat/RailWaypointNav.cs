@@ -70,6 +70,9 @@ public class RailWaypointNav : MonoBehaviour
             waiting = true;
             ChoosingSeat();
 
+            if (!seated)
+                isLeaving = true;
+
         }
         else if (nextWayPointIndex <= waypoints.Count) // keep moving along
         {
@@ -109,6 +112,7 @@ public class RailWaypointNav : MonoBehaviour
                     break;   
                 }
             }
+
             
          }
              

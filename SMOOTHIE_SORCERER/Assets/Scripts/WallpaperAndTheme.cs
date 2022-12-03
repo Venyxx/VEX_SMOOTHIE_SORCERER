@@ -30,7 +30,7 @@ public class WallpaperAndTheme : MonoBehaviour
         else if (SaveManager.Instance.state.activePaper == 1)
             ChangingMaterial("W_Tropical");
         else if (SaveManager.Instance.state.activePaper == 2)
-            ChangingMaterial("s1");//TEMP  
+            ChangingMaterial("W_Stars");
         else if (SaveManager.Instance.state.activePaper == 3)
             ChangingMaterial("W_Scurry");
         else if (SaveManager.Instance.state.activePaper == 4)
@@ -38,9 +38,9 @@ public class WallpaperAndTheme : MonoBehaviour
         else if (SaveManager.Instance.state.activePaper == 5)
             ChangingMaterial("W_Melody_Knight");
         else if (SaveManager.Instance.state.activePaper == 6)
-            ChangingMaterial("s2"); // temp
+            ChangingMaterial("W_Bee");
         else if (SaveManager.Instance.state.activePaper == 7)
-            ChangingMaterial("s3");
+            ChangingMaterial("W_My_Spy");
 
         if (!found && SceneManager.GetActiveScene().name == "SampleScene")
         {
