@@ -449,9 +449,11 @@ MonoBehaviour:
   waypoints: []
   seats: []
   seatsGameObjects: []
-  pathHolder: {fileID: 0}
-  seatHolder: {fileID: 0}
-  player: {fileID: 0}
+  pathHolder: {fileID: 5380734202884402489, guid: 195540604029adb49864c4e1a2d84e0c,
+    type: 3}
+  seatHolder: {fileID: 9195426101883434957, guid: e66fb641f1a33a74bb615c4b0ec40e8f,
+    type: 3}
+  player: {fileID: 8676904401342077853, guid: 44a83f5dc223b8940ae1f85a655b7b0b, type: 3}
   nextWayPointIndex: 0
 --- !u!136 &8170604273171059231
 CapsuleCollider:

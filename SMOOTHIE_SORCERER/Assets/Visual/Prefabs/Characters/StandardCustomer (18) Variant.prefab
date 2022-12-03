@@ -74,7 +74,7 @@ PrefabInstance:
     - target: {fileID: 8170604273171059298, guid: 9e50f07d510ef964b88dc608b8f99c4b,
         type: 3}
       propertyPath: m_Name
-      value: StandardCustomer (18)
+      value: StandardCustomer (18) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8170604273171059298, guid: 9e50f07d510ef964b88dc608b8f99c4b,
         type: 3}
@@ -85,17 +85,20 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8676904401342077853, guid: 44a83f5dc223b8940ae1f85a655b7b0b,
+        type: 3}
     - target: {fileID: 8170604273171059299, guid: 9e50f07d510ef964b88dc608b8f99c4b,
         type: 3}
       propertyPath: pathHolder
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5380734202884402489, guid: 195540604029adb49864c4e1a2d84e0c,
+        type: 3}
     - target: {fileID: 8170604273171059299, guid: 9e50f07d510ef964b88dc608b8f99c4b,
         type: 3}
       propertyPath: seatHolder
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9195426101883434957, guid: e66fb641f1a33a74bb615c4b0ec40e8f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e50f07d510ef964b88dc608b8f99c4b, type: 3}
 --- !u!4 &6826419246235455343 stripped
