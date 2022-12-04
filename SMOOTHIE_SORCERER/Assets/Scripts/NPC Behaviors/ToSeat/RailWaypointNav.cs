@@ -29,9 +29,19 @@ public class RailWaypointNav : MonoBehaviour
     private void Start ()
     {
         GameObject seatManager = GameObject.FindGameObjectWithTag("SeatingManager"); 
+        pathHolder = GameObject.Find("Route");
+        seatHolder = GameObject.Find("Seats");
+        player = GameObject.Find("Character_Default");
         SeatChecker = seatManager.GetComponent<SeatChecker>(); 
         seated = false;
 
+            waypoints = pathHolder.GetComponentsInChildren<Transform>().ToList(); 
+            seats = seatHolder.GetComponentsInChildren<Transform>().ToList(); 
+            seats.RemoveAt(index: 0);
+            waypoints.RemoveAt(index: 0);
+            //Debug.Log(waypoints.Count);
+            MoveToNextWaypoint();
+            
 
         foreach (Transform seat in seats)
         {
@@ -45,12 +55,12 @@ public class RailWaypointNav : MonoBehaviour
     private void OnEnable ()
     {
         
-            waypoints = pathHolder.GetComponentsInChildren<Transform>().ToList(); 
-            seats = seatHolder.GetComponentsInChildren<Transform>().ToList(); 
-            seats.RemoveAt(index: 0);
-            waypoints.RemoveAt(index: 0);
-            //Debug.Log(waypoints.Count);
-            MoveToNextWaypoint();
+            // waypoints = pathHolder.GetComponentsInChildren<Transform>().ToList(); 
+            // seats = seatHolder.GetComponentsInChildren<Transform>().ToList(); 
+            // seats.RemoveAt(index: 0);
+            // waypoints.RemoveAt(index: 0);
+            // //Debug.Log(waypoints.Count);
+            // MoveToNextWaypoint();
     }
 
     private void Update()
