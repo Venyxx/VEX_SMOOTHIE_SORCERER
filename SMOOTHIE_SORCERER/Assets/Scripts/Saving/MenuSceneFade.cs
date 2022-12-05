@@ -251,7 +251,7 @@ public class MenuSceneFade : MonoBehaviour
 
     private void UpdateMoneyText ()
     {
-        moneyText.text = SaveManager.Instance.state.Money.ToString();
+        moneyText.text = ("$" + SaveManager.Instance.state.Money.ToString());
     }
 
     //buttons
@@ -456,6 +456,13 @@ public class MenuSceneFade : MonoBehaviour
     public void SetHighScoreText ()
     {
         highscoreText.text = "$" + SaveManager.Instance.state.endlessHighScore;
+    }
+
+    public void MaxOutMoney ()
+    {
+        SaveManager.Instance.state.Money = 999;
+        Debug.Log("maxmoney");
+        UpdateMoneyText();
     }
 
   

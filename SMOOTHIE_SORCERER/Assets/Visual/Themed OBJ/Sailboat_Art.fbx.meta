@@ -3,7 +3,52 @@ guid: c559e17c7c84d29429e15188722ae090
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deck
+    second: {fileID: 2100000, guid: 2fcdbe4e36a20074c95f4c612bdbe0f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hull1
+    second: {fileID: 2100000, guid: 9cf76cbed4570ab4e8ab14175ca58b45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: keel
+    second: {fileID: 2100000, guid: 5b1cfbbb3ef0c644babdebe96ca629a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 7fb70a180779a9b498393197936a0c89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: df7357dd306e0094eaa47b668447c12e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mast
+    second: {fileID: 2100000, guid: 7fbfc71ab5d1e754a852db4c98b2ad50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mast_tip
+    second: {fileID: 2100000, guid: 4c66cc6ed272abe4c95ebba7318fcba6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: upper_deck
+    second: {fileID: 2100000, guid: 3e9a1c08a0f10c94fa3f4a23da6d3fcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: white_edges
+    second: {fileID: 2100000, guid: 4a557f24877d8bf47a13335aa85b6fa9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -51,7 +51,7 @@ public class GameSystem : MonoBehaviour
         if (isEndless)
         {
              
-            if (earnBack == 3)
+            if (earnBack == 2)
             {
                 happyCurrent ++;
                 earnBack = 0;

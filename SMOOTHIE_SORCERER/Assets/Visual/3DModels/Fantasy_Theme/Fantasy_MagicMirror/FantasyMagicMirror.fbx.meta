@@ -3,7 +3,12 @@ guid: 47ec187cf1a58e84e98fda46578418ac
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FantasyMagicMirror_mat
+    second: {fileID: 2100000, guid: aa399445d2b87c64aaa1dcd7f1bbf4c9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

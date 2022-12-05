@@ -3,7 +3,12 @@ guid: 2605a45e3654d4f41a505d5f737f351a
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LifePreserver_mat
+    second: {fileID: 2100000, guid: 6f8b07baa4d16a44ebc7ab539a129282, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
