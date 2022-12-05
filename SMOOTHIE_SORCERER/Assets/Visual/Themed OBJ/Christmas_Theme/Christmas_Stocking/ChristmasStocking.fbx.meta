@@ -3,7 +3,12 @@ guid: 6ee17ac374dc04b47936033e9e329d5c
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChristmasStocking_mat
+    second: {fileID: 2100000, guid: d8eb2cb1d7b6e464eb773afa99f84738, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -11,6 +11,7 @@ public class RailWaypointNav : MonoBehaviour
     [SerializeField] public bool canOrder;
     [SerializeField] public bool clickedStartingOrder;
     [SerializeField] public bool isLeaving;
+    private GameSystem gameSystem;
     private bool hasSeat;
 
     public List<Transform> waypoints;
@@ -81,7 +82,12 @@ public class RailWaypointNav : MonoBehaviour
             ChoosingSeat();
 
             if (!seated)
-                Destroy(gameObject);
+            {
+                isLeaving = true;
+                gameSystem = GameObject.Find("Game System").GetComponent<GameSystem>();
+                gameSystem.DecreaseHappyCustomers(1);
+            }
+                
 
         }
         else if (nextWayPointIndex <= waypoints.Count) // keep moving along

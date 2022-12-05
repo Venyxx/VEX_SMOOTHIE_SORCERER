@@ -110,6 +110,8 @@ public class Plate : MonoBehaviour
             if (ADDTHIS != 6)
                 gameSystem.DecreaseHappyCustomers(1);
             
+            if (ADDTHIS == 6)
+                gameSystem.earnBack++;
             
             //customer.GetComponent<RailWaypointNav>().isLeaving = true;
             //customer.GetComponent<LeaveBehavior>();

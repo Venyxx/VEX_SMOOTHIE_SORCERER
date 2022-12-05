@@ -10,7 +10,9 @@ public class GameCompletion : MonoBehaviour
     [SerializeField] public int MaxCustomers;
     [SerializeField] public int CurrentCustomers;
     [SerializeField] public TextMeshProUGUI earnings;
+    [SerializeField] public TextMeshProUGUI day;
     private bool canAddMoney;
+    private bool isEndless;
 
 
     public GameObject endMenuUI;
@@ -21,6 +23,23 @@ public class GameCompletion : MonoBehaviour
         endMenuUI.SetActive(false);
         CurrentCustomers = 0;
         canAddMoney = true;
+
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Endless1")
+        {
+            isEndless = true;
+        }
+
+        if (!isEndless)
+        {
+            var dayT =  (Manager.Instance.currentLevel + 1);
+            day.text = ("Day #" + dayT.ToString());  
+        } else if (isEndless)
+        {
+            day.text = "Endless Mode!";  
+        }
+        
+
     }
 
     // Update is called once per frame
@@ -40,7 +59,7 @@ public class GameCompletion : MonoBehaviour
             var localScore = gameObject.GetComponent<GameSystem>().Score;
             SaveManager.Instance.state.Money += gameObject.GetComponent<GameSystem>().Score;
 
-            if (SaveManager.Instance.state.endlessHighScore < gameObject.GetComponent<GameSystem>().Score)
+            if (SaveManager.Instance.state.endlessHighScore < gameObject.GetComponent<GameSystem>().Score && isEndless)
                 SaveManager.Instance.state.endlessHighScore = gameObject.GetComponent<GameSystem>().Score;
 
                 

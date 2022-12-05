@@ -19,11 +19,14 @@ public class GameSystem : MonoBehaviour
     public float Score = 0;
     public bool isEndless;
 
+    public int earnBack;
+
 
     void Start()
     {
         GameCompletion = GetComponent<GameCompletion>();
         
+        earnBack = 0;
         Time.timeScale = 1f;
         ScoreText.text = "$0";
 
@@ -47,6 +50,13 @@ public class GameSystem : MonoBehaviour
     {
         if (isEndless)
         {
+             
+            if (earnBack == 3)
+            {
+                happyCurrent ++;
+                earnBack = 0;
+            }
+             
              HappyCustomerText.text = happyCurrent + "/" + maxHappy;
 
              if (happyCurrent == 0)
@@ -55,6 +65,8 @@ public class GameSystem : MonoBehaviour
                 GameCompletion.MaxCustomers = GameCompletion.CurrentCustomers;
              }
         }
+
+        
            
     }
 
@@ -81,7 +93,7 @@ public class GameSystem : MonoBehaviour
     public void IncreaseScore(float addingValue)
     {
         Score += addingValue;
-        ScoreText.text =("$ " + Score.ToString());
+        ScoreText.text =("$" + Score.ToString());
     }
 
     public void DecreaseHappyCustomers (int subtract)
@@ -93,6 +105,5 @@ public class GameSystem : MonoBehaviour
   {
     //IncreaseScore();
     Debug.Log("Cut");
-    ScoreText.text = Score.ToString();
   }
 }
